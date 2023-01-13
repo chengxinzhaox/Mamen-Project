@@ -91,7 +91,7 @@ struct HomeView: View {
                             Spacer()
                         }
                         HStack {
-                            NavigationLink(destination: AboutView()){
+                            NavigationLink(destination: LibaryView()){
                                 ToolsView(name: "Libary", icon: "books.vertical.fill")
                             }
                             
