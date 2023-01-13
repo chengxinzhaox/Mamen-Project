@@ -1,0 +1,145 @@
+//
+//  Course_IPD_View.swift
+//  Mamen
+//
+//  Created by Chester Zhao on 12/24/22.
+//
+
+import SwiftUI
+
+struct Course_IPD_View: View {
+    
+    @State var showDetailView = false
+    @State var showWebView = false
+    
+    var body: some View {
+        VStack {
+            TeacherView(image: "javier", name: "Javier Jia", mail: "Javier@zy.edu.cn")
+                .onTapGesture {
+                    self.showDetailView = true
+                    TapticEngine.impact.feedback(.medium)
+                }
+                .sheet(isPresented: $showDetailView){
+                    JavierView()
+                }
+            VStack {
+                HStack {
+                    Text("Document List")
+                        .font(.system(size: 15))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("main-green"))
+                        .padding(.leading, 30)
+                        .padding(.top, 15)
+                    Spacer()
+                }
+                ScrollView(showsIndicators: false){
+                    VStack {
+                        ZStack{
+                            CourseFileView(image: "PDF", name: "grooming.pdf", time: "Dec 18 8:23PM")
+                            HStack {
+                                Spacer()
+                                Image(systemName: "arrow.down.circle.fill")
+                                    .font(.title3)
+                                    .padding(.trailing, 50)
+                                    .onTapGesture {
+                                        self.showWebView.toggle()
+                                        TapticEngine.impact.feedback(.medium)
+                                    }
+                                    .sheet(isPresented: $showWebView){
+                                        SafariView(url: URL(string: "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip")!)
+                                    }
+                            }
+                        }
+                        ZStack{
+                            CourseFileView(image: "PDF", name: "scrum-meetings.pdf", time: "Dec 28 7:56PM")
+                            HStack {
+                                Spacer()
+                                Image(systemName: "arrow.down.circle.fill")
+                                    .font(.title3)
+                                    .padding(.trailing, 50)
+                                    .onTapGesture {
+                                        self.showWebView.toggle()
+                                        TapticEngine.impact.feedback(.medium)
+                                    }
+                                    .sheet(isPresented: $showWebView){
+                                        SafariView(url: URL(string: "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week6.zip")!)
+                                    }
+                            }
+                        }
+                        ZStack{
+                            CourseFileView(image: "PDF", name: "assignments-explanation.pdf", time: "Dec 22 8:23AM")
+                            HStack {
+                                Spacer()
+                                Image(systemName: "arrow.down.circle.fill")
+                                    .font(.title3)
+                                    .padding(.trailing, 50)
+                                    .onTapGesture {
+                                        self.showWebView.toggle()
+                                        TapticEngine.impact.feedback(.medium)
+                                    }
+                                    .sheet(isPresented: $showWebView){
+                                        SafariView(url: URL(string: "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/chc5028-week9-streams-and-overload-operator_0.pdf")!)
+                                    }
+                            }
+                        }
+                        ZStack{
+                            CourseFileView(image: "PDF", name: "sprint-planning-meeting.pdf", time: "Dec 21 7:23PM")
+                            HStack {
+                                Spacer()
+                                Image(systemName: "arrow.down.circle.fill")
+                                    .font(.title3)
+                                    .padding(.trailing, 50)
+                                    .onTapGesture {
+                                        self.showWebView.toggle()
+                                        TapticEngine.impact.feedback(.medium)
+                                    }
+                                    .sheet(isPresented: $showWebView){
+                                        SafariView(url: URL(string: "https://www.appcoda.com")!)
+                                    }
+                            }
+                        }
+                        ZStack{
+                            CourseFileView(image: "PDF", name: "planning-your-agile.pdf", time: "Nov 2 8:23PM")
+                            HStack {
+                                Spacer()
+                                Image(systemName: "arrow.down.circle.fill")
+                                    .font(.title3)
+                                    .padding(.trailing, 50)
+                                    .onTapGesture {
+                                        self.showWebView.toggle()
+                                        TapticEngine.impact.feedback(.medium)
+                                    }
+                                    .sheet(isPresented: $showWebView){
+                                        SafariView(url: URL(string: "https://www.appcoda.com")!)
+                                    }
+                            }
+                        }
+                        ZStack{
+                            CourseFileView(image: "docx", name: "rubric-part-dstudents.docx", time: "Nov 21 7:43PM")
+                            HStack {
+                                Spacer()
+                                Image(systemName: "arrow.down.circle.fill")
+                                    .font(.title3)
+                                    .padding(.trailing, 50)
+                                    .onTapGesture {
+                                        self.showWebView.toggle()
+                                        TapticEngine.impact.feedback(.medium)
+                                    }
+                                    .sheet(isPresented: $showWebView){
+                                        SafariView(url: URL(string: "https://www.appcoda.com")!)
+                                    }
+                            }
+                        }
+                    }
+                }
+                .frame(height: 320)
+            }
+        }.offset(y: 135)
+    }
+}
+
+struct Course_IPD_View_Previews: PreviewProvider {
+    static var previews: some View {
+        Course_IPD_View()
+    }
+}
