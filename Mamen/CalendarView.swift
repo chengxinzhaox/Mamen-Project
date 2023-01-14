@@ -28,7 +28,7 @@ struct CalendarView: View {
                         .foregroundColor(Color("main-green"))
                     Spacer()
                 }
-                .padding(.bottom, 20)
+                .padding(.bottom, 10)
 
                 // Calendar
                 HStack {
