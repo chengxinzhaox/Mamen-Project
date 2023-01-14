@@ -96,7 +96,7 @@ struct HomeView: View {
                             }
                             
                             ToolsView(name: "Course", icon: "filemenu.and.selection")
-                            ToolsView(name: "Exam", icon: "pencil.line")
+                            ToolsView(name: "Test", icon: "pencil.line")
                         }
                         HStack {
                             ToolsView(name: "Pay", icon: "creditcard.fill")
