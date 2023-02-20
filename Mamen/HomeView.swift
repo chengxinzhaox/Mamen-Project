@@ -28,7 +28,7 @@ struct HomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 DadLineView(name: "Databases Part 2", inf: "Individual design", time: "2022-12-28", DUO_day: "5  DAY", line: 100)
-                                DadLineView(name: "The Human Interface ", inf: "Coursework", time: "2022-12-25", DUO_day: "3  DAY", line: 150)
+                                DadLineView(name: "The Human Interface ", inf: "Coursework", time: "2022-12-25", DUO_day: "4  DAY", line: 150)
                             }
                             .padding(.leading)
                             .frame(height: 120)
