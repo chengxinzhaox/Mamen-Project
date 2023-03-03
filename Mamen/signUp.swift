@@ -57,7 +57,7 @@ struct signUp: View {
                         RoundedRectangle(cornerRadius: 90, style: .continuous)
                             .frame(width: 320, height: 50, alignment: .center)
                             .foregroundColor(Color(red: 0.575, green: 0.802, blue: 0.782))
-                            .overlay(){
+                            .overlay {
                                 Text("Sign Up")
                                     .font(.system(size: 17))
                                     .foregroundColor(Color.white)
@@ -65,22 +65,28 @@ struct signUp: View {
                             }
                     }
                     .offset(y: 100)
-                }.padding(30)
-                    .offset(y: 50)
-                    .alert(isPresented: $isshow) {
-                        Alert(title: Text("Please check your input"), dismissButton: .default(Text("Done")))
-                    }
+                }
+                .padding(30)
+                .offset(y: 50)
+                .alert(isPresented: $isshow) {
+                    Alert(title: Text("Please check your input"), dismissButton: .default(Text("Done")))
+                }
                 VStack {
                     HStack {
                         Button {
                             self.presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Image("Back_Arrow").resizable().scaledToFit().frame(width: 37)
+                            Image("Back_Arrow")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 37)
                         }
                         Spacer()
                     }
                     Spacer()
-                }.padding(30).padding(.top, 30)
+                }
+                .padding(30)
+                .padding(.top, 30)
             }
         }
     }

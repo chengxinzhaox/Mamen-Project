@@ -45,7 +45,6 @@ struct ContentView: View {
                 TapticEngine.impact.feedback(.medium)
             }
         }
-//        .background(Material.ultraThin)
     }
 }
 

@@ -24,13 +24,14 @@ struct LibaryView: View {
                 .foregroundColor(Color("main-green"))
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("Course Select", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
                     dismiss()
                 }) {
                     Image(systemName: "chevron.left")
-                        .font(.system(size: 18))
+                        .font(.system(size: 13))
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
                 }

@@ -95,7 +95,10 @@ struct HomeView: View {
                                 ToolsView(name: "Libary", icon: "books.vertical.fill")
                             }
                             
-                            ToolsView(name: "Course", icon: "filemenu.and.selection")
+                            NavigationLink(destination: CourseSlectView()){
+                                ToolsView(name: "Course", icon: "filemenu.and.selection")
+                            }
+                            
                             ToolsView(name: "Test", icon: "pencil.line")
                         }
                         HStack {

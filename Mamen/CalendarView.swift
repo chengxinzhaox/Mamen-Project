@@ -32,7 +32,7 @@ struct CalendarView: View {
 
                 // Calendar
                 HStack {
-                    CustomDatePicker(currentDate: $current)
+                    //CustomDatePicker(currentDate: $current)
                 }
                 Spacer()
             }

@@ -14,21 +14,48 @@ struct SettingView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Personal setting") {
-                    SettingElementView(icon: "person.fill", name: "Perosn", color: .blue)
-                }
-
-                Section("Personal setting") {
-                    
+                Section {
                     NavigationLink(destination:
                         LibaryView()
-                            .navigationTitle("haha")
+                            .navigationTitle("Perosnal Information")
                     ) {
-                        SettingElementView(icon: "person.fill", name: "Perosn", color: .gray)
+                        SettingElementView(icon: "person.fill", name: "Perosnal Information", color: Color(hex: "FFA61E"))
                     }
-                    
+
+                }
+//            header: {
+//                    Text("personal strring")
+//                }
+                Section {
+                    HStack {
+                        Spacer()
+                        Text("Log Out")
+                            .foregroundColor(.red)
+                        Spacer()
+                    }
+                } footer: {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Image("SettingLogo")
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                            Spacer()
+                        }
+                        .padding(.bottom, -4.0)
+                        HStack {
+                            Text("Manen v1.07")
+                                .font(.system(size: 16))
+                                .foregroundColor(Color.gray)
+                                .fontWeight(.semibold)
+                            Image(systemName: "checkmark.seal.fill")
+                                .foregroundColor(.accentColor)
+                        }
+                    }
                 }
             }
+
             .navigationBarTitle("Setting", displayMode: .inline)
             .toolbar {
                 Button(action: {
@@ -57,7 +84,7 @@ struct SettingElementView: View {
     var body: some View {
         HStack {
             RoundedRectangle(cornerRadius: 7, style: .continuous)
-                .frame(width: 32, height: 32)
+                .frame(width: 35, height: 35)
                 .foregroundColor(color)
                 .overlay {
                     Image(systemName: icon)
