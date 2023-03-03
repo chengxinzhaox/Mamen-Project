@@ -40,13 +40,13 @@ struct SettingView: View {
                             Spacer()
                             Image("SettingLogo")
                                 .resizable()
-                                .frame(width: 70, height: 70)
+                                .frame(width: 60, height: 60)
                             Spacer()
                         }
                         .padding(.bottom, -4.0)
                         HStack {
-                            Text("Manen v1.07")
-                                .font(.system(size: 16))
+                            Text("Manen v1.08")
+                                .font(.system(size: 12))
                                 .foregroundColor(Color.gray)
                                 .fontWeight(.semibold)
                             Image(systemName: "checkmark.seal.fill")
@@ -88,6 +88,7 @@ struct SettingElementView: View {
                 .foregroundColor(color)
                 .overlay {
                     Image(systemName: icon)
+                        .font(.system(size: 19))
                         .foregroundColor(.white)
                 }
             Text(name)

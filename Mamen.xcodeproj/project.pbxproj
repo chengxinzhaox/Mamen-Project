@@ -45,6 +45,7 @@
 		FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */; };
 		FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */; };
 		FBDFB5BA29B18EC600C20197 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5B929B18EC600C20197 /* Restaurant.swift */; };
+		FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5BF29B19B4F00C20197 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSlectView.swift; sourceTree = "<group>"; };
 		FBDFB5B929B18EC600C20197 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		FBDFB5BF29B19B4F00C20197 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				FB78E933295F17C600090D3E /* LibaryView.swift */,
 				FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */,
 				FBDFB5B929B18EC600C20197 /* Restaurant.swift */,
+				FBDFB5BF29B19B4F00C20197 /* TestView.swift */,
 			);
 			path = "Useful Tools";
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */,
 				FB78E9272956D91600090D3E /* JavierView.swift in Sources */,
 				FB1677F92954AA7A00861EDB /* LiangView.swift in Sources */,
+				FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */,
 				FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */,
 				FB7419DC295022050093BE88 /* Course.swift in Sources */,
 				FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */,
