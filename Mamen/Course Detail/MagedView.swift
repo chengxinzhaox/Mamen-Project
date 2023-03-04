@@ -31,13 +31,11 @@ struct MagedView: View {
                                 .clipShape(Circle())
                         }
                         Text("Maged Refat")
-                            .font(.system(size: 30))
-                            .fontWeight(.heavy)
+                            .font(.custom("AirbnbCereal_W_Bd", size:30))
                             .foregroundColor(Color.white)
                         Text("Databases")
-                            .font(.system(size: 15))
+                            .font(.custom("AirbnbCereal_W_Md", size:15))
                             .offset(y:4)
-                            .fontWeight(.medium)
                             .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.786))
                     }
                     .padding(.top, 90)
@@ -60,8 +58,7 @@ struct MagedView: View {
                         Spacer()
                         HStack {
                             Text("Contect")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                                .font(.custom("AirbnbCereal_W_Bd", size:18))
                                 .foregroundColor(Color("main-green"))
                                 .padding(.top, 10)
                                 .padding(.leading, 25)
@@ -75,21 +72,18 @@ struct MagedView: View {
                                 .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.849), radius: 4, x: 1, y: 1)
                             HStack {
                                 Text("E-mail")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.medium)
+                                    .font(.custom("AirbnbCereal_W_Bd", size:15))
                                     .foregroundColor(Color.gray)
                                     .offset(x: -65)
 
                                 Text("maged@zy.cdut.cn")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.medium)
+                                    .font(.custom("AirbnbCereal_W_Md", size:15))
                                     .offset(x: 55)
                             }
                         }
                         HStack {
                             Text("Office")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                                .font(.custom("AirbnbCereal_W_Bd", size:18))
                                 .foregroundColor(Color("main-green"))
                                 .padding(.top, 5)
                                 .padding(.leading, 25)
@@ -100,28 +94,24 @@ struct MagedView: View {
                             VStack(alignment: .leading) {
                                 HStack {
                                     Text("WORK TIME")
-                                        .font(.system(size: 13))
-                                        .fontWeight(.bold)
+                                        .font(.custom("AirbnbCereal_W_Bd", size:13))
                                         .foregroundColor(Color.gray)
                                         .padding(.top, 10)
                                 }
                                 HStack {
                                     Text("9:00AM - 7:00PM")
-                                        .font(.system(size: 10))
-                                        .fontWeight(.semibold)
+                                        .font(.custom("AirbnbCereal_W_Md", size:10))
                                         .foregroundColor(Color.gray)
                                 }
                             }
                             Spacer()
                             VStack(alignment: .trailing) {
                                 Text("OFFICE LOCATION")
-                                    .font(.system(size: 13))
-                                    .fontWeight(.bold)
+                                    .font(.custom("AirbnbCereal_W_Bd", size:13))
                                     .foregroundColor(Color.gray)
                                     .padding(.top, 10)
                                 Text("8 Building, CDUT")
-                                    .font(.system(size: 10))
-                                    .fontWeight(.semibold)
+                                    .font(.custom("AirbnbCereal_W_Md", size:10))
                                     .foregroundColor(Color.gray)
                             }
                             .padding(.trailing, 35)

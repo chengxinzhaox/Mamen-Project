@@ -38,18 +38,17 @@ struct Person: View {
                             }, secondaryButton: .cancel())
                         }
                     Text("Lily Yuan")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
+                        .font(.custom("AirbnbCereal_W_Bd", size:20))
                         .foregroundColor(.white)
                         .offset(y: -20)
 
                     Text("Chengdu University of technology")
-                        .font(.system(size: 13))
+                        .font(.custom("AirbnbCereal_W_Md", size:13))
                         .fontWeight(.regular)
                         .foregroundColor(.white)
                         .offset(y: -10)
                     Text("Software Engineeing")
-                        .font(.system(size: 14))
+                        .font(.custom("AirbnbCereal_W_Md", size:13))
                         .fontWeight(.regular)
                         .foregroundColor(.white)
                         .offset(y: -10)
@@ -60,7 +59,7 @@ struct Person: View {
                 SubStructure()
             }
             ZStack {
-                Image(systemName: "gearshape")
+                Image("Setting")
                     .foregroundColor(Color.white)
                     .font(.system(size: 20))
                 RoundedRectangle(cornerRadius: 12, style:.continuous)
@@ -117,13 +116,11 @@ struct SubStructure: View {
                     .animation(.easeInOut, value: iscard)
                     HStack {
                         Text("Card")
-                            .font(.system(size: 15))
-                            .fontWeight(.bold)
+                            .font(.custom("AirbnbCereal_W_Bd", size:15))
                             .foregroundColor(self.iscard == -80 ? Color("main-green") : Color.gray)
                         Spacer()
                         Text("Score")
-                            .font(.system(size: 15))
-                            .fontWeight(.bold)
+                            .font(.custom("AirbnbCereal_W_Bd", size:15))
                             .foregroundColor(self.iscard == 80 ? Color("main-green") : Color.gray)
                     }
                     .padding(.horizontal, 90)
@@ -185,13 +182,11 @@ struct StudentCard: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Balance")
-                            .font(.system(size: 15))
+                            .font(.custom("AirbnbCereal_W_Md", size:15))
                             .foregroundColor(Color.black)
-                            .fontWeight(.medium)
                         Text("CN¥\(String(money))")
                             .foregroundColor(Color.black)
-                            .font(.system(size: 25))
-                            .fontWeight(.bold)
+                            .font(.custom("AirbnbCereal_W_Bd", size:25))
                     }
                     .padding(.vertical, 15)
                     .offset(x: -25)
@@ -205,7 +200,7 @@ struct StudentCard: View {
                             .foregroundColor(.black)
                             .overlay {
                                 Text("Top Up")
-                                    .font(.system(size: 15))
+                                    .font(.custom("AirbnbCereal_W_Bd", size:15))
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                             }

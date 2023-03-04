@@ -25,15 +25,27 @@ struct MamenApp: App {
     }
     
     init() {
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "main-green") ?? UIColor.systemRed]
+//        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "main-green") ?? UIColor.systemRed]
+//        navBarAppearance.backgroundColor = .clear
+//        //navBarAppearance.backgroundEffect = .none
+//        navBarAppearance.shadowColor = .clear
+//
+//        UINavigationBar.appearance().standardAppearance = navBarAppearance
+////        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+//        UINavigationBar.appearance().compactAppearance = navBarAppearance
+        
+        
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "main-green") ?? UIColor.systemRed]
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "main-green") ?? UIColor.systemRed]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "main-green") ?? UIColor.systemRed, .font: UIFont(name: "AirbnbCereal_W_Bd", size: 35)!]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "main-green") ?? UIColor.systemRed, .font: UIFont(name: "AirbnbCereal_W_Bd", size: 20)!]
         navBarAppearance.backgroundColor = .clear
         //navBarAppearance.backgroundEffect = .none
         navBarAppearance.shadowColor = .clear
         
         UINavigationBar.appearance().standardAppearance = navBarAppearance
-//        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        //UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         UINavigationBar.appearance().compactAppearance = navBarAppearance
     }
 }

@@ -22,8 +22,7 @@ struct Course: View {
             VStack {
                 HStack {
                     Text("Current Modules")
-                        .font(.system(size: 25))
-                        .fontWeight(.bold)
+                        .font(.custom("AirbnbCereal_W_Bd", size:25))
                         .foregroundColor(Color("main-green"))
                     Spacer()
                 }
@@ -113,7 +112,7 @@ struct Course_card: View {
                     .aspectRatio(contentMode: .fit)
                 HStack {
                     Text(name)
-                        .font(.system(size: 15))
+                        .font(.custom("AirbnbCereal_W_Bd", size:15))
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                         .padding()
@@ -163,13 +162,11 @@ struct TeacherView: View {
 
                 VStack(alignment: .leading) {
                     Text(name)
-                        .font(.system(size: 16))
-                        .fontWeight(.bold)
+                        .font(.custom("AirbnbCereal_W_Bd", size:16))
                         .offset(y: -1)
                     Text(mail)
-                        .font(.system(size: 12))
+                        .font(.custom("AirbnbCereal_W_Md", size:12))
                         .offset(y: 2)
-                        .fontWeight(.semibold)
                         .foregroundColor(.secondary)
                 }
                 .padding(.horizontal, 20)
@@ -196,18 +193,20 @@ struct CourseFileView: View {
                     ZStack {
                         Image(image)
                             .resizable()
-                            .frame(width: 45, height: 45)
+                            .scaledToFit()
+                            .frame(width: 35, height: 50)
                     }
-                    .padding(.leading, 35)
+                    .padding(.leading, 40)
+                    .padding(.trailing, 10)
 
                     VStack(alignment: .leading) {
                         Text(name)
-                            .font(.system(size: 15))
+                            .font(.custom("AirbnbCereal_W_Bd", size:15))
                             .fontWeight(.bold)
                             .padding(.vertical, 0.1)
                             .lineLimit(1)
                         Text(time)
-                            .font(.system(size: 12))
+                            .font(.custom("AirbnbCereal_W_Md", size:12))
                             .foregroundColor(.secondary)
                             .fontWeight(.medium)
                     }

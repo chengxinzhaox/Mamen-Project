@@ -14,8 +14,7 @@ struct CalendarView: View {
         VStack {
             HStack {
                 Text("Calendar")
-                    .font(.system(size: 25))
-                    .fontWeight(.bold)
+                    .font(.custom("AirbnbCereal_W_Bd", size: 25))
                     .foregroundColor(Color("main-green"))
                     .padding([.top, .leading])
                 Spacer()
@@ -81,6 +80,14 @@ struct CalendarView_Previews: PreviewProvider {
     }
 }
 
+/**
+ Date slect element  view
+ 
+ - date: slect date
+ - frontColor: icon color
+ - backColor: back color
+ 
+*/
 struct DateSlectView: View {
     var date: String
     var frontColor: Color
@@ -88,12 +95,11 @@ struct DateSlectView: View {
     
     var body: some View {
         Circle()
-            
-            .frame(width: 60, height: 60)
+            .frame(width: 50, height: 50)
             .foregroundColor(backColor)
             .overlay {
                 Text(date)
-                    .font(.system(size: 16))
+                    .font(.custom("AirbnbCereal_W_Bd", size: 14))
                     .fontWeight(.semibold)
                     .foregroundColor(frontColor)
             }
@@ -101,7 +107,19 @@ struct DateSlectView: View {
     }
 }
 
+
+
+/**
+ Course Element View
+ 
+ - name: course name
+ - place: course place
+ - begin: course begin time
+ - over: course over time
+ 
+ */
 struct DateView: View {
+    
     var name: String
     var place: String
     var begin: String
@@ -120,26 +138,23 @@ struct DateView: View {
                         .foregroundColor(color)
                     VStack(alignment: .leading) {
                         Text(name)
-                            .fontWeight(.bold)
+                            .font(.custom("AirbnbCereal_W_Bd", size: 14))
                             .foregroundColor(.black)
-                            .font(.system(size: 14))
+                            
                         Text(place)
-                            .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.system(size: 13))
+                            .font(.custom("AirbnbCereal_W_Md", size: 13))
                     }
                     Spacer()
                     
                     VStack(alignment: .trailing) {
                         Text(begin)
-                            .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.system(size: 13))
+                            .font(.custom("AirbnbCereal_W_Md", size: 13))
                             
                         Text(over)
-                            .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.system(size: 13))
+                            .font(.custom("AirbnbCereal_W_Md", size: 13))
                             
                     }
                 }

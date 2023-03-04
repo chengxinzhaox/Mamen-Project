@@ -24,8 +24,7 @@ struct Course_C_View: View {
             VStack {
                 HStack {
                     Text("Document List")
-                        .font(.system(size: 15))
-                        .fontWeight(.bold)
+                        .font(.custom("AirbnbCereal_W_Bd", size:15))
                         .foregroundColor(Color("main-green"))
                         .padding(.leading, 30)
                         .padding(.top, 15)

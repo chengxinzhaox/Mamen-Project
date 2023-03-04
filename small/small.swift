@@ -53,7 +53,7 @@ struct smallEntryView: View {
                 Spacer()
             }
             HStack {
-                Text("07/01")
+                Text(currentDate())
                     .font(.title)
                     .fontWeight(.medium)
                 Spacer()
@@ -124,3 +124,11 @@ struct small_Previews: PreviewProvider {
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
+
+func currentDate() -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "d"
+    let datetime = formatter.string(from: Date())
+    return datetime
+}
+

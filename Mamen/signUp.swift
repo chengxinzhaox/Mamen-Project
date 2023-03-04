@@ -59,9 +59,8 @@ struct signUp: View {
                             .foregroundColor(Color(red: 0.575, green: 0.802, blue: 0.782))
                             .overlay {
                                 Text("Sign Up")
-                                    .font(.system(size: 17))
+                                    .font(.custom("AirbnbCereal_W_Bd", size:17))
                                     .foregroundColor(Color.white)
-                                    .fontWeight(.bold)
                             }
                     }
                     .offset(y: 100)
@@ -116,8 +115,7 @@ struct S_input_ID: View {
                 .resizable()
                 .scaledToFit()
             TextField("Input your ID", text: $id)
-                .font(.body)
-                .fontWeight(.semibold)
+                .font(.custom("AirbnbCereal_W_Md", size:16))
                 .offset(x: 70)
         }
     }
@@ -131,8 +129,7 @@ struct S_input_pwd: View {
                 .resizable()
                 .scaledToFit()
             TextField("Input your password", text: $pwd)
-                .font(.body)
-                .fontWeight(.semibold)
+                .font(.custom("AirbnbCereal_W_Md", size:16))
                 .offset(x: 70)
         }
     }

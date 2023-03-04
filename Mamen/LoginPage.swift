@@ -36,9 +36,8 @@ struct LoginPage: View {
                             .foregroundColor(.white)
                             .overlay(){
                                 Text("Sign Up")
-                                    .font(.system(size: 17))
+                                    .font(.custom("AirbnbCereal_W_Bd", size:17))
                                     .foregroundColor(Color("main-green"))
-                                    .fontWeight(.bold)
                             }
 //                            .foregroundColor(Color(red: 0.575, green: 0.802, blue: 0.782))
                     }
@@ -52,9 +51,8 @@ struct LoginPage: View {
                             .foregroundColor(Color(red: 0.575, green: 0.802, blue: 0.782))
                             .overlay(){
                                 Text("Login")
-                                    .font(.system(size: 17))
+                                    .font(.custom("AirbnbCereal_W_Bd", size:17))
                                     .foregroundColor(Color.white)
-                                    .fontWeight(.bold)
                             }
                             
                     }

@@ -32,13 +32,11 @@ struct LiangView: View {
                                 .clipShape(Circle())
                         }
                         Text("Leno Liang")
-                            .font(.system(size: 30))
-                            .fontWeight(.heavy)
+                            .font(.custom("AirbnbCereal_W_Bd", size:30))
                             .foregroundColor(Color.white)
                         Text("Software Development with C and Cpp")
-                            .font(.system(size: 15))
+                            .font(.custom("AirbnbCereal_W_Md", size:15))
                             .offset(y: 4)
-                            .fontWeight(.medium)
                             .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.786))
                     }
                     .padding(.top, 90)
@@ -60,8 +58,7 @@ struct LiangView: View {
                         Spacer()
                         HStack {
                             Text("Contact")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                                .font(.custom("AirbnbCereal_W_Bd", size:18))
                                 .foregroundColor(Color("main-green"))
                                 .padding(.top, 10)
                                 .padding(.leading, 25)
@@ -74,13 +71,13 @@ struct LiangView: View {
                                 .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.849), radius: 4, x: 1, y: 1)
                             HStack {
                                 Text("E-mail")
-                                    .font(.system(size: 15))
+                                    .font(.custom("AirbnbCereal_W_Bd", size:15))
                                     .fontWeight(.medium)
                                     .foregroundColor(Color.gray)
                                     .offset(x: -65)
 
                                 Text("leno@zy.cdut.cn")
-                                    .font(.system(size: 15))
+                                    .font(.custom("AirbnbCereal_W_Md", size:15))
                                     .fontWeight(.medium)
                                     .offset(x: 55)
                             }
@@ -88,8 +85,7 @@ struct LiangView: View {
 
                         HStack {
                             Text("Office")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                                .font(.custom("AirbnbCereal_W_Bd", size:18))
                                 .foregroundColor(Color("main-green"))
                                 .padding(.top, 5)
                                 .padding(.leading, 25)
@@ -100,28 +96,24 @@ struct LiangView: View {
                             VStack(alignment: .leading) {
                                 HStack {
                                     Text("WORK TIME")
-                                        .font(.system(size: 13))
-                                        .fontWeight(.bold)
+                                        .font(.custom("AirbnbCereal_W_Bd", size:13))
                                         .foregroundColor(Color.gray)
                                         .padding(.top, 10)
                                 }
                                 HStack {
                                     Text("9:00AM - 7:00PM")
-                                        .font(.system(size: 10))
-                                        .fontWeight(.semibold)
+                                        .font(.custom("AirbnbCereal_W_Md", size:10))
                                         .foregroundColor(Color.gray)
                                 }
                             }
                             Spacer()
                             VStack(alignment: .trailing) {
                                 Text("OFFICE LOCATION")
-                                    .font(.system(size: 13))
-                                    .fontWeight(.bold)
+                                    .font(.custom("AirbnbCereal_W_Bd", size:13))
                                     .foregroundColor(Color.gray)
                                     .padding(.top, 10)
                                 Text("8 Building, CDUT")
-                                    .font(.system(size: 10))
-                                    .fontWeight(.semibold)
+                                    .font(.custom("AirbnbCereal_W_Md", size:10))
                                     .foregroundColor(Color.gray)
                             }
                             .padding(.trailing, 35)

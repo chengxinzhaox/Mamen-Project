@@ -19,23 +19,23 @@ struct ContentView: View {
             TabView(selection: $select) {
                 HomeView()
                     .tabItem {
-                        Label("Home", systemImage: "house")
+                        Label("", image: select==1 ? "Home_on" : "Home")
                     }
                     .tag(1)
                 Course()
                     .tabItem {
-                        Label("Course", systemImage: "book")
+                        Label("", image: select==2 ? "Course_on" : "Course")
                     }
                     .tag(2)
                     CalendarView()
                     .tabItem {
-                        Label("Calender", systemImage: "calendar")
+                        Label("", image: select==3 ? "Calendar_on" : "Calendar")
                     }
                     .tag(3)
 
                 Person().offset(y: 40)
                     .tabItem {
-                        Label("Me", systemImage: "person")
+                        Label("", image: select==4 ? "Person_on" : "Person")
                     }
                     .tag(4)
 

@@ -17,7 +17,7 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Text("\(Date(), style: .date)")
-                                .font(.system(size: 17))
+                                .font(.custom("AirbnbCereal_W_Md", size: 17))
                                 .fontWeight(/*@START_MENU_TOKEN@*/ .semibold/*@END_MENU_TOKEN@*/)
                                 .foregroundColor(.gray)
                                 .listRowSeparator(.hidden)
@@ -40,7 +40,7 @@ struct HomeView: View {
                     VStack{
                         HStack {
                             Text("Message")
-                                .font(.system(size: 18))
+                                .font(.custom("AirbnbCereal_W_Bd", size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("main-green"))
                                 .padding(.leading)
@@ -68,8 +68,7 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Text("Your Day")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                                .font(.custom("AirbnbCereal_W_Bd", size: 18))
                                 .foregroundColor(Color("main-green"))
                                 .padding(.leading)
                             Spacer()
@@ -84,7 +83,7 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Text("Useful Tools")
-                                .font(.system(size: 18))
+                                .font(.custom("AirbnbCereal_W_Bd", size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("main-green"))
                                 .padding(.leading)
@@ -92,19 +91,19 @@ struct HomeView: View {
                         }
                         HStack {
                             NavigationLink(destination: LibaryView()){
-                                ToolsView(name: "Libary", icon: "books.vertical.fill")
+                                ToolsView(name: "Libary", icon: "Book")
                             }
                             
                             NavigationLink(destination: CourseSlectView()){
-                                ToolsView(name: "Course", icon: "filemenu.and.selection")
+                                ToolsView(name: "Course", icon: "Course 1")
                             }
                             
-                            ToolsView(name: "Test", icon: "pencil.line")
+                            ToolsView(name: "Test", icon: "Exam")
                         }
                         HStack {
-                            ToolsView(name: "Pay", icon: "creditcard.fill")
-                            ToolsView(name: "Room", icon: "studentdesk")
-                            ToolsView(name: "Drop out", icon: "square.and.arrow.up.trianglebadge.exclamationmark")
+                            ToolsView(name: "Pay", icon: "Pay")
+                            ToolsView(name: "Room", icon: "Room")
+                            ToolsView(name: "Drop out", icon: "Drop")
                         }
                     }
                     
@@ -139,37 +138,34 @@ struct DadLineView: View {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text(name)
-                        .font(.system(size: 15))
+                        .font(.custom("AirbnbCereal_W_Bd", size: 15))
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                     Text(inf)
-                        .font(.system(size: 10))
+                        .font(.custom("AirbnbCereal_W_Bk", size: 10))
                         .fontWeight(.medium)
                         .foregroundColor(.gray)
                         .offset(y: 2)
                     HStack {
                         Image(systemName: "calendar")
                             .foregroundColor(Color.white)
-                            .font(.system(size: 10))
+                            .font(.system(size: 11))
                         Text(time)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
-                            .font(.system(size: 10))
+                            .font(.custom("AirbnbCereal_W_Md", size: 11))
                     }
                     .offset(y: 10)
                 }
                 .offset(y: -7)
                 HStack {
                     Text("DUE")
-                        .font(.system(size: 8))
-                        .fontWeight(.bold)
+                        .font(.custom("AirbnbCereal_W_Bd", size: 8))
                         .foregroundColor(Color.white)
                     Text(DUO_day)
-                        .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .font(.system(size: 8))
-
-                        .offset(x: 130)
+                        .font(.custom("AirbnbCereal_W_Bd", size: 8))
+                        .offset(x: 135)
                 }
                 .offset(y: 11)
                 ZStack(alignment: .leading) {
@@ -182,7 +178,7 @@ struct DadLineView: View {
                         .cornerRadius(10)
                         .foregroundColor(Color("main-green"))
                 }
-                .offset(y: 8)
+                .offset(y: 5)
             }
         }
         .padding(.trailing, 10)
@@ -200,11 +196,11 @@ struct ToolsView: View {
             .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.92), radius: 4, x: 0, y: 0)
             .overlay {
                 VStack {
-                    Image(systemName: icon)
-                        .foregroundColor(.white)
+                    Image(icon)
+                        .offset(y:4)
                     Text(name)
                         .foregroundColor(.white)
-                        .font(.system(size: 12))
+                        .font(.custom("AirbnbCereal_W_xBd", size: 12))
                         .fontWeight(.bold)
                         .offset(y: 4)
                 }
@@ -232,15 +228,14 @@ struct DayView: View {
                         .foregroundColor(color)
                     VStack(alignment: .leading){
                         Text(name)
-                            .fontWeight(.bold)
                             .foregroundColor(.black)
-                            .font(.system(size: 12))
-                            .offset(y: -1)
+                            .font(.custom("AirbnbCereal_W_Bd", size: 12))
+//                            .offset(y: -1)
                         Text(place)
                             .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.system(size: 11))
-                            .offset(y: -1)
+                            .font(.custom("AirbnbCereal_W_Md", size:10))
+//                            .offset(y: -1)
                     }
                     Spacer()
                     
@@ -248,13 +243,13 @@ struct DayView: View {
                         Text(begin)
                             .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.system(size: 10))
-                            .offset(y: -1)
+                            .font(.custom("AirbnbCereal_W_Md", size:10))
+//                            .offset(y: -1)
                         Text(over)
                             .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.system(size: 10))
-                            .offset(y: -1)
+                            .font(.custom("AirbnbCereal_W_Md", size:10))
+//                            .offset(y: -1)
                     }
                 }
                 .padding(.trailing, 12)
@@ -279,16 +274,16 @@ struct MassageView: View {
                 Text(name)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
-                    .font(.system(size: 10))
+                    .font(.custom("AirbnbCereal_W_Bd", size:10))
                 Text(massage)
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
-                    .font(.system(size: 10))
+                    .font(.custom("AirbnbCereal_W_Md", size:10))
                 Spacer()
                 Text(time)
                     .fontWeight(.bold)
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.809))
-                    .font(.system(size: 10))
+                    .font(.custom("AirbnbCereal_W_Md", size:10))
             }
             .padding(.trailing, 10)
             .padding(.leading, 10)

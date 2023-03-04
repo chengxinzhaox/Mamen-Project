@@ -13,59 +13,78 @@ struct SettingView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    NavigationLink(destination:
-                        LibaryView()
-                            .navigationTitle("Perosnal Information")
-                    ) {
-                        SettingElementView(icon: "person.fill", name: "Perosnal Information", color: Color(hex: "FFA61E"))
-                    }
-
+            VStack {
+                HStack {
+                    Text("Setting")
+                        .font(.custom("AirbnbCereal_W_Bd", size: 25))
+                        .foregroundColor(Color("main-green"))
+                    Spacer()
                 }
-//            header: {
-//                    Text("personal strring")
-//                }
-                Section {
+                .padding([.top, .leading, .bottom])
+                
+                Group{
+                    Spacer()
+                        .frame(height: 10)
+                    Image("Back_illustrate")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 190)
+                    
+                    Spacer()
+                        .frame(height: 40)
+                }
+                
+
+                NavigationLink(destination:
+                    LibaryView()
+                        .navigationTitle("Perosnal Information")
+                ) {
+                    SettingElementView(icon: "Person_Black", name: "Perosnal Information", color: Color(hex: "FFA61E"))
+                }
+
+                Divider_Person()
+                
+                NavigationLink(destination:
+                    LibaryView()
+                        .navigationTitle("Perosnal Information")
+                ) {
+                    SettingElementView(icon: "About", name: "About Us", color: Color(hex: "FFA61E"))
+                }
+                
+                Divider_Person()
+
+                HStack {
+                    Text("Log Out")
+                        .font(.custom("AirbnbCereal_W_Md", size: 15))
+                        .foregroundColor(.red)
+                    Spacer()
+                }
+                .padding([.top, .leading])
+                Spacer()
+
+                Group {
                     HStack {
                         Spacer()
-                        Text("Log Out")
-                            .foregroundColor(.red)
+                        Image("SettingLogo")
+                            .resizable()
+                            .frame(width: 60, height: 60)
                         Spacer()
                     }
-                } footer: {
-                    VStack {
+                    .padding(.bottom, -4.0)
+                    HStack {
                         Spacer()
-                        HStack {
-                            Spacer()
-                            Image("SettingLogo")
-                                .resizable()
-                                .frame(width: 60, height: 60)
-                            Spacer()
-                        }
-                        .padding(.bottom, -4.0)
-                        HStack {
-                            Text("Manen v1.08")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color.gray)
-                                .fontWeight(.semibold)
-                            Image(systemName: "checkmark.seal.fill")
-                                .foregroundColor(.accentColor)
-                        }
+                        Text("Manen v1.10")
+                            .font(.custom("AirbnbCereal_W_Md", size: 12))
+                            .foregroundColor(Color.gray)
+                            .fontWeight(.semibold)
+                        Image(systemName: "checkmark.seal.fill")
+                            .foregroundColor(.accentColor)
+                        Spacer()
                     }
                 }
-            }
 
-            .navigationBarTitle("Setting", displayMode: .inline)
-            .toolbar {
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "chevron.down")
-                }
-                Spacer()
+                .accentColor(Color("main-green"))
             }
-            .accentColor(Color("main-green"))
         }
     }
 }
@@ -83,15 +102,29 @@ struct SettingElementView: View {
 
     var body: some View {
         HStack {
-            RoundedRectangle(cornerRadius: 7, style: .continuous)
-                .frame(width: 35, height: 35)
-                .foregroundColor(color)
-                .overlay {
-                    Image(systemName: icon)
-                        .font(.system(size: 19))
-                        .foregroundColor(.white)
-                }
+            Image(icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 18)
+                .fontWeight(.light)
+                .foregroundColor(.black)
             Text(name)
+                .font(.custom("AirbnbCereal_W_Bk", size: 17))
+                .foregroundColor(.black)
+                .padding(.leading, 7)
+            Spacer()
+        }
+        .padding([.top, .leading])
+    }
+}
+
+struct Divider_Person: View {
+    var body: some View {
+        HStack {
+            RoundedRectangle(cornerRadius: 100)
+                .frame(width: 350, height: 1)
+                .foregroundColor(Color(hex: "DDDDDD"))
+            
         }
     }
 }
