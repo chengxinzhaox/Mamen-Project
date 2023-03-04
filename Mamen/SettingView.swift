@@ -73,7 +73,7 @@ struct SettingView: View {
                     .padding(.bottom, -4.0)
                     HStack {
                         Spacer()
-                        Text("Manen v1.10")
+                        Text("Manen v1.11")
                             .font(.custom("AirbnbCereal_W_Md", size: 12))
                             .foregroundColor(Color.gray)
                             .fontWeight(.semibold)
@@ -95,36 +95,4 @@ struct SettingView_Previews: PreviewProvider {
     }
 }
 
-struct SettingElementView: View {
-    var icon: String
-    var name: String
-    var color: Color
 
-    var body: some View {
-        HStack {
-            Image(icon)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 18)
-                .fontWeight(.light)
-                .foregroundColor(.black)
-            Text(name)
-                .font(.custom("AirbnbCereal_W_Bk", size: 17))
-                .foregroundColor(.black)
-                .padding(.leading, 7)
-            Spacer()
-        }
-        .padding([.top, .leading])
-    }
-}
-
-struct Divider_Person: View {
-    var body: some View {
-        HStack {
-            RoundedRectangle(cornerRadius: 100)
-                .frame(width: 350, height: 1)
-                .foregroundColor(Color(hex: "DDDDDD"))
-            
-        }
-    }
-}

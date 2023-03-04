@@ -24,7 +24,7 @@ struct LibaryView: View {
                 .foregroundColor(Color("main-green"))
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("Course Select", displayMode: .inline)
+        .navigationBarTitle("Libary", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {

@@ -12,6 +12,7 @@ struct CourseSlectView: View {
     @Environment(\.dismiss) var dismiss
         
     var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
+    
     var courseImags = ["C_imag", "HCI_imag", "Wad_imag", "Java_imag", "Database_imag", "Swift_imag", "CSS_imag", "GE_imag"]
     
     var types = ["Basic Course", "Software Engineering", "Software Engineering", "Basic Course", "Software Engineering", "Basic Course", "Software Engineering", "Pre-sessional Course"]
