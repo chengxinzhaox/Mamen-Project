@@ -47,9 +47,10 @@ struct HomeView: View {
                             Spacer()
                         }
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
                             .frame(width: 350, height: 75)
-                            .foregroundColor(Color.white)
-                            .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.92), radius: 4, x: 0, y: 0)
+                            //.foregroundColor(Color.white)
+                            
                             .overlay(){
                                 VStack{
                                     Group{

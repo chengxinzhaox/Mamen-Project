@@ -70,9 +70,12 @@ struct TeacherView: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 90)
-                .frame(height: 70)
+            RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(.white)
+                .frame(width: 350, height: 70)
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
+                .frame(width: 350, height: 70)
             HStack {
                 ZStack {
                     Image(image)
@@ -84,7 +87,7 @@ struct TeacherView: View {
                         .frame(width: 50)
                         .foregroundColor(Color("highlight-blue"))
                 }
-                .padding(.leading, 25)
+                .padding(.leading, 37)
 
                 VStack(alignment: .leading) {
                     Text(name)
@@ -113,9 +116,10 @@ struct Course_card: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
                 .frame(width: 150, height: 110)
                 .foregroundColor(.white)
-                .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.708), radius: 4, x: 1, y: 1)
+                
             VStack {
                 Image(image)
                     .resizable()
@@ -142,8 +146,7 @@ struct Course_card: View {
             }
             
         }
-        .padding(.leading, 10)
-        .padding(.trailing, 10)
+        .padding(.leading, 15)
         .padding(.bottom, 10)
     }
 }
@@ -238,9 +241,8 @@ struct DateView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10, style: .continuous)
+            .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
             .frame(width: 350, height: 60)
-            .foregroundColor(Color.white)
-            .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.92), radius: 2, x: 0, y: 0)
             .overlay {
                 HStack {
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
@@ -289,7 +291,6 @@ struct DeadLineView: View {
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .frame(width: 210, height: 100)
                 .foregroundColor(Color(red: 0.823, green: 0.888, blue: 0.887))
-                .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.92), radius: 4, x: 0, y: 0)
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text(name)
@@ -352,7 +353,6 @@ struct ToolsView: View {
         RoundedRectangle(cornerRadius: 20, style: .continuous)
             .frame(width: 110, height: 80)
             .foregroundColor(Color("main-green"))
-            .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.92), radius: 4, x: 0, y: 0)
             .overlay {
                 VStack {
                     Image(icon)
@@ -367,6 +367,7 @@ struct ToolsView: View {
     }
 }
 
+// MARK: - DayView view
 struct DayView: View {
     
     var name: String
@@ -377,9 +378,9 @@ struct DayView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10, style: .continuous)
+            .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
             .frame(width: 350, height: 45)
             .foregroundColor(Color.white)
-            .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.92), radius: 4, x: 0, y: 0)
             .overlay {
                 HStack {
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
@@ -450,6 +451,36 @@ struct MassageView: View {
 }
 
 
+// MARK: - Hex Color
+
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue: Double(b) / 255,
+            opacity: Double(a) / 255
+        )
+    }
+}
+
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
@@ -459,6 +490,19 @@ struct HomeView_Previews: PreviewProvider {
 struct Tools_Previews: PreviewProvider {
     static var previews: some View {
         ToolsView(name: "Pay", icon: "Pay")
+        DateView(name: "C++", place: "8201", begin: "20:00", over: "22:00", color: .gray)
     }
 }
 
+struct CourseElement_Previews: PreviewProvider {
+    static var previews: some View {
+        Course()
+    }
+}
+
+
+struct CoursePage_Previews: PreviewProvider {
+    static var previews: some View {
+        Course()
+    }
+}

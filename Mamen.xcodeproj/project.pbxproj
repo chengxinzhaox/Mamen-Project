@@ -184,7 +184,6 @@
 				FBA4DFD729657E0800A9DB14 /* CalendarView.swift */,
 				6267D17A293DAD60005A3392 /* Assets.xcassets */,
 				6267D17C293DAD60005A3392 /* Preview Content */,
-				FB1677F4295497A700861EDB /* CourseFile.swift */,
 			);
 			path = Mamen;
 			sourceTree = "<group>";
@@ -222,6 +221,7 @@
 		FB78E9152955E48200090D3E /* Func */ = {
 			isa = PBXGroup;
 			children = (
+				FB1677F4295497A700861EDB /* CourseFile.swift */,
 				FB0A2D7A29B37CBF00044814 /* TeachersView.swift */,
 				FB0A2D7C29B3906100044814 /* Course_Down_View.swift */,
 				FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */,

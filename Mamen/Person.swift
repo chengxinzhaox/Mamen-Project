@@ -176,70 +176,81 @@ struct StudentCard: View {
                 .padding(.all, 15)
             ZStack {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .fill(.white)
+                    .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
                     .frame(height: 78)
-                    .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.765, opacity: 0.542), radius: 3, x: 1, y: 1)
                 HStack {
-                    VStack(alignment: .leading) {
-                        Text("Balance")
-                            .font(.custom("AirbnbCereal_W_Md", size:15))
-                            .foregroundColor(Color.black)
-                        Text("CN¥\(String(money))")
-                            .foregroundColor(Color.black)
-                            .font(.custom("AirbnbCereal_W_Bd", size:25))
-                    }
-                    .padding(.vertical, 15)
-                    .offset(x: -25)
+                    ZStack{
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Balance")
+                                    .font(.custom("AirbnbCereal_W_Md", size:15))
+                                    .foregroundColor(Color.black)
+                                Text("CN¥\(String(money))")
+                                    .foregroundColor(Color.black)
+                                    .font(.custom("AirbnbCereal_W_Bd", size:25))
+                            }
+                            .padding(.leading)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
+                            Group{
+                                Button {
+                                    self.isshow.toggle()
+                                    TapticEngine.impact.feedback(.medium)
+                                } label: {
+                                    RoundedRectangle(cornerRadius: 90, style: .continuous)
+                                        .frame(width: 100, height: 37)
+                                        .foregroundColor(.black)
+                                        .overlay {
+                                            Text("Top Up")
+                                                .font(.custom("AirbnbCereal_W_Bd", size:15))
+                                                .fontWeight(.bold)
+                                                .foregroundColor(Color.white)
+                                        }
+                                }
+                                .actionSheet(isPresented: $isshow) {
+                                    ActionSheet(title: Text("Please select"), buttons: [.default(Text("20RMB")) {
+                                        ProgressHUD.show()
+                                        Task {
+                                            // 休眠0.5秒
+                                            try await Task
+                                                .sleep(nanoseconds: 500000000)
+                                            ProgressHUD.showSucceed("Success")
+                                            self.money += 20.0
+                                            TapticEngine.impact.feedback(.medium)
+                                        }
 
-                    Button {
-                        self.isshow.toggle()
-                        TapticEngine.impact.feedback(.medium)
-                    } label: {
-                        RoundedRectangle(cornerRadius: 90, style: .continuous)
-                            .frame(width: 100, height: 37)
-                            .foregroundColor(.black)
-                            .overlay {
-                                Text("Top Up")
-                                    .font(.custom("AirbnbCereal_W_Bd", size:15))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(Color.white)
+                                    }, .default(Text("50RMB")) {
+                                        ProgressHUD.show()
+                                        Task {
+                                            try await Task
+                                                .sleep(nanoseconds: 500000000)
+                                            ProgressHUD.showSucceed("Success")
+                                            self.money += 50.0
+                                            TapticEngine.impact.feedback(.medium)
+                                        }
+                                    }, .default(Text("100RMb")) {
+                                        ProgressHUD.show()
+                                        Task {
+                                            try await Task
+                                                .sleep(nanoseconds: 500000000)
+                                            ProgressHUD.showSucceed("Success")
+                                            self.money += 100.0
+                                            TapticEngine.impact.feedback(.medium)
+                                        }
+                                    }, .cancel()])
+                                }
                             }
+                            .padding(.trailing)
+                        }
+                        
                     }
-                    .offset(x: 3)
-                    .padding(.leading, 20)
-                    .actionSheet(isPresented: $isshow) {
-                        ActionSheet(title: Text("Please select"), buttons: [.default(Text("20RMB")) {
-                            ProgressHUD.show()
-                            Task {
-                                // 休眠0.5秒
-                                try await Task
-                                    .sleep(nanoseconds: 500000000)
-                                ProgressHUD.showSucceed("Success")
-                                self.money += 20.0
-                                TapticEngine.impact.feedback(.medium)
-                            }
+                    
+                    
+                    
 
-                        }, .default(Text("50RMB")) {
-                            ProgressHUD.show()
-                            Task {
-                                try await Task
-                                    .sleep(nanoseconds: 500000000)
-                                ProgressHUD.showSucceed("Success")
-                                self.money += 50.0
-                                TapticEngine.impact.feedback(.medium)
-                            }
-                        }, .default(Text("100RMb")) {
-                            ProgressHUD.show()
-                            Task {
-                                try await Task
-                                    .sleep(nanoseconds: 500000000)
-                                ProgressHUD.showSucceed("Success")
-                                self.money += 100.0
-                                TapticEngine.impact.feedback(.medium)
-                            }
-                        }, .cancel()])
-                    }
-                    .offset(x: 25)
+                    
                 }
             }.padding(.horizontal, 25)
 
@@ -247,29 +258,4 @@ struct StudentCard: View {
     }
 }
 
-extension Color {
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        let a, r, g, b: UInt64
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (1, 1, 1, 0)
-        }
 
-        self.init(
-            .sRGB,
-            red: Double(r) / 255,
-            green: Double(g) / 255,
-            blue: Double(b) / 255,
-            opacity: Double(a) / 255
-        )
-    }
-}
