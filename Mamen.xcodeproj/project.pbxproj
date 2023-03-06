@@ -27,6 +27,9 @@
 		FB49E301296D703F00558018 /* small.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB49E2FD296D703E00558018 /* small.intentdefinition */; };
 		FB49E302296D703F00558018 /* small.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB49E2FD296D703E00558018 /* small.intentdefinition */; };
 		FB49E305296D703F00558018 /* smallExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB49E2F0296D703E00558018 /* smallExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB58332529B61DB2005784A8 /* Course_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58332429B61DB2005784A8 /* Course_class.swift */; };
+		FB58332729B62B06005784A8 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58332629B62B06005784A8 /* ActivityView.swift */; };
+		FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58332829B62D8A005784A8 /* CourseDetailView.swift */; };
 		FB5D2A24293DB6DA006FD3DD /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2A23293DB6DA006FD3DD /* login.swift */; };
 		FB5D2A26293DBD1C006FD3DD /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2A25293DBD1C006FD3DD /* signUp.swift */; };
 		FB7419DC295022050093BE88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7419DB295022050093BE88 /* Course.swift */; };
@@ -42,7 +45,6 @@
 		FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */; };
 		FBDA4FDB29B595DC0018071F /* Slected.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA4FDA29B595DC0018071F /* Slected.swift */; };
 		FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */; };
-		FBDFB5BA29B18EC600C20197 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5B929B18EC600C20197 /* Restaurant.swift */; };
 		FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5BF29B19B4F00C20197 /* TestView.swift */; };
 		FBDFB5C329B1CD1E00C20197 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5C229B1CD1E00C20197 /* ChatGPTView.swift */; };
 		FBDFB5C529B1CD6800C20197 /* ChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5C429B1CD6800C20197 /* ChatGPT.swift */; };
@@ -100,6 +102,9 @@
 		FB49E2FD296D703E00558018 /* small.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = small.intentdefinition; sourceTree = "<group>"; };
 		FB49E2FE296D703F00558018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB49E300296D703F00558018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB58332429B61DB2005784A8 /* Course_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_class.swift; sourceTree = "<group>"; };
+		FB58332629B62B06005784A8 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		FB58332829B62D8A005784A8 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		FB5D2A23293DB6DA006FD3DD /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		FB5D2A25293DBD1C006FD3DD /* signUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		FB7419DB295022050093BE88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -116,7 +121,6 @@
 		FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		FBDA4FDA29B595DC0018071F /* Slected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slected.swift; sourceTree = "<group>"; };
 		FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSlectView.swift; sourceTree = "<group>"; };
-		FBDFB5B929B18EC600C20197 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		FBDFB5BF29B19B4F00C20197 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		FBDFB5C229B1CD1E00C20197 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
 		FBDFB5C429B1CD6800C20197 /* ChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT.swift; sourceTree = "<group>"; };
@@ -245,9 +249,11 @@
 			children = (
 				FB78E933295F17C600090D3E /* LibaryView.swift */,
 				FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */,
-				FBDFB5B929B18EC600C20197 /* Restaurant.swift */,
+				FB58332829B62D8A005784A8 /* CourseDetailView.swift */,
 				FBDFB5BF29B19B4F00C20197 /* TestView.swift */,
 				FBDA4FDA29B595DC0018071F /* Slected.swift */,
+				FB58332429B61DB2005784A8 /* Course_class.swift */,
+				FB58332629B62B06005784A8 /* ActivityView.swift */,
 			);
 			path = "Useful Tools";
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */,
 				FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */,
 				FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */,
+				FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */,
 				FB7419DC295022050093BE88 /* Course.swift in Sources */,
 				FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */,
 				FB78E9142955E10700090D3E /* WebView.swift in Sources */,
@@ -390,13 +397,14 @@
 				FBDFB5C529B1CD6800C20197 /* ChatGPT.swift in Sources */,
 				FB5D2A24293DB6DA006FD3DD /* login.swift in Sources */,
 				FB0A2D7D29B3906100044814 /* Course_Down_View.swift in Sources */,
+				FB58332529B61DB2005784A8 /* Course_class.swift in Sources */,
 				FB5D2A26293DBD1C006FD3DD /* signUp.swift in Sources */,
 				FBDFB5C329B1CD1E00C20197 /* ChatGPTView.swift in Sources */,
 				6267D179293DAD5F005A3392 /* ContentView.swift in Sources */,
 				FB78E92A2957195000090D3E /* HomeView.swift in Sources */,
+				FB58332729B62B06005784A8 /* ActivityView.swift in Sources */,
 				FB78E91D29560A8300090D3E /* MapViewNoBack.swift in Sources */,
 				6267D185293DADD8005A3392 /* LoginPage.swift in Sources */,
-				FBDFB5BA29B18EC600C20197 /* Restaurant.swift in Sources */,
 				FB9850DF294CA618000DDA45 /* Person.swift in Sources */,
 				FBDA4FDB29B595DC0018071F /* Slected.swift in Sources */,
 				6267D177293DAD5F005A3392 /* MamenApp.swift in Sources */,

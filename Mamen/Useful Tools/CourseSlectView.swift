@@ -8,44 +8,52 @@
 import SwiftUI
 
 struct CourseSlectView: View {
+    
     @Environment(\.dismiss) var dismiss
-        
-    var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
     
-    @State var courseScores = [72, 90, 45, 23, 82, 88, 63, 43]
-    
-    @State var courseImags = ["C_imag", "HCI_imag", "Wad_imag", "Java_imag", "Database_imag", "Swift_imag", "CSS_imag", "GE_imag"]
-    
-    @State var types = ["Basic Course", "Software Engineering", "Software Engineering", "Basic Course", "Software Engineering", "Basic Course", "Software Engineering", "Pre-sessional Course"]
-    
-    @State var Teachers = ["Leon Liang", "Jons Slemmer", "Aymen Chebira", "Gore Jiang", "Maged Refat", "Tim Cook", "Bill Gates", "Sam Welsh"]
-    
-    @State var CourseSlected = [false, false, false, false, false, false, false, false]
-    
+    @State var Course_classes = [
+        Course_class(name: "C&C++ Development", image: "C_imag", type: "Basic Course", teacher: "Leon Liang", slected: false),
+        Course_class(name: "Human Interface", image: "HCI_imag", type: "Software Engineering", teacher: "Jons Slemmer", slected: false),
+        Course_class(name: "Web Application Development", image: "Wad_imag", type: "Software Engineering", teacher: "Aymen Chebira", slected: false),
+        Course_class(name: "JAVA Development", image: "Java_imag", type: "Basic Course", teacher: "Gore Jiang", slected: false),
+        Course_class(name: "Data Base", image: "Database_imag", type: "Software Engineering", teacher: "Maged Refat", slected: false),
+        Course_class(name: "Swift Development", image: "Swift_imag", type: "Software Engineering", teacher: "Tim Cook", slected: false),
+        Course_class(name: "CSS & HTML", image: "CSS_imag", type: "Software Engineering", teacher: "Bill Gates", slected: false),
+        Course_class(name: "Generic English", image: "GE_imag", type: "Pre-sessional Course", teacher: "Sam Welsh", slected: false),
+    ]
     
     var body: some View {
         ZStack {
             VStack {
                 List {
-                    ForEach(courseNames.indices, id: \.self) { index in
-                        HStack(alignment: .top) {
-                            Image(courseImags[index])
-                                .resizable()
-                                .frame(width: 120, height: 118)
-                                .cornerRadius(20)
-                                .padding(.trailing, 10)
-                            VStack(alignment: .leading) {
-                                Text(courseNames[index])
-                                    .font(.custom("AirbnbCereal_W_Md", size: 18))
-                                Text(types[index])
-                                    .font(.custom("AirbnbCereal_W_Bk", size: 15))
-                                    .foregroundColor(.gray)
-                                Text(Teachers[index])
-                                    .font(.custom("AirbnbCereal_W_Bk", size: 15))
-                                    .foregroundColor(.gray)
+                    ForEach(Course_classes.indices, id: \.self) { index in
+                        ZStack(alignment: .leading){
+                            NavigationLink(destination: CourseDetailView(course: Course_classes[index])){
+                                EmptyView()
                             }
+                            .opacity(0)
+                            
+                            BasicRow(course: $Course_classes[index])
                         }
+                            .swipeActions(edge: .leading, allowsFullSwipe: false,content: {
+                                Button{
+
+                                }label: {
+                                    Image(systemName: "heart")
+                                }
+                                .tint(.green)
+
+                                Button{
+
+                                }label: {
+                                    Image(systemName: "square.and.arrow.up")
+                                }
+                                .tint(.orange)
+                            })
                     }
+                    .onDelete(perform: { indexSet in
+                        Course_classes.remove(atOffsets: indexSet)
+                    })
                     .listRowSeparator(.hidden)
                 }
                 
@@ -105,5 +113,74 @@ struct CourseSlectView: View {
 struct CourseSlectView_Previews: PreviewProvider {
     static var previews: some View {
         CourseSlectView()
+    }
+}
+
+struct BasicRow: View {
+    
+    @State private var shouwOptions = false
+    @Binding var course: Course_class
+    
+    var body: some View {
+        HStack(alignment: .top) {
+            Image(course.image)
+                .resizable()
+                .frame(width: 120, height: 118)
+                .cornerRadius(20)
+                .padding(.trailing, 10)
+            VStack(alignment: .leading) {
+                Text(course.name)
+                    .font(.custom("AirbnbCereal_W_Md", size: 18))
+                Text(course.type)
+                    .font(.custom("AirbnbCereal_W_Bk", size: 15))
+                    .foregroundColor(.gray)
+                Text(course.teacher)
+                    .font(.custom("AirbnbCereal_W_Bk", size: 15))
+                    .foregroundColor(.gray)
+            }
+            if course.slected {
+                Spacer()
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.yellow)
+            }
+        }
+        .contextMenu {
+            Button(action: {
+               
+            }) {
+                HStack {
+                    Text("Reserve a table")
+                    Image(systemName: "phone")
+                }
+            }
+            
+            Button(action: {
+                self.course.slected.toggle()
+            }) {
+                HStack {
+                    Text(course.slected ? "Remove from favorites" : "Mark as favorite")
+                    Image(systemName: "heart")
+                }
+            }
+            
+            Button(action: {
+                self.shouwOptions.toggle()
+            }) {
+                HStack {
+                    Text("Share")
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
+        }
+        .sheet(isPresented: $shouwOptions) {
+
+            let defaultText = "Just checking in at \(course.name)"
+
+            if let imageToShare = UIImage(named: course.image) {
+                ActivityView(activityItems: [defaultText, imageToShare])
+            } else {
+                ActivityView(activityItems: [defaultText])
+            }
+        }
     }
 }
