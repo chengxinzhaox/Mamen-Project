@@ -67,8 +67,6 @@ struct CourseSlectView: View {
                                 .foregroundColor(.white)
                         }
                     }
-                Spacer()
-                    .frame(height: 20)
             }
         }
         .navigationBarBackButtonHidden(true)

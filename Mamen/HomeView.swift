@@ -111,11 +111,6 @@ struct HomeView: View {
                     }
                 
             }
-            .navigationTitle(Text("Home"))
-            .navigationViewStyle(StackNavigationViewStyle())
-        
-        
-        
     }
 
     struct HomeView_Previews: PreviewProvider {

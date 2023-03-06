@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var select: Int = 1
 
     init() {
         UITabBar.appearance().backgroundColor = .white
     }
-
+    
+    let naviTitle = ["Home", "", "", ""]
     var body: some View {
         NavigationView {
             TabView(selection: $select) {
                 HomeView()
-                    .navigationTitle(Text("Home"))
-                    .navigationViewStyle(StackNavigationViewStyle())
+//                    .navigationTitle(Text("Home"))
+//                    .navigationViewStyle(StackNavigationViewStyle())
                     .tabItem {
                         Label("", image: select==1 ? "Home_on" : "Home")
                     }
@@ -41,6 +43,8 @@ struct ContentView: View {
                     }
                     .tag(4)
             }
+            .navigationTitle(Text(naviTitle[select-1]))
+            .navigationViewStyle(StackNavigationViewStyle())
             .accentColor(Color("main-green")) // text color
             .onChange(of: self.select) { _ in
                 TapticEngine.impact.feedback(.medium)
