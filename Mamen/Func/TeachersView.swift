@@ -44,6 +44,7 @@ struct TeachersView: View {
                             VStack(alignment: .leading) {
                                 Text(TeacherName)
                                     .font(.custom("AirbnbCereal_W_Bd", size: 30))
+                                    //.foregroundColor(Color("main-green"))
                                     .foregroundColor(Color.black)
                                 HStack(alignment: .center) {
                                     Image("University")

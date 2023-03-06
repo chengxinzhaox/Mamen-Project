@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationStack {
-            ScrollView(showsIndicators: false){
-                VStack {
-                    
-                    //MARK: - Dadline view
+        
+            ScrollView(showsIndicators: false) {
+                
+                    // MARK: - Dadline view
+
                     VStack {
                         HStack {
                             Text("\(Date(), style: .date)")
@@ -36,8 +36,9 @@ struct HomeView: View {
                         .offset(y: -10)
                     }
 
-                    //MARK: - Message view
-                    VStack{
+                    // MARK: - Message view
+
+                    VStack {
                         HStack {
                             Text("Message")
                                 .font(.custom("AirbnbCereal_W_Bd", size: 18))
@@ -47,25 +48,25 @@ struct HomeView: View {
                             Spacer()
                         }
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
+                            .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
                             .frame(width: 350, height: 75)
-                            //.foregroundColor(Color.white)
-                            
-                            .overlay(){
-                                VStack{
-                                    Group{
+                            // .foregroundColor(Color.white)
+
+                            .overlay {
+                                VStack {
+                                    Group {
                                         MassageView(name: "Doctument", icon: "doc.text.fill", massage: "IPD have new doctument", time: "5 hours age")
                                         MassageView(name: "Daed Line", icon: "clock.fill", massage: "HCI have new daed line", time: "2 days age")
                                         MassageView(name: "Dead Line", icon: "clock.fill", massage: "C&C++ have new daed line", time: "2 days age")
                                     }
                                     .padding(.top, 0.1)
                                 }
-                                
                             }
                     }
                     .padding(.bottom)
-                    
-                    //MARK: - Day View
+
+                    // MARK: - Day View
+
                     VStack {
                         HStack {
                             Text("Your Day")
@@ -79,8 +80,9 @@ struct HomeView: View {
                         DayView(name: "C&C++", place: "6A102", begin: "4:30 PM", over: "6:00 PM", color: .cyan)
                     }
                     .padding(.bottom)
-                    
-                    //MARK: - Tools View
+
+                    // MARK: - Tools View
+
                     VStack {
                         HStack {
                             Text("Useful Tools")
@@ -91,14 +93,14 @@ struct HomeView: View {
                             Spacer()
                         }
                         HStack {
-                            NavigationLink(destination: LibaryView()){
+                            NavigationLink(destination: LibaryView()) {
                                 ToolsView(name: "Libary", icon: "Book")
                             }
-                            
-                            NavigationLink(destination: CourseSlectView()){
+
+                            NavigationLink(destination: CourseSlectView()) {
                                 ToolsView(name: "Select", icon: "Course 1")
                             }
-                            
+
                             ToolsView(name: "My Courses", icon: "Exam")
                         }
                         HStack {
@@ -107,13 +109,13 @@ struct HomeView: View {
                             ToolsView(name: "Drop out", icon: "Drop")
                         }
                     }
-                    
-                }
-                .navigationBarTitle("Home", displayMode: .automatic)
-                .listStyle(.plain)
-                .navigationViewStyle(StackNavigationViewStyle())
+                
             }
-        }
+            .navigationTitle(Text("Home"))
+            .navigationViewStyle(StackNavigationViewStyle())
+        
+        
+        
     }
 
     struct HomeView_Previews: PreviewProvider {
@@ -122,6 +124,3 @@ struct HomeView: View {
         }
     }
 }
-
-
-

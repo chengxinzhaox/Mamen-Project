@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @State private var select: Int = 1
-    
+
     init() {
         UITabBar.appearance().backgroundColor = .white
-        }
+    }
 
     var body: some View {
         NavigationView {
             TabView(selection: $select) {
                 HomeView()
+                    .navigationTitle(Text("Home"))
+                    .navigationViewStyle(StackNavigationViewStyle())
                     .tabItem {
                         Label("", image: select==1 ? "Home_on" : "Home")
                     }
@@ -28,7 +29,7 @@ struct ContentView: View {
                         Label("", image: select==2 ? "Course_on" : "Course")
                     }
                     .tag(2)
-                    CalendarView()
+                CalendarView()
                     .tabItem {
                         Label("", image: select==3 ? "Calendar_on" : "Calendar")
                     }
@@ -39,9 +40,8 @@ struct ContentView: View {
                         Label("", image: select==4 ? "Person_on" : "Person")
                     }
                     .tag(4)
-
             }
-            .accentColor(Color("main-green")) //text color
+            .accentColor(Color("main-green")) // text color
             .onChange(of: self.select) { _ in
                 TapticEngine.impact.feedback(.medium)
             }
