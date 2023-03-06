@@ -42,7 +42,7 @@ struct ContentView: View {
                     .tag(4)
             }
             .navigationTitle(Text(naviTitle[select-1]))
-            .navigationViewStyle(StackNavigationViewStyle())
+            //.navigationViewStyle(StackNavigationViewStyle())
             .accentColor(Color("main-green")) // text color
             .onChange(of: self.select) { _ in
                 TapticEngine.impact.feedback(.medium)

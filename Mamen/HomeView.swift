@@ -101,7 +101,10 @@ struct HomeView: View {
                                 ToolsView(name: "Select", icon: "Course 1")
                             }
 
-                            ToolsView(name: "My Courses", icon: "Exam")
+                            NavigationLink(destination: Slected()) {
+                                ToolsView(name: "My Courses", icon: "Exam")
+                            }
+                            
                         }
                         HStack {
                             ToolsView(name: "Pay", icon: "Pay")
