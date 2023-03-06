@@ -82,10 +82,7 @@ struct TeacherView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
-                    Circle()
-                        .stroke(lineWidth: 3)
-                        .frame(width: 50)
-                        .foregroundColor(Color("highlight-blue"))
+                    
                 }
                 .padding(.leading, 37)
 

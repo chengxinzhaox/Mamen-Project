@@ -53,20 +53,26 @@ struct CourseSlectView: View {
             }
             VStack {
                 Spacer()
-                RoundedRectangle(cornerRadius: 90, style: .continuous)
-                    .foregroundColor(Color("main-green"))
-                    .frame(width: 100, height: 45)
-                    .overlay {
-                        HStack {
-                            Image("List")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20)
-                            Text("List")
-                                .font(.custom("AirbnbCereal_W_Bd", size: 16))
-                                .foregroundColor(.white)
+                NavigationLink {
+                    Slected()
+                } label: {
+                    RoundedRectangle(cornerRadius: 90, style: .continuous)
+                        .foregroundColor(Color("main-green"))
+                        .frame(width: 100, height: 45)
+                        .overlay {
+                            HStack {
+                                Image("List")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 20)
+                                Text("List")
+                                    .font(.custom("AirbnbCereal_W_Bd", size: 16))
+                                    .foregroundColor(.white)
+                            }
                         }
-                    }
+                }
+
+                
             }
         }
         .navigationBarBackButtonHidden(true)

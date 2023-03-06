@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct Person: View {
-    
     @State private var isshow = false
     @State private var showSettingView = false
     @AppStorage("islogined") var islogined = false
     @AppStorage("userkey") var userkey = ""
     
-    
-
     var body: some View {
         ZStack {
             Image("ID card")
@@ -141,6 +138,7 @@ struct SubStructure: View {
                         .animation(.default, value: iscard)
                 } else {
                     Score()
+                        .offset(y: -70)
                         .animation(.default, value: iscard)
                 }
 
@@ -149,21 +147,117 @@ struct SubStructure: View {
     }
 }
 
-
 struct Score: View {
-    
-    
     var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
     
-    var courseScores = ["72", "90", "45", "23", "82", "88", "63", "43"]
+    var courseScores = [72, 90, 75, 73, 82, 88, 83, 83]
+    
+    func calculateGPA(score: Int) -> Double {
+        switch score {
+        case 90...100:
+            return 4.0
+        case 80...89:
+            return 3.0
+        case 70...79:
+            return 2.0
+        case 60...69:
+            return 1.0
+        default:
+            return 0.0
+        }
+    }
+        
+    var averageScore: Double {
+        let sum = courseScores.reduce(0, +)
+        return Double(sum) / Double(courseScores.count)
+    }
+        
+    var averageGPA: Double {
+        let gpaSum = courseScores.map { calculateGPA(score: $0) }.reduce(0, +)
+        return gpaSum / Double(courseScores.count)
+    }
     
     var body: some View {
         VStack {
             List {
-                ForEach(courseNames.indices, id: \.self){ index in
-                    ScoreElement(scoreName: courseNames[index], scoreNumber: courseScores[index])
+                HStack {
+                    ZStack {
+                        HStack {
+                            Image("GPA")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 17)
+                            Text("GPA")
+                                .font(.custom("AirbnbCereal_W_Bd", size: 15))
+                                .foregroundColor(Color("main-green"))
+                                
+                        }
+                        .offset(x: -35, y: -59)
+                        
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
+                            .frame(width: 160, height: 160)
+                        Group {
+                            Circle()
+                                .stroke(Color.gray, lineWidth: 10)
+                                .opacity(0.1)
+                            
+                            Circle()
+                                .trim(from: 0, to: CGFloat(averageGPA / 4.0))
+                                .stroke(Color("main-green"), lineWidth: 10)
+                                .rotationEffect(.degrees(-90))
+
+                            Text("\(averageGPA, specifier: "%.1f")")
+                                .foregroundColor(Color("main-green"))
+                                .font(.custom("AirbnbCereal_W_Bd", size: 19))
+                        }
+                        .offset(y: 15)
+                        .frame(width: 90, height: 90)
+                    }
+    
+                    Spacer()
+                    
+                    ZStack {
+                        HStack {
+                            Image("Score")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 17)
+                            Text("Average")
+                                .font(.custom("AirbnbCereal_W_Bd", size: 15))
+                                .foregroundColor(Color("main-green"))
+                                
+                        }
+                        .offset(x: -22, y: -59)
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
+                            .frame(width: 160, height: 160)
+                        Group {
+                            Circle()
+                                .stroke(Color.gray, lineWidth: 10)
+                                .opacity(0.1)
+                            
+                            Circle()
+                                .trim(from: 0, to: CGFloat(averageScore / 100.0))
+                                .stroke(Color("main-green"), lineWidth: 10)
+                                .rotationEffect(.degrees(-90))
+                            Text("\(averageScore, specifier: "%.1f")")
+                                .foregroundColor(Color("main-green"))
+                                .font(.custom("AirbnbCereal_W_Bd", size: 19))
+                        }
+                        .offset(y: 15)
+                        .frame(width: 90, height: 90)
+                        
+                        
+                    }
                 }
+                .padding(.horizontal, 10)
+                .padding(.bottom, 10)
                 
+                ForEach(courseNames.indices, id: \.self) { index in
+                    ScoreElement(scoreName: courseNames[index], scoreNumber: "\(courseScores[index])")
+                        .listRowSeparator(.hidden)
+                }
             }
             .listStyle(.plain)
             .frame(height: 380)
@@ -262,17 +356,17 @@ struct StudentCard: View {
 }
 
 struct ScoreElement: View {
-    
     var scoreName: String
     var scoreNumber: String
     
     var body: some View {
-        HStack{
+        HStack {
             Text(scoreName)
                 .foregroundColor(Color("main-green"))
                 .font(.custom("AirbnbCereal_W_Md", size: 15))
             Spacer()
             Text(scoreNumber)
+                .foregroundColor(.gray)
                 .font(.custom("AirbnbCereal_W_Md", size: 15))
         }
         .padding(.horizontal)

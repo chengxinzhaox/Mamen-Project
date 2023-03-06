@@ -20,8 +20,6 @@ struct ContentView: View {
         NavigationView {
             TabView(selection: $select) {
                 HomeView()
-//                    .navigationTitle(Text("Home"))
-//                    .navigationViewStyle(StackNavigationViewStyle())
                     .tabItem {
                         Label("", image: select==1 ? "Home_on" : "Home")
                     }
