@@ -11,15 +11,25 @@ struct CourseSlectView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @State var Course_classes = [
-        Course_class(name: "C&C++ Development", image: "C_imag", type: "Basic Course", teacher: "Leon Liang", slected: false),
-        Course_class(name: "Human Interface", image: "HCI_imag", type: "Software Engineering", teacher: "Jons Slemmer", slected: false),
-        Course_class(name: "Web Application Development", image: "Wad_imag", type: "Software Engineering", teacher: "Aymen Chebira", slected: false),
-        Course_class(name: "JAVA Development", image: "Java_imag", type: "Basic Course", teacher: "Gore Jiang", slected: false),
-        Course_class(name: "Data Base", image: "Database_imag", type: "Software Engineering", teacher: "Maged Refat", slected: false),
-        Course_class(name: "Swift Development", image: "Swift_imag", type: "Software Engineering", teacher: "Tim Cook", slected: false),
-        Course_class(name: "CSS & HTML", image: "CSS_imag", type: "Software Engineering", teacher: "Bill Gates", slected: false),
-        Course_class(name: "Generic English", image: "GE_imag", type: "Pre-sessional Course", teacher: "Sam Welsh", slected: false),
+
+    @State var Course_classes: [Course_class] = [
+        
+        
+        Course_class(name: "C&C++ Development", image: "C_imag", type: "Basic Course", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Leon Liang", teacher_image: "leon", teacher_emial: "leon@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "This course will help you master the high-level programming language, including key concepts such as pointers, memory management, classes, inheritance, and more. You will learn how to write efficient and effective C++ code for a variety of applications.", slected: false),
+        
+        Course_class(name: "Human Interface", image: "HCI_imag", type: "Software Engineering", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Jons Slemmer", teacher_image: "jons", teacher_emial: "jons@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "The human interface course aims to teach you how to design and develop user-friendly software systems. You will learn how to create interfaces that are intuitive, aesthetically pleasing, and easy to navigate to improve user experience.", slected: false),
+        
+        Course_class(name: "Web Application Development", image: "Wad_imag", type: "Software Engineering", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Aymen Chebira", teacher_image: "aymen", teacher_emial: "aymen@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "Web application design course will introduce students to key web design technologies and standards, including responsive design and cross-browser compatibility. You will learn how to create web applications that are scalable and adaptable using industry-standard tools and frameworks.", slected: false),
+        
+        Course_class(name: "JAVA Development", image: "Java_imag", type: "Basic Course", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Gore Jiang", teacher_image: "gore", teacher_emial: "gore@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "The Java course will take students on a deep dive into this popular programming language, covering Java applications, systems, and security. You will learn how to write efficient and effective Java code for a wide range of applications.", slected: false),
+        
+        Course_class(name: "Data Base", image: "Database_imag", type: "Software Engineering", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Maged Refat", teacher_image: "maged", teacher_emial: "maged@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "The database course will teach students key database concepts and design techniques, as well as methods for managing data using SQL. You will learn how to create and maintain efficient and effective databases to support a variety of applications.", slected: false),
+        
+        Course_class(name: "Swift Development", image: "Swift_imag", type: "Software Engineering", location: "Apple Inc.,One Apple Park Way,Cupertino, CA 95014, United States", teacher_name: "Tim Cook", teacher_image: "tim", teacher_emial: "tim@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "Swift Development course will explore this popular programming language for iOS application development. Students will learn how to write efficient and effective Swift code for a variety of applications.", slected: false),
+        
+        Course_class(name: "CSS & HTML", image: "CSS_imag", type: "Software Engineering", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Bill Gates", teacher_image: "bill", teacher_emial: "bill@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "The CSS and HTML course will teach you mastery of these two key web technologies, including scalable vector graphics, multimedia, and cross-browser support. You will learn how to create dynamic and responsive web designs using current industry standards and tools.", slected: false),
+        
+        Course_class(name: "Generic English", image: "GE_imag", type: "Pre-sessional Course", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Sam Welsh", teacher_image: "sam", teacher_emial: "sam@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "This course aims to help non-native English speakers to improve their language skills, including reading, writing, and conversation. Students will study a variety of subjects and topics to expand their vocabulary, improve their grammar, and gain confidence in communicating in English.", slected: false),
     ]
     
     var body: some View {
@@ -127,6 +137,7 @@ struct BasicRow: View {
                 .resizable()
                 .frame(width: 120, height: 118)
                 .cornerRadius(20)
+                
                 .padding(.trailing, 10)
             VStack(alignment: .leading) {
                 Text(course.name)
@@ -134,7 +145,7 @@ struct BasicRow: View {
                 Text(course.type)
                     .font(.custom("AirbnbCereal_W_Bk", size: 15))
                     .foregroundColor(.gray)
-                Text(course.teacher)
+                Text(course.teacher_name)
                     .font(.custom("AirbnbCereal_W_Bk", size: 15))
                     .foregroundColor(.gray)
             }
