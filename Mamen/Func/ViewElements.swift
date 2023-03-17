@@ -13,11 +13,9 @@ struct ViewElements: View {
     }
 }
 
-
 // MARK: - Coure file View
 
 struct CourseFileView: View {
-    
     var image: String
     var name: String
     var time: String
@@ -29,9 +27,7 @@ struct CourseFileView: View {
                 .frame(width: 350, height: 60)
                 .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.849), radius: 4, x: 1, y: 1)
                 .opacity(0)
-                .onTapGesture {
-                    
-                }
+                .onTapGesture {}
             ZStack {
                 HStack {
                     ZStack {
@@ -74,7 +70,7 @@ struct TeacherView: View {
                 .foregroundColor(.white)
                 .frame(width: 350, height: 70)
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
+                .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
                 .frame(width: 350, height: 70)
             HStack {
                 ZStack {
@@ -82,7 +78,6 @@ struct TeacherView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
-                    
                 }
                 .padding(.leading, 37)
 
@@ -105,7 +100,6 @@ struct TeacherView: View {
 // MARK: - The course card view
 
 struct Course_card: View {
-    
     var image: String
     var name: String
     var emoji: String
@@ -113,21 +107,21 @@ struct Course_card: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
+                .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
                 .frame(width: 150, height: 110)
                 .foregroundColor(.white)
-                
+
             VStack {
                 Image(image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .offset(y:-19)
+                    .offset(y: -19)
                 HStack {
                     Text(name)
                         .font(.custom("AirbnbCereal_W_Bd", size: 15))
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
-                        .offset(y:-13)
+                        .offset(y: -13)
                         .padding()
                     Spacer()
                 }
@@ -141,14 +135,11 @@ struct Course_card: View {
                     .offset(y: -5)
                 Spacer()
             }
-            
         }
         .padding(.leading, 15)
         .padding(.bottom, 10)
     }
 }
-
-
 
 // MARK: - SettingElement view
 
@@ -181,27 +172,25 @@ struct Divider_Person: View {
             RoundedRectangle(cornerRadius: 100)
                 .frame(width: 350, height: 1)
                 .foregroundColor(Color(hex: "DDDDDD"))
-            
         }
     }
 }
-
 
 // MARK: - Calendar DateSlect view
 
 /**
  Date slect element  view
- 
+
  - date: slect date
  - frontColor: icon color
  - backColor: back color
- 
-*/
+
+ */
 struct DateSlectView: View {
     var date: String
     var frontColor: Color
     var backColor: Color
-    
+
     var body: some View {
         Circle()
             .frame(width: 50, height: 50)
@@ -216,63 +205,64 @@ struct DateSlectView: View {
     }
 }
 
-
 // MARK: - Calendar Date view
 
 /**
  Course Element View
- 
+
  - name: course name
  - place: course place
  - begin: course begin time
  - over: course over time
- 
+
  */
 struct DateView: View {
-    
     var name: String
     var place: String
     var begin: String
     var over: String
     var color: Color
-    
+
     var body: some View {
         RoundedRectangle(cornerRadius: 10, style: .continuous)
-            .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
+            .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
             .frame(width: 350, height: 60)
             .overlay {
-                HStack {
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .frame(width: 7, height: 40)
-                        .foregroundColor(color)
-                    VStack(alignment: .leading) {
-                        Text(name)
-                            .font(.custom("AirbnbCereal_W_Bd", size: 14))
-                            .foregroundColor(.black)
-                            
-                        Text(place)
-                            .foregroundColor(.gray)
-                            .font(.custom("AirbnbCereal_W_Md", size: 13))
+                ZStack {
+                    RoundedRectangle(cornerRadius: 90)
+                        .frame(width: 340, height: 50)
+                        .foregroundColor(.white)
+                    HStack {
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                            .frame(width: 7, height: 40)
+                            .foregroundColor(color)
+                        VStack(alignment: .leading) {
+                            Text(name)
+                                .font(.custom("AirbnbCereal_W_Bd", size: 14))
+                                .foregroundColor(.black)
+
+                            Text(place)
+                                .foregroundColor(.gray)
+                                .font(.custom("AirbnbCereal_W_Md", size: 13))
+                        }
+                        Spacer()
+
+                        VStack(alignment: .trailing) {
+                            Text(begin)
+                                .foregroundColor(.gray)
+                                .font(.custom("AirbnbCereal_W_Md", size: 13))
+
+                            Text(over)
+                                .foregroundColor(.gray)
+                                .font(.custom("AirbnbCereal_W_Md", size: 13))
+                        }
                     }
-                    Spacer()
-                    
-                    VStack(alignment: .trailing) {
-                        Text(begin)
-                            .foregroundColor(.gray)
-                            .font(.custom("AirbnbCereal_W_Md", size: 13))
-                            
-                        Text(over)
-                            .foregroundColor(.gray)
-                            .font(.custom("AirbnbCereal_W_Md", size: 13))
-                            
-                    }
+                    .padding(.trailing, 12)
+                    .padding(.leading, 12)
                 }
-                .padding(.trailing, 12)
-                .padding(.leading, 12)
             }
     }
 }
-
 
 // MARK: - DeadLineView view
 
@@ -338,8 +328,6 @@ struct DeadLineView: View {
     }
 }
 
-
-
 // MARK: - Tools view
 
 struct ToolsView: View {
@@ -353,7 +341,7 @@ struct ToolsView: View {
             .overlay {
                 VStack {
                     Image(icon)
-                        .offset(y:4)
+                        .offset(y: 4)
                     Text(name)
                         .foregroundColor(.white)
                         .font(.custom("AirbnbCereal_W_xBd", size: 12))
@@ -365,17 +353,17 @@ struct ToolsView: View {
 }
 
 // MARK: - DayView view
+
 struct DayView: View {
-    
     var name: String
     var place: String
     var begin: String
     var over: String
     var color: Color
-    
+
     var body: some View {
         RoundedRectangle(cornerRadius: 10, style: .continuous)
-            .stroke(Color(hex: "e8e8e8"),lineWidth: 1)
+            .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
             .frame(width: 350, height: 45)
             .foregroundColor(Color.white)
             .overlay {
@@ -383,26 +371,26 @@ struct DayView: View {
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
                         .frame(width: 5, height: 30)
                         .foregroundColor(color)
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         Text(name)
                             .foregroundColor(.black)
                             .font(.custom("AirbnbCereal_W_Bd", size: 12))
                         Text(place)
                             .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.custom("AirbnbCereal_W_Md", size:10))
+                            .font(.custom("AirbnbCereal_W_Md", size: 10))
                     }
                     Spacer()
-                    
-                    VStack(alignment: .trailing){
+
+                    VStack(alignment: .trailing) {
                         Text(begin)
                             .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.custom("AirbnbCereal_W_Md", size:10))
+                            .font(.custom("AirbnbCereal_W_Md", size: 10))
                         Text(over)
                             .fontWeight(.medium)
                             .foregroundColor(.gray)
-                            .font(.custom("AirbnbCereal_W_Md", size:10))
+                            .font(.custom("AirbnbCereal_W_Md", size: 10))
                     }
                 }
                 .padding(.trailing, 12)
@@ -411,42 +399,39 @@ struct DayView: View {
     }
 }
 
-
 // MARK: - Message view
 
 struct MassageView: View {
-    
     var name: String
     var icon: String
     var massage: String
     var time: String
-    
+
     var body: some View {
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Image(systemName: icon)
                     .foregroundColor(Color("main-green"))
                     .font(.system(size: 10))
                 Text(name)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
-                    .font(.custom("AirbnbCereal_W_Bd", size:10))
+                    .font(.custom("AirbnbCereal_W_Bd", size: 10))
                 Text(massage)
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
-                    .font(.custom("AirbnbCereal_W_Md", size:10))
+                    .font(.custom("AirbnbCereal_W_Md", size: 10))
                 Spacer()
                 Text(time)
                     .fontWeight(.bold)
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.809))
-                    .font(.custom("AirbnbCereal_W_Md", size:10))
+                    .font(.custom("AirbnbCereal_W_Md", size: 10))
             }
             .padding(.trailing, 10)
             .padding(.leading, 10)
         }
     }
 }
-
 
 // MARK: - Hex Color
 
@@ -477,7 +462,6 @@ extension Color {
     }
 }
 
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
@@ -496,7 +480,6 @@ struct CourseElement_Previews: PreviewProvider {
         Course()
     }
 }
-
 
 struct CoursePage_Previews: PreviewProvider {
     static var previews: some View {

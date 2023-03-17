@@ -12,7 +12,7 @@ struct CourseSlectView: View {
     @Environment(\.dismiss) var dismiss
     
 
-    @State var Course_classes: [Course_class] = [
+    @State var Course_classes = [
         
         
         Course_class(name: "C&C++ Development", image: "C_imag", type: "Basic Course", location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", teacher_name: "Leon Liang", teacher_image: "leon", teacher_emial: "leon@zy.edu.cn", teacher_workTime: "9:00AM - 7:00PM", teacher_office: "8 Building, CDUT", teacher_office_location: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China", descrip: "This course will help you master the high-level programming language, including key concepts such as pointers, memory management, classes, inheritance, and more. You will learn how to write efficient and effective C++ code for a variety of applications.", slected: false),

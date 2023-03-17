@@ -31,6 +31,8 @@
 		FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58332829B62D8A005784A8 /* CourseDetailView.swift */; };
 		FB5D2A24293DB6DA006FD3DD /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2A23293DB6DA006FD3DD /* login.swift */; };
 		FB5D2A26293DBD1C006FD3DD /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2A25293DBD1C006FD3DD /* signUp.swift */; };
+		FB6399C529C3EF79003CC3F0 /* Calendar_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */; };
+		FB6399C729C40002003CC3F0 /* CalendarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */; };
 		FB7419DC295022050093BE88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7419DB295022050093BE88 /* Course.swift */; };
 		FB78E9122955D4B900090D3E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9112955D4B900090D3E /* SafariView.swift */; };
 		FB78E9142955E10700090D3E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9132955E10700090D3E /* WebView.swift */; };
@@ -103,6 +105,8 @@
 		FB58332829B62D8A005784A8 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		FB5D2A23293DB6DA006FD3DD /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		FB5D2A25293DBD1C006FD3DD /* signUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
+		FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_class.swift; sourceTree = "<group>"; };
+		FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDetailView.swift; sourceTree = "<group>"; };
 		FB7419DB295022050093BE88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		FB78E9112955D4B900090D3E /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		FB78E9132955E10700090D3E /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				FB78E9162955FE3C00090D3E /* MapView.swift */,
 				FB78E91C29560A8300090D3E /* MapViewNoBack.swift */,
 				FB0A2D8229B4038E00044814 /* ViewElements.swift */,
+				FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */,
+				FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */,
 				FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */,
 				FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */,
+				FB6399C529C3EF79003CC3F0 /* Calendar_class.swift in Sources */,
 				FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */,
 				FB7419DC295022050093BE88 /* Course.swift in Sources */,
 				FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */,
@@ -385,6 +392,7 @@
 				FB0A2D7B29B37CBF00044814 /* TeachersView.swift in Sources */,
 				FB78E9172955FE3C00090D3E /* MapView.swift in Sources */,
 				FB5D2A24293DB6DA006FD3DD /* login.swift in Sources */,
+				FB6399C729C40002003CC3F0 /* CalendarDetailView.swift in Sources */,
 				FB0A2D7D29B3906100044814 /* Course_Down_View.swift in Sources */,
 				FB58332529B61DB2005784A8 /* Course_class.swift in Sources */,
 				FB5D2A26293DBD1C006FD3DD /* signUp.swift in Sources */,
