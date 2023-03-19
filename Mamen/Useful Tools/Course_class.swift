@@ -6,23 +6,24 @@
 //
 
 import Foundation
+import Combine
 
-struct Course_class{
+class Course_class: ObservableObject{
     
-    var name: String
-    var image: String
-    var type: String
-    var location: String
+    @Published var name: String
+    @Published var image: String
+    @Published var type: String
+    @Published var location: String
     
-    var teacher_name: String
-    var teacher_image: String
-    var teacher_email: String
-    var teacher_workTime: String
-    var teacher_office: String
-    var teacher_office_location: String
+    @Published var teacher_name: String
+    @Published var teacher_image: String
+    @Published var teacher_email: String
+    @Published var teacher_workTime: String
+    @Published var teacher_office: String
+    @Published var teacher_office_location: String
     
-    var slected: Bool
-    var descrip: String
+    @Published var slected: Bool
+    @Published var descrip: String
     
     
     init(name: String, image: String, type: String, location: String, teacher_name: String, teacher_image: String, teacher_emial: String, teacher_workTime:String, teacher_office: String, teacher_office_location: String, descrip: String, slected: Bool) {

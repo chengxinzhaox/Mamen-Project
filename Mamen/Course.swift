@@ -26,10 +26,10 @@ struct Course: View {
             .padding(.bottom, 30)
             .padding(.top, 20)
             ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(height: 3)
-                    .foregroundColor(Color(hex: "e8e8e8"))
-                    .offset(y:61)
+//                RoundedRectangle(cornerRadius: 20)
+//                    .frame(height: 3)
+//                    .foregroundColor(Color(hex: "e8e8e8"))
+//                    .offset(y:61)
                 HStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         ZStack {
@@ -86,7 +86,7 @@ struct Course: View {
             .padding(.bottom, 10)
            
             if courseSlect == 1 {
-                Course_Down_View(TeacherImag: "maged", TeacherName: "Maged Refat", Course_name: "Database", Email: "maged@zy.edu.cn", WorkTime: "9:00AM - 7:00PM", OfficeLocation: "8 Building, CDUT", OfficeLocation_Map: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China")
+                Course_Down_View(TeacherImag: "leon", TeacherName: "Leno Liang", Course_name: "C&C++", Email: "maged@zy.edu.cn", WorkTime: "9:00AM - 7:00PM", OfficeLocation: "8 Building, CDUT", OfficeLocation_Map: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China")
             }
             if courseSlect == 2 {
                 Course_Down_View(TeacherImag: "maged", TeacherName: "Maged Refat", Course_name: "Database", Email: "maged@zy.edu.cn", WorkTime: "9:00AM - 7:00PM", OfficeLocation: "8 Building, CDUT", OfficeLocation_Map: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China")

@@ -20,6 +20,7 @@ struct ContentView: View {
         NavigationView {
             TabView(selection: $select) {
                 HomeView()
+//                Empty()
                     .tabItem {
                         Label("", image: select==1 ? "Home_on" : "Home")
                     }

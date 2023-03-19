@@ -33,7 +33,10 @@
 		FB5D2A26293DBD1C006FD3DD /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2A25293DBD1C006FD3DD /* signUp.swift */; };
 		FB6399C529C3EF79003CC3F0 /* Calendar_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */; };
 		FB6399C729C40002003CC3F0 /* CalendarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */; };
+		FB6399C929C40ED0003CC3F0 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6399C829C40ED0003CC3F0 /* Empty.swift */; };
 		FB7419DC295022050093BE88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7419DB295022050093BE88 /* Course.swift */; };
+		FB784BFA29C5FF0000EF5EE0 /* NewCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB784BF929C5FF0000EF5EE0 /* NewCourseView.swift */; };
+		FB784BFE29C6662800EF5EE0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB784BFD29C6662800EF5EE0 /* ChatView.swift */; };
 		FB78E9122955D4B900090D3E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9112955D4B900090D3E /* SafariView.swift */; };
 		FB78E9142955E10700090D3E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9132955E10700090D3E /* WebView.swift */; };
 		FB78E9172955FE3C00090D3E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9162955FE3C00090D3E /* MapView.swift */; };
@@ -107,7 +110,10 @@
 		FB5D2A25293DBD1C006FD3DD /* signUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_class.swift; sourceTree = "<group>"; };
 		FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDetailView.swift; sourceTree = "<group>"; };
+		FB6399C829C40ED0003CC3F0 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		FB7419DB295022050093BE88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FB784BF929C5FF0000EF5EE0 /* NewCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCourseView.swift; sourceTree = "<group>"; };
+		FB784BFD29C6662800EF5EE0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		FB78E9112955D4B900090D3E /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		FB78E9132955E10700090D3E /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FB78E9162955FE3C00090D3E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -237,6 +243,8 @@
 				FB0A2D8229B4038E00044814 /* ViewElements.swift */,
 				FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */,
 				FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */,
+				FB6399C829C40ED0003CC3F0 /* Empty.swift */,
+				FB784BFD29C6662800EF5EE0 /* ChatView.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 				FBDA4FDA29B595DC0018071F /* Slected.swift */,
 				FB58332429B61DB2005784A8 /* Course_class.swift */,
 				FB58332629B62B06005784A8 /* ActivityView.swift */,
+				FB784BF929C5FF0000EF5EE0 /* NewCourseView.swift */,
 			);
 			path = "Useful Tools";
 			sourceTree = "<group>";
@@ -379,6 +388,8 @@
 				FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */,
 				FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */,
 				FB6399C529C3EF79003CC3F0 /* Calendar_class.swift in Sources */,
+				FB784BFE29C6662800EF5EE0 /* ChatView.swift in Sources */,
+				FB784BFA29C5FF0000EF5EE0 /* NewCourseView.swift in Sources */,
 				FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */,
 				FB7419DC295022050093BE88 /* Course.swift in Sources */,
 				FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */,
@@ -396,6 +407,7 @@
 				FB0A2D7D29B3906100044814 /* Course_Down_View.swift in Sources */,
 				FB58332529B61DB2005784A8 /* Course_class.swift in Sources */,
 				FB5D2A26293DBD1C006FD3DD /* signUp.swift in Sources */,
+				FB6399C929C40ED0003CC3F0 /* Empty.swift in Sources */,
 				6267D179293DAD5F005A3392 /* ContentView.swift in Sources */,
 				FB78E92A2957195000090D3E /* HomeView.swift in Sources */,
 				FB58332729B62B06005784A8 /* ActivityView.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CourseDetailView: View {
+    
     var course: Course_class
     @Environment(\.dismiss) var dismiss
     @State var showMap = false
@@ -22,7 +23,7 @@ struct CourseDetailView: View {
                     .frame(height: 255)
                     .overlay {
                         VStack {
-                            Image(systemName: "heart")
+                            Image(systemName: course.slected ? "checkmark.circle.fill" : "")
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
                                 .padding()
                                 .font(.system(size: 20))
@@ -111,6 +112,27 @@ struct CourseDetailView: View {
                         
                     }
                     
+                    Spacer()
+                        .frame(height: 30)
+                    
+                    Button {
+                        self.course.slected.toggle()
+                    } label: {
+                        HStack{
+                            RoundedRectangle(cornerRadius: 90, style: .continuous)
+                                .frame(width: 350, height: 50)
+                                .foregroundColor(Color("main-green"))
+                                .overlay {
+                                    Text(course.slected ? "Delete" : "Choose")
+                                        .font(.custom("AirbnbCereal_W_Bd", size: 15))
+                                        .foregroundColor(.white)
+                                }
+                        }
+                    }
+
+                    
+                    
+                    
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 80)
@@ -118,18 +140,6 @@ struct CourseDetailView: View {
         }
         .ignoresSafeArea()
         .navigationBarBackButtonHidden(true)
-//        .toolbar {
-//            ToolbarItem(placement: .navigationBarLeading) {
-//                Button(action: {
-//                    dismiss()
-//                }) {
-//                    Image(systemName: "chevron.backward.circle.fill")
-//                        .font(.system(size: 15))
-//                        .fontWeight(.bold)
-//                        .foregroundColor(.white)
-//                }
-//            }
-//        }
     }
 }
 

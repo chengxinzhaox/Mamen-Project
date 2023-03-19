@@ -45,21 +45,6 @@ struct CourseSlectView: View {
                             
                             BasicRow(course: $Course_classes[index])
                         }
-                            .swipeActions(edge: .leading, allowsFullSwipe: false,content: {
-                                Button{
-
-                                }label: {
-                                    Image(systemName: "heart")
-                                }
-                                .tint(.green)
-
-                                Button{
-
-                                }label: {
-                                    Image(systemName: "square.and.arrow.up")
-                                }
-                                .tint(.orange)
-                            })
                     }
                     .onDelete(perform: { indexSet in
                         Course_classes.remove(atOffsets: indexSet)
@@ -151,26 +136,26 @@ struct BasicRow: View {
             }
             if course.slected {
                 Spacer()
-                Image(systemName: "heart.fill")
+                Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.yellow)
             }
         }
         .contextMenu {
-            Button(action: {
-               
-            }) {
-                HStack {
-                    Text("Reserve a table")
-                    Image(systemName: "phone")
-                }
-            }
+//            Button(action: {
+//
+//            }) {
+//                HStack {
+//                    Text("Reserve a table")
+//                    Image(systemName: "phone")
+//                }
+//            }
             
             Button(action: {
                 self.course.slected.toggle()
             }) {
                 HStack {
-                    Text(course.slected ? "Remove from favorites" : "Mark as favorite")
-                    Image(systemName: "heart")
+                    Text(course.slected ? "Remove from list" : "Mark as slected")
+                    Image(systemName: "checkmark.circle")
                 }
             }
             
@@ -185,7 +170,7 @@ struct BasicRow: View {
         }
         .sheet(isPresented: $shouwOptions) {
 
-            let defaultText = "Just checking in at \(course.name)"
+            let defaultText = "Just checking the \(course.name)"
 
             if let imageToShare = UIImage(named: course.image) {
                 ActivityView(activityItems: [defaultText, imageToShare])
