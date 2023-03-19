@@ -107,7 +107,10 @@ struct HomeView: View {
                             
                         }
                         HStack {
-                            ToolsView(name: "Pay", icon: "Pay")
+                            NavigationLink(destination: GPT3View()) {
+                                ToolsView(name: "Pay", icon: "Pay")
+                            }
+                            
                             ToolsView(name: "Room", icon: "Room")
                             ToolsView(name: "Drop out", icon: "Drop")
                         }

@@ -47,10 +47,5 @@ class Course_class: ObservableObject{
         
         
     }
-    
-//    init(){
-//        self.init(name: "", image: "", type: "", teacher: "", descrip: "", slected: false)
-//    }
-    
 }
 

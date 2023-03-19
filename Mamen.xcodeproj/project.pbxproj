@@ -36,7 +36,6 @@
 		FB6399C929C40ED0003CC3F0 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6399C829C40ED0003CC3F0 /* Empty.swift */; };
 		FB7419DC295022050093BE88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7419DB295022050093BE88 /* Course.swift */; };
 		FB784BFA29C5FF0000EF5EE0 /* NewCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB784BF929C5FF0000EF5EE0 /* NewCourseView.swift */; };
-		FB784BFE29C6662800EF5EE0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB784BFD29C6662800EF5EE0 /* ChatView.swift */; };
 		FB78E9122955D4B900090D3E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9112955D4B900090D3E /* SafariView.swift */; };
 		FB78E9142955E10700090D3E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9132955E10700090D3E /* WebView.swift */; };
 		FB78E9172955FE3C00090D3E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78E9162955FE3C00090D3E /* MapView.swift */; };
@@ -47,6 +46,14 @@
 		FB9850DF294CA618000DDA45 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9850DE294CA618000DDA45 /* Person.swift */; };
 		FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4DFD729657E0800A9DB14 /* CalendarView.swift */; };
 		FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */; };
+		FBB590B129C75FFA00EFF3C2 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590B029C75FFA00EFF3C2 /* OpenAIKit */; };
+		FBB590B529C7605F00EFF3C2 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590B429C7605F00EFF3C2 /* ChatGPTSwift */; };
+		FBB590B729C7606700EFF3C2 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590B629C7606700EFF3C2 /* OpenAI */; };
+		FBB590B929C7623E00EFF3C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590B829C7623E00EFF3C2 /* Message.swift */; };
+		FBB590BB29C7625800EFF3C2 /* GPT3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590BA29C7625800EFF3C2 /* GPT3View.swift */; };
+		FBB590BD29C7626600EFF3C2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590BC29C7626600EFF3C2 /* MessageView.swift */; };
+		FBB590BF29C7629800EFF3C2 /* MessageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590BE29C7629800EFF3C2 /* MessageIndicatorView.swift */; };
+		FBB590C129C762AD00EFF3C2 /* GPT3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590C029C762AD00EFF3C2 /* GPT3ViewModel.swift */; };
 		FBDA4FDB29B595DC0018071F /* Slected.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA4FDA29B595DC0018071F /* Slected.swift */; };
 		FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */; };
 		FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5BF29B19B4F00C20197 /* TestView.swift */; };
@@ -113,7 +120,6 @@
 		FB6399C829C40ED0003CC3F0 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		FB7419DB295022050093BE88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		FB784BF929C5FF0000EF5EE0 /* NewCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCourseView.swift; sourceTree = "<group>"; };
-		FB784BFD29C6662800EF5EE0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		FB78E9112955D4B900090D3E /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		FB78E9132955E10700090D3E /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FB78E9162955FE3C00090D3E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,14 @@
 		FB9850DE294CA618000DDA45 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		FBA4DFD729657E0800A9DB14 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FBA4DFDB29657E8200A9DB14 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		FBB590AF29C75FDF00EFF3C2 /* OpenAIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OpenAIKit; path = "../../../../../Desktop/checkouts copy/OpenAIKit"; sourceTree = "<group>"; };
+		FBB590B229C7603A00EFF3C2 /* ChatGPTSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChatGPTSwift; path = "../../../../../Desktop/checkouts copy/ChatGPTSwift"; sourceTree = "<group>"; };
+		FBB590B329C7604F00EFF3C2 /* openai */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = openai; path = "../../../../../Desktop/checkouts copy/openai"; sourceTree = "<group>"; };
+		FBB590B829C7623E00EFF3C2 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FBB590BA29C7625800EFF3C2 /* GPT3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPT3View.swift; sourceTree = "<group>"; };
+		FBB590BC29C7626600EFF3C2 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		FBB590BE29C7629800EFF3C2 /* MessageIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageIndicatorView.swift; sourceTree = "<group>"; };
+		FBB590C029C762AD00EFF3C2 /* GPT3ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPT3ViewModel.swift; sourceTree = "<group>"; };
 		FBDA4FDA29B595DC0018071F /* Slected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slected.swift; sourceTree = "<group>"; };
 		FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSlectView.swift; sourceTree = "<group>"; };
 		FBDFB5BF29B19B4F00C20197 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -141,6 +155,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB590B529C7605F00EFF3C2 /* ChatGPTSwift in Frameworks */,
+				FBB590B729C7606700EFF3C2 /* OpenAI in Frameworks */,
+				FBB590B129C75FFA00EFF3C2 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +176,7 @@
 		6267D16A293DAD5F005A3392 = {
 			isa = PBXGroup;
 			children = (
+				FBB590AE29C75FDF00EFF3C2 /* Packages */,
 				FBDFB5DB29B30CC000C20197 /* Font */,
 				6267D175293DAD5F005A3392 /* Mamen */,
 				FB49E2F6296D703E00558018 /* small */,
@@ -179,6 +197,7 @@
 		6267D175293DAD5F005A3392 /* Mamen */ = {
 			isa = PBXGroup;
 			children = (
+				FB62EA3B29C759BC00F65232 /* OpenAi */,
 				FB78E92B2957278D00090D3E /* Info.plist */,
 				FB78E932295F17A700090D3E /* Useful Tools */,
 				FB78E9152955E48200090D3E /* Func */,
@@ -228,6 +247,18 @@
 			path = small;
 			sourceTree = "<group>";
 		};
+		FB62EA3B29C759BC00F65232 /* OpenAi */ = {
+			isa = PBXGroup;
+			children = (
+				FBB590C029C762AD00EFF3C2 /* GPT3ViewModel.swift */,
+				FBB590B829C7623E00EFF3C2 /* Message.swift */,
+				FBB590BA29C7625800EFF3C2 /* GPT3View.swift */,
+				FBB590BC29C7626600EFF3C2 /* MessageView.swift */,
+				FBB590BE29C7629800EFF3C2 /* MessageIndicatorView.swift */,
+			);
+			path = OpenAi;
+			sourceTree = "<group>";
+		};
 		FB78E9152955E48200090D3E /* Func */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +275,6 @@
 				FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */,
 				FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */,
 				FB6399C829C40ED0003CC3F0 /* Empty.swift */,
-				FB784BFD29C6662800EF5EE0 /* ChatView.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -262,6 +292,16 @@
 				FB784BF929C5FF0000EF5EE0 /* NewCourseView.swift */,
 			);
 			path = "Useful Tools";
+			sourceTree = "<group>";
+		};
+		FBB590AE29C75FDF00EFF3C2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FBB590AF29C75FDF00EFF3C2 /* OpenAIKit */,
+				FBB590B229C7603A00EFF3C2 /* ChatGPTSwift */,
+				FBB590B329C7604F00EFF3C2 /* openai */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		FBDFB5DB29B30CC000C20197 /* Font */ = {
@@ -295,6 +335,11 @@
 				FB49E304296D703F00558018 /* PBXTargetDependency */,
 			);
 			name = Mamen;
+			packageProductDependencies = (
+				FBB590B029C75FFA00EFF3C2 /* OpenAIKit */,
+				FBB590B429C7605F00EFF3C2 /* ChatGPTSwift */,
+				FBB590B629C7606700EFF3C2 /* OpenAI */,
+			);
 			productName = Mamen;
 			productReference = 6267D173293DAD5F005A3392 /* Mamen.app */;
 			productType = "com.apple.product-type.application";
@@ -388,9 +433,9 @@
 				FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */,
 				FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */,
 				FB6399C529C3EF79003CC3F0 /* Calendar_class.swift in Sources */,
-				FB784BFE29C6662800EF5EE0 /* ChatView.swift in Sources */,
 				FB784BFA29C5FF0000EF5EE0 /* NewCourseView.swift in Sources */,
 				FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */,
+				FBB590B929C7623E00EFF3C2 /* Message.swift in Sources */,
 				FB7419DC295022050093BE88 /* Course.swift in Sources */,
 				FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */,
 				FB78E9142955E10700090D3E /* WebView.swift in Sources */,
@@ -403,6 +448,7 @@
 				FB0A2D7B29B37CBF00044814 /* TeachersView.swift in Sources */,
 				FB78E9172955FE3C00090D3E /* MapView.swift in Sources */,
 				FB5D2A24293DB6DA006FD3DD /* login.swift in Sources */,
+				FBB590BD29C7626600EFF3C2 /* MessageView.swift in Sources */,
 				FB6399C729C40002003CC3F0 /* CalendarDetailView.swift in Sources */,
 				FB0A2D7D29B3906100044814 /* Course_Down_View.swift in Sources */,
 				FB58332529B61DB2005784A8 /* Course_class.swift in Sources */,
@@ -410,10 +456,13 @@
 				FB6399C929C40ED0003CC3F0 /* Empty.swift in Sources */,
 				6267D179293DAD5F005A3392 /* ContentView.swift in Sources */,
 				FB78E92A2957195000090D3E /* HomeView.swift in Sources */,
+				FBB590C129C762AD00EFF3C2 /* GPT3ViewModel.swift in Sources */,
 				FB58332729B62B06005784A8 /* ActivityView.swift in Sources */,
 				FB78E91D29560A8300090D3E /* MapViewNoBack.swift in Sources */,
 				6267D185293DADD8005A3392 /* LoginPage.swift in Sources */,
+				FBB590BF29C7629800EFF3C2 /* MessageIndicatorView.swift in Sources */,
 				FB9850DF294CA618000DDA45 /* Person.swift in Sources */,
+				FBB590BB29C7625800EFF3C2 /* GPT3View.swift in Sources */,
 				FBDA4FDB29B595DC0018071F /* Slected.swift in Sources */,
 				6267D177293DAD5F005A3392 /* MamenApp.swift in Sources */,
 				FB78E92D2957585300090D3E /* SettingView.swift in Sources */,
@@ -719,6 +768,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBB590B029C75FFA00EFF3C2 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenAIKit;
+		};
+		FBB590B429C7605F00EFF3C2 /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ChatGPTSwift;
+		};
+		FBB590B629C7606700EFF3C2 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6267D16B293DAD5F005A3392 /* Project object */;
 }
