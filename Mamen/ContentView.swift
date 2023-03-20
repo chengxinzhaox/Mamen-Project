@@ -5,6 +5,7 @@
 //  Created by Chester Zhao on 12/5/22.
 //
 
+import AxisTabView
 import SwiftUI
 
 struct ContentView: View {

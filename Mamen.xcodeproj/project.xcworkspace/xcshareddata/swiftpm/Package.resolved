@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "axistabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisTabView",
+      "state" : {
+        "revision" : "5677e874634a2ccf890a1a5ed9258b4d5d9a3d7a",
+        "version" : "0.5.1"
+      }
+    },
+    {
       "identity" : "swift-atomics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics.git",

@@ -1,8 +1,8 @@
 //
-//  Message.swift
-//  OpenAI chat-dalle
+//  CourseSlectView.swift
+//  Mamen
 //
-//  Created by kz on 17/02/2023.
+//  Created by Chester Zhao on 3/3/23.
 //
 
 import Foundation

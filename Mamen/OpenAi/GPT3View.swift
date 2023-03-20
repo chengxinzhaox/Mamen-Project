@@ -1,21 +1,22 @@
 //
-//  ChatBotView.swift
-//  OpenAI GPT-DALL-E
+//  CourseSlectView.swift
+//  Mamen
 //
-//  Created by kz on 25/01/2023.
+//  Created by Chester Zhao on 3/3/23.
 //
+
 
 import SwiftUI
 
 struct GPT3View: View {
-    
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var gpt3ViewModel = GPT3ViewModel()
     @State var typingMessage: String = ""
     @Namespace var bottomID
     @FocusState private var fieldIsFocused: Bool
 
     var body: some View {
-        NavigationView(){
+        
             VStack(alignment: .leading){
                 if !gpt3ViewModel.messages.isEmpty{
                     ScrollViewReader { reader in
@@ -47,11 +48,22 @@ struct GPT3View: View {
                     }
                 } else {
                     VStack{
-                        Image(systemName: "ellipses.bubble")
-                            .font(.largeTitle)
-                        Text("Talk with your course selection consultant")
-                            .font(.subheadline)
-                            .padding(10)
+                        Image("Talk_Pfo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 170)
+                        Spacer()
+                            .frame(height: 30)
+                        Text("Hi, I'm Dr. Dinosaur and I can help")
+                            .font(.custom("AirbnbCereal_W_Bd", size: 20))
+                            .foregroundColor(Color("main-green"))
+                            .padding(.horizontal, 20)
+                        Spacer()
+                            .frame(height: 2)
+                        Text("you with your studies!")
+                            .foregroundColor(Color("main-green"))
+                            .font(.custom("AirbnbCereal_W_Bd", size: 20))
+                            .padding(.horizontal, 20)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
@@ -59,7 +71,8 @@ struct GPT3View: View {
                 HStack(alignment: .center){
                     TextField("Message...", text: $typingMessage, axis: .vertical)
                         .focused($fieldIsFocused)
-                        .padding()
+                        .padding(.leading, 25)
+                        .font(.custom("AirbnbCereal_W_Md", size: 16))
                         .foregroundColor(.black)
                         .lineLimit(3)
                         .disableAutocorrection(true)
@@ -68,12 +81,14 @@ struct GPT3View: View {
                             fieldIsFocused = true
                         }
                     Button(action: sendMessage) {
-                        Image(systemName: typingMessage.isEmpty ? "circle" : "paperplane.fill")
+                        Image(systemName: typingMessage.isEmpty ? "circle.circle" : "paperplane.fill")
                             .resizable()
+                            .fontWeight(.bold)
                             .scaledToFit()
-                            .foregroundColor(typingMessage.isEmpty ? .black.opacity(0.75) : .black)
+                            .foregroundColor(typingMessage.isEmpty ? Color("main-green").opacity(0.75) : Color("main-green"))
                             .frame(width: 20, height: 20)
                             .padding()
+                            .padding(.trailing, 10)
                     }
                 }
                 .onDisappear {
@@ -81,18 +96,32 @@ struct GPT3View: View {
                 }
                 .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.922))
                 .cornerRadius(32)
-                .padding([.leading, .trailing, .bottom], 10)
+                .padding(.bottom, 10)
+                .padding([.leading, .trailing], 25)
                 
             }
-            .background(.white)
+            .background(Color.white)
             .gesture(TapGesture().onEnded {
                 hideKeyboard()
             })
             
-            .navigationTitle("Course Selection Consultant")
+            .navigationTitle("Course Consultant")
             .navigationBarTitleDisplayMode(.inline)
-        }
-        .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 13))
+                            .fontWeight(.bold)
+                            .foregroundColor(.gray)
+                    }
+                }
+            }
+        
+        
     }
     
     private func sendMessage() {

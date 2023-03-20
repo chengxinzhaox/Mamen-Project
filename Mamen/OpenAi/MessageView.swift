@@ -1,9 +1,10 @@
 //
-//  MessageView.swift
-//  ChattingAPP
+//  CourseSlectView.swift
+//  Mamen
 //
-//  Created by kz on 02/02/2023.
+//  Created by Chester Zhao on 3/3/23.
 //
+
 
 import SwiftUI
 
@@ -14,15 +15,17 @@ struct MessageView: View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 0) {
                 HStack(alignment: message.isUserMessage ? .center : .top){
-                    Image(message.isUserMessage ? "person-icon" : "gpt-logo")
+                    Image(message.isUserMessage ? "Profile" : "round")
                         .resizable()
-                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                        .frame(width: 40, height: 40)
                         .padding(.trailing, 10)
 
                     switch message.type {
                     case .text:
                         let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines)
                         Text(output)
+                            .font(.custom("AirbnbCereal_W_Md", size: 16))
                             .foregroundColor(.black)
                             .textSelection(.enabled)
                     case .error:

@@ -1,16 +1,17 @@
 //
-//  GPT3ViewModel.swift
-//  OpenAI chat-dalle
+//  CourseSlectView.swift
+//  Mamen
 //
-//  Created by kz on 05/03/2023.
+//  Created by Chester Zhao on 3/3/23.
 //
+
 
 import Foundation
 import ChatGPTSwift
 
 class GPT3ViewModel: ObservableObject {
 
-    let api = ChatGPTAPI(apiKey: "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")
+    let api = ChatGPTAPI(apiKey: "")
     @Published var messages = [Message]()
     
     func getResponse(text: String) async{

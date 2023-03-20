@@ -1,8 +1,8 @@
 //
-//  MessageIndicatorView.swift
-//  OpenAI GPT-DALL-E
+//  CourseSlectView.swift
+//  Mamen
 //
-//  Created by kz on 06/02/2023.
+//  Created by Chester Zhao on 3/3/23.
 //
 
 import SwiftUI
