@@ -337,7 +337,7 @@ struct ToolsView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 20, style: .continuous)
             .frame(width: 110, height: 80)
-            .foregroundColor(Color("main-green"))
+            .foregroundColor(Color(red: 0.43, green: 0.649, blue: 0.642, opacity: 0.629))
             .overlay {
                 VStack {
                     Image(icon)

@@ -13,49 +13,25 @@ struct Person: View {
     @AppStorage("islogined") var islogined = false
     @AppStorage("userkey") var userkey = ""
     
+    @State private var iscard = -80
+    @AppStorage("money") var money = 0.0
+    
     var body: some View {
         ZStack {
-            Image("ID card")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
             VStack {
-                Group {
-                    Spacer()
-
-                    Image("Profile")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100)
-                        .offset(y: -20)
-                        .onTapGesture {
-                            self.isshow.toggle()
-                        }.alert(isPresented: $isshow) {
-                            Alert(title: Text("Quit?"), primaryButton: .default(Text("Continue")) {
-                                self.islogined = false
-                                self.userkey = ""
-                            }, secondaryButton: .cancel())
-                        }
-                    Text("Lily Yuan")
-                        .font(.custom("AirbnbCereal_W_Bd", size: 20))
-                        .foregroundColor(.white)
-                        .offset(y: -20)
-
-                    Text("Chengdu University of technology")
-                        .font(.custom("AirbnbCereal_W_Md", size: 13))
-                        .fontWeight(.regular)
-                        .foregroundColor(.white)
-                        .offset(y: -10)
-                    Text("Software Engineeing")
-                        .font(.custom("AirbnbCereal_W_Md", size: 13))
-                        .fontWeight(.regular)
-                        .foregroundColor(.white)
-                        .offset(y: -10)
-                    Spacer()
-                        .frame(height: 45)
-                }
-                .offset(y: 30)
-                SubStructure()
+                Image("ID card")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(height: 320)
+                Spacer()
+            }
+            VStack {
+                Spacer()
+                    .frame(height: 105)
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(Color(hex: "FFFFFF"))
+                    .frame(height: 330)
+                    
             }
             ZStack {
                 Image("Setting")
@@ -72,29 +48,42 @@ struct Person: View {
             .sheet(isPresented: $showSettingView) {
                 SettingView()
             }
-            .offset(x: 140, y: -360)
-        }
-    }
-}
-
-struct Person_preview: PreviewProvider {
-    static var previews: some View {
-        Person()
-    }
-}
-
-struct SubStructure: View {
-    @State private var iscard = -80
-    @AppStorage("money") var money = 0.0
-
-    var body: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(Color(hex: "FFFFFF"))
-                .frame(height: 580)
-                .shadow(radius: 4.0)
-                .ignoresSafeArea()
+            .offset(x: 150, y: -330)
+            
             VStack {
+                Spacer()
+                    .frame(height: 30)
+                Image("Profile")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100)
+                    .padding(.top, 20)
+                    .onTapGesture {
+                        self.isshow.toggle()
+                    }.alert(isPresented: $isshow) {
+                        Alert(title: Text("Quit?"), primaryButton: .default(Text("Continue")) {
+                            self.islogined = false
+                            self.userkey = ""
+                        }, secondaryButton: .cancel())
+                    }
+                Text("Lily Yuan")
+                    .font(.custom("AirbnbCereal_W_Bd", size: 20))
+                    .foregroundColor(.white)
+                
+                Text("Chengdu University of technology")
+                    .font(.custom("AirbnbCereal_W_Md", size: 13))
+                    .fontWeight(.regular)
+                    .foregroundColor(.white)
+                
+                Text("Software Engineeing")
+                    .font(.custom("AirbnbCereal_W_Md", size: 13))
+                    .fontWeight(.regular)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                    .frame(height: 30)
+                
+                //Bar
                 ZStack {
                     RoundedRectangle(cornerRadius: 15, style: .continuous)
                         .frame(width: 340, height: 50)
@@ -123,7 +112,6 @@ struct SubStructure: View {
                     }
                     .padding(.horizontal, 90)
                 }
-                .offset(y: -60)
                 .onTapGesture {
                     if self.iscard > 0 {
                         self.iscard = -80
@@ -132,20 +120,26 @@ struct SubStructure: View {
                     }
                     TapticEngine.impact.feedback(.medium)
                 }
-
+                
                 if self.iscard == -80 {
-                    StudentCard(money: $money)
-                        .animation(.default, value: iscard)
+                            StudentCard(money: $money)
+                                .animation(.default, value: iscard)
                 } else {
-                    Score()
-                        .offset(y: -70)
-                        .animation(.default, value: iscard)
+                            Score()
+                                .animation(.default, value: iscard)
                 }
-
-            }.offset(y: 70)
+                Spacer()
+            }
         }
     }
 }
+
+struct Person_preview: PreviewProvider {
+    static var previews: some View {
+        Person()
+    }
+}
+
 
 struct Score: View {
     var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
@@ -190,7 +184,6 @@ struct Score: View {
                             Text("GPA")
                                 .font(.custom("AirbnbCereal_W_Bd", size: 15))
                                 .foregroundColor(Color("main-green"))
-                                
                         }
                         .offset(x: -35, y: -59)
                         
@@ -226,7 +219,6 @@ struct Score: View {
                             Text("Average")
                                 .font(.custom("AirbnbCereal_W_Bd", size: 15))
                                 .foregroundColor(Color("main-green"))
-                                
                         }
                         .offset(x: -22, y: -59)
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -247,8 +239,6 @@ struct Score: View {
                         }
                         .offset(y: 15)
                         .frame(width: 90, height: 90)
-                        
-                        
                     }
                 }
                 .padding(.horizontal, 10)
@@ -260,7 +250,7 @@ struct Score: View {
                 }
             }
             .listStyle(.plain)
-            .frame(height: 380)
+            .frame(height: 355)
         }
     }
 }
@@ -270,17 +260,20 @@ struct StudentCard: View {
     @State var isshow = false
 
     var body: some View {
-        Group {
+        VStack {
+            Spacer()
+                .frame(height: 20)
             Image("ID_card")
                 .resizable()
                 .frame(width: 340, height: 211.18)
                 .scaledToFit()
                 .shadow(color: Color(hue: 0.054, saturation: 0.0, brightness: 0.539, opacity: 0.542), radius: 5, x: 1, y: 1)
-                .padding(.all, 15)
+            Spacer()
+                .frame(height: 30)
             ZStack {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
                     .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
-                    .frame(height: 78)
+                    .frame(width: 336, height: 78)
                 HStack {
                     ZStack {
                         HStack {
@@ -292,7 +285,7 @@ struct StudentCard: View {
                                     .foregroundColor(Color.black)
                                     .font(.custom("AirbnbCereal_W_Bd", size: 25))
                             }
-                            .padding(.leading)
+                            .padding(.leading, 23)
                             Spacer()
                         }
                         HStack {
@@ -350,8 +343,7 @@ struct StudentCard: View {
                     }
                 }
             }.padding(.horizontal, 25)
-
-        }.offset(y: -60)
+        }
     }
 }
 

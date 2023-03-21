@@ -61,7 +61,7 @@ struct MessageView: View {
                                 }
                             }) {
                                 Image(systemName: "square.and.arrow.up")
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.gray)
                             }
                             .padding()
                         }
