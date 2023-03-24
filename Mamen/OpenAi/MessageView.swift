@@ -26,7 +26,7 @@ struct MessageView: View {
                         let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines)
                         Text(output)
                             .font(.custom("AirbnbCereal_W_Md", size: 16))
-                            .foregroundColor(.black)
+                            .foregroundColor(.gray)
                             .textSelection(.enabled)
                     case .error:
                         let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines)
