@@ -141,9 +141,6 @@
 		FBB590BC29C7626600EFF3C2 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		FBB590BE29C7629800EFF3C2 /* MessageIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageIndicatorView.swift; sourceTree = "<group>"; };
 		FBB590C029C762AD00EFF3C2 /* GPT3ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPT3ViewModel.swift; sourceTree = "<group>"; };
-		FBB590C629C76BE400EFF3C2 /* ChatGPTSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChatGPTSwift; path = ../Packet/ChatGPTSwift; sourceTree = "<group>"; };
-		FBB590C729C76BF400EFF3C2 /* openai */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = openai; path = ../Packet/openai; sourceTree = "<group>"; };
-		FBB590C829C76C0100EFF3C2 /* OpenAIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OpenAIKit; path = ../Packet/OpenAIKit; sourceTree = "<group>"; };
 		FBB590D429C83E6B00EFF3C2 /* Home_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Helper.swift; sourceTree = "<group>"; };
 		FBB590D629C8574C00EFF3C2 /* Translator_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator_View.swift; sourceTree = "<group>"; };
 		FBB590D829C85D8C00EFF3C2 /* DalleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DalleViewModel.swift; sourceTree = "<group>"; };
@@ -157,6 +154,9 @@
 		FBDFB5DF29B30CD800C20197 /* AirbnbCereal_W_Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Bd.otf; sourceTree = "<group>"; };
 		FBDFB5E029B30CD800C20197 /* AirbnbCereal_W_Bk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Bk.otf; sourceTree = "<group>"; };
 		FBDFB5E129B30CD800C20197 /* AirbnbCereal_W_Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Lt.otf; sourceTree = "<group>"; };
+		FBF8980A29CD83AF00E72B13 /* ChatGPTSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChatGPTSwift; path = Packet/ChatGPTSwift; sourceTree = "<group>"; };
+		FBF8980B29CD83BB00E72B13 /* openai */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = openai; path = Packet/openai; sourceTree = "<group>"; };
+		FBF8980C29CD83C600E72B13 /* OpenAIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OpenAIKit; path = Packet/OpenAIKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,9 +311,9 @@
 		FBB590AE29C75FDF00EFF3C2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				FBB590C629C76BE400EFF3C2 /* ChatGPTSwift */,
-				FBB590C729C76BF400EFF3C2 /* openai */,
-				FBB590C829C76C0100EFF3C2 /* OpenAIKit */,
+				FBF8980A29CD83AF00E72B13 /* ChatGPTSwift */,
+				FBF8980B29CD83BB00E72B13 /* openai */,
+				FBF8980C29CD83C600E72B13 /* OpenAIKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
