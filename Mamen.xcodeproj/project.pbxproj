@@ -51,9 +51,6 @@
 		FBB590BD29C7626600EFF3C2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590BC29C7626600EFF3C2 /* MessageView.swift */; };
 		FBB590BF29C7629800EFF3C2 /* MessageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590BE29C7629800EFF3C2 /* MessageIndicatorView.swift */; };
 		FBB590C129C762AD00EFF3C2 /* GPT3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590C029C762AD00EFF3C2 /* GPT3ViewModel.swift */; };
-		FBB590CA29C76C0E00EFF3C2 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590C929C76C0E00EFF3C2 /* ChatGPTSwift */; };
-		FBB590CC29C76C0E00EFF3C2 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590CB29C76C0E00EFF3C2 /* OpenAI */; };
-		FBB590CE29C76C0E00EFF3C2 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590CD29C76C0E00EFF3C2 /* OpenAIKit */; };
 		FBB590D129C8078C00EFF3C2 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = FBB590D029C8078C00EFF3C2 /* AxisTabView */; };
 		FBB590D529C83E6B00EFF3C2 /* Home_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590D429C83E6B00EFF3C2 /* Home_Helper.swift */; };
 		FBB590D729C8574C00EFF3C2 /* Translator_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590D629C8574C00EFF3C2 /* Translator_View.swift */; };
@@ -68,6 +65,9 @@
 		FBDFB5E529B30CD800C20197 /* AirbnbCereal_W_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBDFB5DF29B30CD800C20197 /* AirbnbCereal_W_Bd.otf */; };
 		FBDFB5E629B30CD800C20197 /* AirbnbCereal_W_Bk.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBDFB5E029B30CD800C20197 /* AirbnbCereal_W_Bk.otf */; };
 		FBDFB5E729B30CD800C20197 /* AirbnbCereal_W_Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBDFB5E129B30CD800C20197 /* AirbnbCereal_W_Lt.otf */; };
+		FBF8980F29CD885600E72B13 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBF8980E29CD885500E72B13 /* ChatGPTSwift */; };
+		FBF8981229CD89FF00E72B13 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = FBF8981129CD89FF00E72B13 /* OpenAI */; };
+		FBF8981529CD8A2A00E72B13 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = FBF8981429CD8A2A00E72B13 /* OpenAIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,9 +154,6 @@
 		FBDFB5DF29B30CD800C20197 /* AirbnbCereal_W_Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Bd.otf; sourceTree = "<group>"; };
 		FBDFB5E029B30CD800C20197 /* AirbnbCereal_W_Bk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Bk.otf; sourceTree = "<group>"; };
 		FBDFB5E129B30CD800C20197 /* AirbnbCereal_W_Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCereal_W_Lt.otf; sourceTree = "<group>"; };
-		FBF8980A29CD83AF00E72B13 /* ChatGPTSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChatGPTSwift; path = Packet/ChatGPTSwift; sourceTree = "<group>"; };
-		FBF8980B29CD83BB00E72B13 /* openai */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = openai; path = Packet/openai; sourceTree = "<group>"; };
-		FBF8980C29CD83C600E72B13 /* OpenAIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OpenAIKit; path = Packet/OpenAIKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +161,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBB590CC29C76C0E00EFF3C2 /* OpenAI in Frameworks */,
-				FBB590CA29C76C0E00EFF3C2 /* ChatGPTSwift in Frameworks */,
+				FBF8980F29CD885600E72B13 /* ChatGPTSwift in Frameworks */,
+				FBF8981529CD8A2A00E72B13 /* OpenAIKit in Frameworks */,
+				FBF8981229CD89FF00E72B13 /* OpenAI in Frameworks */,
 				FBB590D129C8078C00EFF3C2 /* AxisTabView in Frameworks */,
-				FBB590CE29C76C0E00EFF3C2 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +183,6 @@
 		6267D16A293DAD5F005A3392 = {
 			isa = PBXGroup;
 			children = (
-				FBB590AE29C75FDF00EFF3C2 /* Packages */,
 				FBDFB5DB29B30CC000C20197 /* Font */,
 				6267D175293DAD5F005A3392 /* Mamen */,
 				FB49E2F6296D703E00558018 /* small */,
@@ -308,16 +304,6 @@
 			path = "Useful Tools";
 			sourceTree = "<group>";
 		};
-		FBB590AE29C75FDF00EFF3C2 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				FBF8980A29CD83AF00E72B13 /* ChatGPTSwift */,
-				FBF8980B29CD83BB00E72B13 /* openai */,
-				FBF8980C29CD83C600E72B13 /* OpenAIKit */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		FBDFB5DB29B30CC000C20197 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,10 +336,10 @@
 			);
 			name = Mamen;
 			packageProductDependencies = (
-				FBB590C929C76C0E00EFF3C2 /* ChatGPTSwift */,
-				FBB590CB29C76C0E00EFF3C2 /* OpenAI */,
-				FBB590CD29C76C0E00EFF3C2 /* OpenAIKit */,
 				FBB590D029C8078C00EFF3C2 /* AxisTabView */,
+				FBF8980E29CD885500E72B13 /* ChatGPTSwift */,
+				FBF8981129CD89FF00E72B13 /* OpenAI */,
+				FBF8981429CD8A2A00E72B13 /* OpenAIKit */,
 			);
 			productName = Mamen;
 			productReference = 6267D173293DAD5F005A3392 /* Mamen.app */;
@@ -405,6 +391,9 @@
 			mainGroup = 6267D16A293DAD5F005A3392;
 			packageReferences = (
 				FBB590CF29C8078C00EFF3C2 /* XCRemoteSwiftPackageReference "AxisTabView" */,
+				FBF8980D29CD885500E72B13 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+				FBF8981029CD89FF00E72B13 /* XCRemoteSwiftPackageReference "openai" */,
+				FBF8981329CD8A2A00E72B13 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
 			);
 			productRefGroup = 6267D174293DAD5F005A3392 /* Products */;
 			projectDirPath = "";
@@ -800,25 +789,52 @@
 				minimumVersion = 0.5.1;
 			};
 		};
+		FBF8980D29CD885500E72B13 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		FBF8981029CD89FF00E72B13 /* XCRemoteSwiftPackageReference "openai" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/colealanroberts/openai";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		FBF8981329CD8A2A00E72B13 /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MarcoDotIO/OpenAIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FBB590C929C76C0E00EFF3C2 /* ChatGPTSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ChatGPTSwift;
-		};
-		FBB590CB29C76C0E00EFF3C2 /* OpenAI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = OpenAI;
-		};
-		FBB590CD29C76C0E00EFF3C2 /* OpenAIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = OpenAIKit;
-		};
 		FBB590D029C8078C00EFF3C2 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBB590CF29C8078C00EFF3C2 /* XCRemoteSwiftPackageReference "AxisTabView" */;
 			productName = AxisTabView;
+		};
+		FBF8980E29CD885500E72B13 /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF8980D29CD885500E72B13 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
+		};
+		FBF8981129CD89FF00E72B13 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF8981029CD89FF00E72B13 /* XCRemoteSwiftPackageReference "openai" */;
+			productName = OpenAI;
+		};
+		FBF8981429CD8A2A00E72B13 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF8981329CD8A2A00E72B13 /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
