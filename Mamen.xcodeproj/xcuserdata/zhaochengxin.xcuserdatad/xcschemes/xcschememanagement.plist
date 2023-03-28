@@ -4,15 +4,60 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mamen Watch Watch App 1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Mamen Watch Watch App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Mamen Watch Watch App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Mamen.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>smallExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6267D172293DAD5F005A3392</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB29684E29D284AB00B0E2C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB29685D29D284AC00B0E2C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB29686729D284AC00B0E2C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB49E2EF296D703E00558018</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

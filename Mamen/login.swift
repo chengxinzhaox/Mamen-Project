@@ -28,13 +28,29 @@ struct login: View {
                 }
 
                 VStack {
-                    Spacer().frame(height: 100)
-                    Image("Welcome_Back").resizable().scaledToFit().offset(y: 30).padding([.leading, .trailing], 40)
-                    input_ID(id: $username).offset(y: 50)
-                    Spacer().frame(height: 26)
-                    input_pwd(pwd: $password).offset(y: 40)
-                    Spacer().frame(height: 85)
+                    
+                    //"welecome" and other Textes
+                    Text("Welcome Back")
+                        .font(.custom("AirbnbCereal_W_Bd", size:37))
+                        .foregroundColor(Color("main-green"))
+                        .padding(.top, 140)
+                        .padding(.bottom, 2)
+                    Text("Login to your account")
+                        .font(.custom("AirbnbCereal_W_Bd", size:17))
+                        .foregroundColor(.gray)
+                        .opacity(0.5)
+                    //inpute ID textfild
+                    input_ID(id: $username)
+                        .offset(y: 60)
+                    Spacer()
+                        .frame(height: 26)
+                    //inpute password textfild
+                    input_pwd(pwd: $password)
+                        .offset(y: 50)
+                    Spacer()
+                        .frame(height: 85)
 
+                    //Login button adn Success Announce
                     Button {
                         let newuserkey=username + password
                         if newuserkey.count > 0 && newuserkey == userkey {
@@ -53,24 +69,31 @@ struct login: View {
                                     .foregroundColor(Color.white)
                             }
                     }
-                    .offset(y: 50)
+                    .offset(y: 70)
                 }
                 .padding(30)
                 .offset(y: 50)
                 .alert(isPresented: $isshow) {
                     Alert(title: Text("Login Faild"), message: Text("Check you ID or password"), dismissButton: .default(Text("Done")))
                 }
+                
+                //"back" button
                 VStack {
                     HStack {
                         Button {
                             self.presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Image("Back_Arrow").resizable().scaledToFit().frame(width: 37)
+                            Image("Back_Arrow")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 37)
                         }
                         Spacer()
                     }
                     Spacer()
-                }.padding(30).padding(.top, 30)
+                }
+                .padding(30)
+                .padding(.top, 30)
             }
         }
     }

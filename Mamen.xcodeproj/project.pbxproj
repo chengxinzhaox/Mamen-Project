@@ -17,6 +17,15 @@
 		FB0A2D7B29B37CBF00044814 /* TeachersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A2D7A29B37CBF00044814 /* TeachersView.swift */; };
 		FB0A2D7D29B3906100044814 /* Course_Down_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A2D7C29B3906100044814 /* Course_Down_View.swift */; };
 		FB0A2D8329B4038E00044814 /* ViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A2D8229B4038E00044814 /* ViewElements.swift */; };
+		FB29685229D284AB00B0E2C0 /* Mamen_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29685129D284AB00B0E2C0 /* Mamen_WatchApp.swift */; };
+		FB29685429D284AB00B0E2C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29685329D284AB00B0E2C0 /* ContentView.swift */; };
+		FB29685629D284AC00B0E2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29685529D284AC00B0E2C0 /* Assets.xcassets */; };
+		FB29685929D284AC00B0E2C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29685829D284AC00B0E2C0 /* Preview Assets.xcassets */; };
+		FB29686329D284AC00B0E2C0 /* Mamen_Watch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29686229D284AC00B0E2C0 /* Mamen_Watch_Watch_AppTests.swift */; };
+		FB29686D29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29686C29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITests.swift */; };
+		FB29686F29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29686E29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITestsLaunchTests.swift */; };
+		FB29687A29D2867200B0E2C0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29687929D2867200B0E2C0 /* CalendarView.swift */; };
+		FB29687C29D28F8D00B0E2C0 /* DeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29687B29D28F8D00B0E2C0 /* DeadlineView.swift */; };
 		FB49E2F3296D703E00558018 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB49E2F2296D703E00558018 /* WidgetKit.framework */; };
 		FB49E2F5296D703E00558018 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB49E2F4296D703E00558018 /* SwiftUI.framework */; };
 		FB49E2F8296D703E00558018 /* smallBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49E2F7296D703E00558018 /* smallBundle.swift */; };
@@ -71,6 +80,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FB29685F29D284AC00B0E2C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6267D16B293DAD5F005A3392 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB29684E29D284AB00B0E2C0;
+			remoteInfo = "Mamen Watch Watch App";
+		};
+		FB29686929D284AC00B0E2C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6267D16B293DAD5F005A3392 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB29684E29D284AB00B0E2C0;
+			remoteInfo = "Mamen Watch Watch App";
+		};
 		FB49E303296D703F00558018 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6267D16B293DAD5F005A3392 /* Project object */;
@@ -106,6 +129,18 @@
 		FB0A2D7A29B37CBF00044814 /* TeachersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersView.swift; sourceTree = "<group>"; };
 		FB0A2D7C29B3906100044814 /* Course_Down_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_Down_View.swift; sourceTree = "<group>"; };
 		FB0A2D8229B4038E00044814 /* ViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElements.swift; sourceTree = "<group>"; };
+		FB29684F29D284AB00B0E2C0 /* Mamen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mamen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29685129D284AB00B0E2C0 /* Mamen_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mamen_WatchApp.swift; sourceTree = "<group>"; };
+		FB29685329D284AB00B0E2C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB29685529D284AC00B0E2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB29685829D284AC00B0E2C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB29685E29D284AC00B0E2C0 /* Mamen Watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mamen Watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29686229D284AC00B0E2C0 /* Mamen_Watch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mamen_Watch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		FB29686829D284AC00B0E2C0 /* Mamen Watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mamen Watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29686C29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mamen_Watch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		FB29686E29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mamen_Watch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB29687929D2867200B0E2C0 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		FB29687B29D28F8D00B0E2C0 /* DeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineView.swift; sourceTree = "<group>"; };
 		FB49E2F0296D703E00558018 /* smallExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = smallExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB49E2F2296D703E00558018 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		FB49E2F4296D703E00558018 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -168,6 +203,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB29684C29D284AB00B0E2C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29685B29D284AC00B0E2C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29686529D284AC00B0E2C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB49E2ED296D703E00558018 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +242,9 @@
 				FBDFB5DB29B30CC000C20197 /* Font */,
 				6267D175293DAD5F005A3392 /* Mamen */,
 				FB49E2F6296D703E00558018 /* small */,
+				FB29685029D284AB00B0E2C0 /* Mamen Watch Watch App */,
+				FB29686129D284AC00B0E2C0 /* Mamen Watch Watch AppTests */,
+				FB29686B29D284AC00B0E2C0 /* Mamen Watch Watch AppUITests */,
 				FB49E2F1296D703E00558018 /* Frameworks */,
 				6267D174293DAD5F005A3392 /* Products */,
 			);
@@ -196,6 +255,9 @@
 			children = (
 				6267D173293DAD5F005A3392 /* Mamen.app */,
 				FB49E2F0296D703E00558018 /* smallExtension.appex */,
+				FB29684F29D284AB00B0E2C0 /* Mamen.app */,
+				FB29685E29D284AC00B0E2C0 /* Mamen Watch Watch AppTests.xctest */,
+				FB29686829D284AC00B0E2C0 /* Mamen Watch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,6 +291,44 @@
 				6267D17D293DAD60005A3392 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB29685029D284AB00B0E2C0 /* Mamen Watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				FB29685129D284AB00B0E2C0 /* Mamen_WatchApp.swift */,
+				FB29685329D284AB00B0E2C0 /* ContentView.swift */,
+				FB29687929D2867200B0E2C0 /* CalendarView.swift */,
+				FB29687B29D28F8D00B0E2C0 /* DeadlineView.swift */,
+				FB29685529D284AC00B0E2C0 /* Assets.xcassets */,
+				FB29685729D284AC00B0E2C0 /* Preview Content */,
+			);
+			path = "Mamen Watch Watch App";
+			sourceTree = "<group>";
+		};
+		FB29685729D284AC00B0E2C0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB29685829D284AC00B0E2C0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB29686129D284AC00B0E2C0 /* Mamen Watch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB29686229D284AC00B0E2C0 /* Mamen_Watch_Watch_AppTests.swift */,
+			);
+			path = "Mamen Watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FB29686B29D284AC00B0E2C0 /* Mamen Watch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB29686C29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITests.swift */,
+				FB29686E29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Mamen Watch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 		FB49E2F1296D703E00558018 /* Frameworks */ = {
@@ -345,6 +445,59 @@
 			productReference = 6267D173293DAD5F005A3392 /* Mamen.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FB29684E29D284AB00B0E2C0 /* Mamen Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB29687629D284AC00B0E2C0 /* Build configuration list for PBXNativeTarget "Mamen Watch Watch App" */;
+			buildPhases = (
+				FB29684B29D284AB00B0E2C0 /* Sources */,
+				FB29684C29D284AB00B0E2C0 /* Frameworks */,
+				FB29684D29D284AB00B0E2C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mamen Watch Watch App";
+			productName = "Mamen Watch Watch App";
+			productReference = FB29684F29D284AB00B0E2C0 /* Mamen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB29685D29D284AC00B0E2C0 /* Mamen Watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB29687729D284AC00B0E2C0 /* Build configuration list for PBXNativeTarget "Mamen Watch Watch AppTests" */;
+			buildPhases = (
+				FB29685A29D284AC00B0E2C0 /* Sources */,
+				FB29685B29D284AC00B0E2C0 /* Frameworks */,
+				FB29685C29D284AC00B0E2C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB29686029D284AC00B0E2C0 /* PBXTargetDependency */,
+			);
+			name = "Mamen Watch Watch AppTests";
+			productName = "Mamen Watch Watch AppTests";
+			productReference = FB29685E29D284AC00B0E2C0 /* Mamen Watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB29686729D284AC00B0E2C0 /* Mamen Watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB29687829D284AC00B0E2C0 /* Build configuration list for PBXNativeTarget "Mamen Watch Watch AppUITests" */;
+			buildPhases = (
+				FB29686429D284AC00B0E2C0 /* Sources */,
+				FB29686529D284AC00B0E2C0 /* Frameworks */,
+				FB29686629D284AC00B0E2C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB29686A29D284AC00B0E2C0 /* PBXTargetDependency */,
+			);
+			name = "Mamen Watch Watch AppUITests";
+			productName = "Mamen Watch Watch AppUITests";
+			productReference = FB29686829D284AC00B0E2C0 /* Mamen Watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FB49E2EF296D703E00558018 /* smallExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB49E306296D703F00558018 /* Build configuration list for PBXNativeTarget "smallExtension" */;
@@ -375,6 +528,17 @@
 					6267D172293DAD5F005A3392 = {
 						CreatedOnToolsVersion = 14.1;
 					};
+					FB29684E29D284AB00B0E2C0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FB29685D29D284AC00B0E2C0 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FB29684E29D284AB00B0E2C0;
+					};
+					FB29686729D284AC00B0E2C0 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FB29684E29D284AB00B0E2C0;
+					};
 					FB49E2EF296D703E00558018 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -401,6 +565,9 @@
 			targets = (
 				6267D172293DAD5F005A3392 /* Mamen */,
 				FB49E2EF296D703E00558018 /* smallExtension */,
+				FB29684E29D284AB00B0E2C0 /* Mamen Watch Watch App */,
+				FB29685D29D284AC00B0E2C0 /* Mamen Watch Watch AppTests */,
+				FB29686729D284AC00B0E2C0 /* Mamen Watch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,6 +585,29 @@
 				FBDFB5E629B30CD800C20197 /* AirbnbCereal_W_Bk.otf in Resources */,
 				6267D17E293DAD60005A3392 /* Preview Assets.xcassets in Resources */,
 				6267D17B293DAD60005A3392 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29684D29D284AB00B0E2C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29685929D284AC00B0E2C0 /* Preview Assets.xcassets in Resources */,
+				FB29685629D284AC00B0E2C0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29685C29D284AC00B0E2C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29686629D284AC00B0E2C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +670,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB29684B29D284AB00B0E2C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29685429D284AB00B0E2C0 /* ContentView.swift in Sources */,
+				FB29685229D284AB00B0E2C0 /* Mamen_WatchApp.swift in Sources */,
+				FB29687C29D28F8D00B0E2C0 /* DeadlineView.swift in Sources */,
+				FB29687A29D2867200B0E2C0 /* CalendarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29685A29D284AC00B0E2C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29686329D284AC00B0E2C0 /* Mamen_Watch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29686429D284AC00B0E2C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29686D29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITests.swift in Sources */,
+				FB29686F29D284AC00B0E2C0 /* Mamen_Watch_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB49E2EC296D703E00558018 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +712,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FB29686029D284AC00B0E2C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB29684E29D284AB00B0E2C0 /* Mamen Watch Watch App */;
+			targetProxy = FB29685F29D284AC00B0E2C0 /* PBXContainerItemProxy */;
+		};
+		FB29686A29D284AC00B0E2C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB29684E29D284AB00B0E2C0 /* Mamen Watch Watch App */;
+			targetProxy = FB29686929D284AC00B0E2C0 /* PBXContainerItemProxy */;
+		};
 		FB49E304296D703F00558018 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FB49E2EF296D703E00558018 /* smallExtension */;
@@ -692,6 +920,146 @@
 			};
 			name = Release;
 		};
+		FB29687029D284AC00B0E2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mamen Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = Mamen;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		FB29687129D284AC00B0E2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mamen Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = Mamen;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		FB29687229D284AC00B0E2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamen Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamen Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		FB29687329D284AC00B0E2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamen Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamen Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		FB29687429D284AC00B0E2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Mamen Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		FB29687529D284AC00B0E2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Mamen Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 		FB49E307296D703F00558018 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -765,6 +1133,33 @@
 			buildConfigurations = (
 				6267D182293DAD60005A3392 /* Debug */,
 				6267D183293DAD60005A3392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB29687629D284AC00B0E2C0 /* Build configuration list for PBXNativeTarget "Mamen Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29687029D284AC00B0E2C0 /* Debug */,
+				FB29687129D284AC00B0E2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB29687729D284AC00B0E2C0 /* Build configuration list for PBXNativeTarget "Mamen Watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29687229D284AC00B0E2C0 /* Debug */,
+				FB29687329D284AC00B0E2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB29687829D284AC00B0E2C0 /* Build configuration list for PBXNativeTarget "Mamen Watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29687429D284AC00B0E2C0 /* Debug */,
+				FB29687529D284AC00B0E2C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

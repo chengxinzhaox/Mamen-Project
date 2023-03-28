@@ -197,7 +197,7 @@ struct Score: View {
                             
                             Circle()
                                 .trim(from: 0, to: CGFloat(averageGPA / 4.0))
-                                .stroke(Color("main-green"), lineWidth: 10)
+                                .stroke(Color("main-green"), style: StrokeStyle(lineWidth: 10, lineCap: .round))
                                 .rotationEffect(.degrees(-90))
 
                             Text("\(averageGPA, specifier: "%.1f")")
@@ -231,7 +231,7 @@ struct Score: View {
                             
                             Circle()
                                 .trim(from: 0, to: CGFloat(averageScore / 100.0))
-                                .stroke(Color("main-green"), lineWidth: 10)
+                                .stroke(Color("main-green"), style: StrokeStyle(lineWidth: 10, lineCap: .round))
                                 .rotationEffect(.degrees(-90))
                             Text("\(averageScore, specifier: "%.1f")")
                                 .foregroundColor(Color("main-green"))

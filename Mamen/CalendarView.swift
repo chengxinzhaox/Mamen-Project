@@ -80,6 +80,7 @@ struct CalendarView: View {
             Spacer()
                 .frame(height: 40)
 
+            //
             switch DateSelect {
             case "Mon":
                 ForEach(filterClassesByDate(date: 1, classes: Calendar_Clss_Set).indices, id: \.self) { index in
@@ -88,14 +89,6 @@ struct CalendarView: View {
                              begin: filterClassesByDate(date: 1, classes: Calendar_Clss_Set)[index].begin,
                              over: filterClassesByDate(date: 1, classes: Calendar_Clss_Set)[index].over,
                              color: filterClassesByDate(date: 1, classes: Calendar_Clss_Set)[index].color)
-                    .onTapGesture {
-                        self.showDetailView = true
-                        self.selectedElement = (filterClassesByDate(date: 1, classes: Calendar_Clss_Set))[index]
-                    }
-//                    .sheet(isPresented: $showDetailView) {
-//                        CalendarDetailView(Element: selectedElement)
-//                    }
-                    
                 }
 
             case "Tue":

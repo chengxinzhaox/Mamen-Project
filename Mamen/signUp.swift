@@ -25,21 +25,28 @@ struct signUp: View {
                         hideKeyboard()
                     }
                 VStack {
-                    Image("Register")
-                        .resizable()
-                        .scaledToFit()
-                        .offset(y: 80)
-                        .padding([.leading, .trailing], 30)
+                    Spacer()
+                        .frame(height: 120)
+                    Group {
+                        Text("Register")
+                            .font(.custom("AirbnbCereal_W_Bd", size: 37))
+                            .foregroundColor(Color("main-green"))
+                            .padding(.bottom, 2)
+                        Text("Create your account")
+                            .font(.custom("AirbnbCereal_W_Bd", size: 17))
+                            .foregroundColor(.gray)
+                            .opacity(0.5)
+                    }
+                    Spacer()
+                        .frame(height: 50)
+                    S_input_ID(id: $username)
+                    Spacer()
+                        .frame(height: 20)
+                    
+                    S_input_pwd(pwd: $password)
+                        
                     Spacer()
                         .frame(height: 10)
-                    S_input_ID(id: $username)
-                        .offset(y: 100)
-                    Spacer()
-                        .frame(height: 26)
-                    S_input_pwd(pwd: $password)
-                        .offset(y: 100)
-                    Spacer()
-                        .frame(height: 100)
 
                     Button {
                         if !self.Check(username: self.username, password: self.password) {
@@ -59,7 +66,7 @@ struct signUp: View {
                             .foregroundColor(Color(red: 0.575, green: 0.802, blue: 0.782))
                             .overlay {
                                 Text("Sign Up")
-                                    .font(.custom("AirbnbCereal_W_Bd", size:17))
+                                    .font(.custom("AirbnbCereal_W_Bd", size: 17))
                                     .foregroundColor(Color.white)
                             }
                     }
@@ -115,7 +122,7 @@ struct S_input_ID: View {
                 .resizable()
                 .scaledToFit()
             TextField("Input your ID", text: $id)
-                .font(.custom("AirbnbCereal_W_Md", size:16))
+                .font(.custom("AirbnbCereal_W_Md", size: 16))
                 .offset(x: 70)
         }
     }
@@ -129,7 +136,7 @@ struct S_input_pwd: View {
                 .resizable()
                 .scaledToFit()
             TextField("Input your password", text: $pwd)
-                .font(.custom("AirbnbCereal_W_Md", size:16))
+                .font(.custom("AirbnbCereal_W_Md", size: 16))
                 .offset(x: 70)
         }
     }
