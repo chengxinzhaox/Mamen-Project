@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingView: View {
     @State var show = false
     @Environment(\.dismiss) var dismiss
+    @State private var apiKey: String = ""
 
     var body: some View {
         NavigationStack {
@@ -21,19 +22,18 @@ struct SettingView: View {
                     Spacer()
                 }
                 .padding([.top, .leading, .bottom])
-                
-                Group{
+
+                Group {
                     Spacer()
                         .frame(height: 10)
                     Image("Back_illustrate")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 190)
-                    
+
                     Spacer()
                         .frame(height: 40)
                 }
-                
 
                 NavigationLink(destination:
                     LibaryView()
@@ -43,16 +43,17 @@ struct SettingView: View {
                 }
 
                 Divider_Person()
-                
+
                 NavigationLink(destination:
                     LibaryView()
                         .navigationTitle("Perosnal Information")
                 ) {
                     SettingElementView(icon: "About", name: "About Us", color: Color(hex: "FFA61E"))
                 }
-                
+
                 Divider_Person()
 
+                
                 HStack {
                     Text("Log Out")
                         .font(.custom("AirbnbCereal_W_Md", size: 15))
@@ -94,5 +95,3 @@ struct SettingView_Previews: PreviewProvider {
         SettingView()
     }
 }
-
-

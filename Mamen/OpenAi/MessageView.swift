@@ -15,7 +15,7 @@ struct MessageView: View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 0) {
                 HStack(alignment: message.isUserMessage ? .center : .top){
-                    Image(message.isUserMessage ? "Profile" : "round")
+                    Image(message.isUserMessage ? "Profile" : "AI")
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 40, height: 40)
@@ -75,7 +75,7 @@ struct MessageView: View {
             Spacer()
         }
         .background(message.isUserMessage ? Color.white : Color.white)
-        .shadow( radius: message.isUserMessage ? 0 : 0.5)
+        //.shadow( radius: message.isUserMessage ? 0 : 0.5)
 
     }
 }

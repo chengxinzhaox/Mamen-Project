@@ -10,7 +10,7 @@ import SwiftUI
 struct DeadlineView: View {
     var body: some View {
         
-            DeadlineElementView(deadlineDate: Date().addingTimeInterval(9 * 24 * 60 * 60), deadlineTitle: "HCI")
+            DeadlineElementView(deadlineDate: Date().addingTimeInterval(13 * 24 * 60 * 60), deadlineTitle: "HCI")
         
     }
 }
@@ -32,11 +32,11 @@ struct DeadlineElementView: View {
     private func gradientColors() -> [Color] {
         switch daysRemaining {
         case ..<5:
-            return [Color.red]
+            return [Color(hex: "#FFBFBF"), Color(hex: "#FE859D")]
         case 5 ... 10:
-            return [Color.yellow]
+            return [Color(hex: "#FF9777"), Color(hex: "#FFC484")]
         default:
-            return [Color.green]
+            return [Color(hex: "C8E8AE"), Color(hex: "83E2F0")]
         }
     }
 
@@ -47,6 +47,7 @@ struct DeadlineElementView: View {
                     .stroke(.gray, lineWidth: 15)
                     .rotationEffect(Angle(degrees: -90.0))
                     .animation(.easeInOut(duration: 0.5))
+                    .opacity(0.4)
                     .padding()
                 Circle()
                     .trim(from: 1.0 - CGFloat(Double(daysRemaining) / 20.0), to: 1.0)

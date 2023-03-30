@@ -13,6 +13,7 @@ struct Person: View {
     @AppStorage("islogined") var islogined = false
     @AppStorage("userkey") var userkey = ""
     
+    
     @State private var iscard = -80
     @AppStorage("money") var money = 0.0
     
@@ -31,7 +32,6 @@ struct Person: View {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .fill(Color(hex: "FFFFFF"))
                     .frame(height: 330)
-                    
             }
             ZStack {
                 Image("Setting")
@@ -56,7 +56,8 @@ struct Person: View {
                 Image("Profile")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100)
+                    .clipShape(Circle())
+                    .frame(width: 95)
                     .padding(.top, 20)
                     .onTapGesture {
                         self.isshow.toggle()
@@ -81,9 +82,9 @@ struct Person: View {
                     .foregroundColor(.white)
                 
                 Spacer()
-                    .frame(height: 30)
+                    .frame(height: 40)
                 
-                //Bar
+                // Bar
                 ZStack {
                     RoundedRectangle(cornerRadius: 15, style: .continuous)
                         .frame(width: 340, height: 50)
@@ -114,19 +115,22 @@ struct Person: View {
                 }
                 .onTapGesture {
                     if self.iscard > 0 {
-                        self.iscard = -80
+                        withAnimation {
+                            self.iscard = -80
+                        }
+                        
                     } else {
-                        self.iscard = 80
+                        withAnimation {
+                            self.iscard = 80
+                        }
                     }
                     TapticEngine.impact.feedback(.medium)
                 }
                 
                 if self.iscard == -80 {
-                            StudentCard(money: $money)
-                                .animation(.default, value: iscard)
+                    StudentCard(money: $money)
                 } else {
-                            Score()
-                                .animation(.default, value: iscard)
+                    Score()
                 }
                 Spacer()
             }
@@ -139,7 +143,6 @@ struct Person_preview: PreviewProvider {
         Person()
     }
 }
-
 
 struct Score: View {
     var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]

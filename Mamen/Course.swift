@@ -26,10 +26,6 @@ struct Course: View {
             .padding(.bottom, 30)
             .padding(.top, 20)
             ZStack {
-//                RoundedRectangle(cornerRadius: 20)
-//                    .frame(height: 3)
-//                    .foregroundColor(Color(hex: "e8e8e8"))
-//                    .offset(y:61)
                 HStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         ZStack {
