@@ -12,6 +12,7 @@ import SwiftUI
 struct smallBundle: WidgetBundle {
     var body: some Widget {
         small()
+        Deadline()
         smallLiveActivity()
     }
 }

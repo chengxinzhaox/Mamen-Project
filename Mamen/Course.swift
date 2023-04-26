@@ -95,11 +95,6 @@ struct Course: View {
 }
 
 
-
-
-
-
-
 struct Course_Previews: PreviewProvider {
     static var previews: some View {
         Course()

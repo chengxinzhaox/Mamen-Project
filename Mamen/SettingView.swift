@@ -74,7 +74,7 @@ struct SettingView: View {
                     .padding(.bottom, -4.0)
                     HStack {
                         Spacer()
-                        Text("Manen v1.5.1")
+                        Text("Manen v1.6")
                             .font(.custom("AirbnbCereal_W_Md", size: 12))
                             .foregroundColor(Color.gray)
                             .fontWeight(.semibold)

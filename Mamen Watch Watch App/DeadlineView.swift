@@ -16,11 +16,10 @@ struct DeadlineView: View {
 }
 
 struct DeadlineElementView: View {
-    let deadlineDate: Date // Deadline时间
-    let deadlineTitle: String // Deadline标题
-    @State private var daysRemaining: Int = 0 // 剩余天数
+    let deadlineDate: Date
+    let deadlineTitle: String // 剩余天数
 
-    // 计算并更新剩余天数
+    
     private func updateDaysRemaining() {
         let currentDate = Date()
         let calendar = Calendar.current
@@ -28,7 +27,7 @@ struct DeadlineElementView: View {
         daysRemaining = max(dateComponents.day ?? 0, 0)
     }
 
-    // 根据剩余天数返回对应的渐变色
+    
     private func gradientColors() -> [Color] {
         switch daysRemaining {
         case ..<5:

@@ -23,7 +23,8 @@ struct CalendarView: View {
         Calendar_class(date: 3, name: "DataBase", place: "8403", begin: "2:30PM", over: "4:45AM", color: Color(hex: "FF927F")),
         Calendar_class(date: 4, name: "CSS&HTML", place: "6A101", begin: "8:00AM", over: "9:45AM", color: Color(hex: "9FECEC")),
         Calendar_class(date: 4, name: "Human Interface", place: "6A201", begin: "10:00AM", over: "11:45AM", color: Color(hex: "CCC8EF")),
-        Calendar_class(date: 5, name: "DataBase", place: "8203", begin: "8:00AM", over: "9:45AM", color: Color(hex: "FF927F"))
+        Calendar_class(date: 5, name: "DataBase", place: "8203", begin: "8:00AM", over: "9:45AM", color: Color(hex: "FF927F")),
+        Calendar_class(date: 5, name: "Human Interface", place: "8606", begin: "2:30PM", over: "4:05PM", color: Color(hex: "CCC8EF"))
     ]
 
     var body: some View {
