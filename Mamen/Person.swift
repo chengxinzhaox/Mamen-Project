@@ -67,7 +67,7 @@ struct Person: View {
                             self.userkey = ""
                         }, secondaryButton: .cancel())
                     }
-                Text("Lily Yuan")
+                Text("Byran Zhong")
                     .font(.custom("AirbnbCereal_W_Bd", size: 20))
                     .foregroundColor(.white)
                 
