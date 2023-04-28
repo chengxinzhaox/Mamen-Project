@@ -26,8 +26,8 @@ struct HomeView: View {
                 .padding(.bottom, 1)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        DeadLineView(name: "Databases Part 2", inf: "Individual design", time: "2022-12-28", DUO_day: "5  DAY", line: 100)
-                        DeadLineView(name: "The Human Interface ", inf: "Coursework", time: "2022-12-25", DUO_day: "3  DAY", line: 150)
+                        DeadLineView(name: "Human Interface", inf: "Individual design", time: "2022-5-08", DUO_day: "10  DAY", line: 100)
+                        DeadLineView(name: "Data Structure Algorithms", inf: "Coursework", time: "2022-5-13", DUO_day: "15  DAY", line: 150)
                     }
                     .padding(.leading)
                     .frame(height: 120)
@@ -74,9 +74,8 @@ struct HomeView: View {
                         .padding(.leading)
                     Spacer()
                 }
-                DayView(name: "Data Base", place: "8304", begin: "10:15 AM", over: "11:05 AM", color: .pink)
-                DayView(name: "IPD", place: "6A101", begin: "2:30 PM", over: "3:00 PM", color: .teal)
-                DayView(name: "C&C++", place: "6A102", begin: "4:30 PM", over: "6:00 PM", color: .cyan)
+                DayView(name: "Data Base", place: "8203", begin: "8:00 AM", over: "9:45 AM", color: Color(hex: "FF927F"))
+                DayView(name: "Human Interface", place: "8606", begin: "2:30 PM", over: "3:00 PM", color: Color(hex: "CCC8EF"))
             }
             .padding(.bottom)
 
