@@ -108,21 +108,21 @@ struct Course_card: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
-                .frame(width: 150, height: 90)
-                .offset(y:30)
+                .frame(width: 150, height: 80)
+                .offset(y:15)
                 .foregroundColor(.white)
 
             VStack {
                 Image(image)
                     .resizable()
-                    
-                    .frame(width: 150, height: 100)
+                    .frame(width: 150, height: 80)
                 HStack {
                     Text(name)
-                        .font(.custom("AirbnbCereal_W_Bd", size: 15))
+                        .font(.custom("AirbnbCereal_W_Bd", size: 13))
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                         .lineLimit(1)
+                        .offset(y:-7)
                         .padding()
                     Spacer()
                 }
