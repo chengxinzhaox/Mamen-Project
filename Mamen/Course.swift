@@ -15,6 +15,7 @@ struct Course: View {
     @State var courseSlect = 0
     @State private var coursejson:responseBody=responseBody(result: 0, message: "", data: nil)
     @AppStorage("selectedCourse") var selectedCourse: [String] = []
+    @State var now=0
     var body: some View {
         VStack {
             HStack {
@@ -48,6 +49,7 @@ struct Course: View {
                                                 .onTapGesture {
                                                     courseSlect = item
                                                     TapticEngine.impact.feedback(.medium)
+                                                    now=courseSlect
                                                 }
                                                 .animation(.easeOut, value: courseSlect)
                                             if courseSlect == item {
@@ -68,8 +70,8 @@ struct Course: View {
             }
             .padding(.bottom, 10)
             if selectedCourse.count > 0{
-                let location=selectedCourse.firstIndex(of: json[courseSlect,"name"].stringValue) ?? 0
-                Course_Down_View(TeacherImag: json[location,"name"].stringValue, TeacherName:json[location,"fullname"].stringValue, Course_name: json[location,"title"].stringValue, Email: json[location,"email"].stringValue, WorkTime: json[location,"worktime"].stringValue, OfficeLocation: json[location,"workroom"].stringValue, OfficeLocation_Map: json[location,"workroomdetail"].stringValue)
+                
+                Course_Down_View(TeacherImag: json[now,"name"].stringValue, TeacherName:json[now,"fullname"].stringValue, Course_name: json[now,"title"].stringValue, Email: json[now,"email"].stringValue, WorkTime: json[now,"worktime"].stringValue, OfficeLocation: json[now,"workroom"].stringValue, OfficeLocation_Map: json[now,"workroomdetail"].stringValue)
             }
         }
     }
@@ -81,3 +83,4 @@ struct Course_Previews: PreviewProvider {
         Course()
     }
 }
+
