@@ -39,10 +39,7 @@ struct Course: View {
                 HStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         ZStack {
-                            
                             HStack {
-                               
-
                                 ForEach(0 ..< json.count,id:\.self) { item in
                                     if self.selectedCourse.contains(json[item,"title"].stringValue){
                                         ZStack {
