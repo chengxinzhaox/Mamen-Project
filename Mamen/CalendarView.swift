@@ -91,7 +91,7 @@ struct CalendarView: View {
             let json=JSON(coursejson.data)
             ForEach(1..<8, id: \.self) { index in
                 
-                if index==DateSelect{
+                if json[index,"week"].intValue==DateSelect{
                     DateView(name:json[index,"title"].stringValue ,
                              place: json[index,"room"].stringValue,
                              begin: json[index,"start"].stringValue,

@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class JSONBRIDGE {
-    let url="http://192.168.10.195:4545"
+    let url="http://35.79.4.24:4545"
     func CheckUserNameRepeat(username: String, closure: @escaping (responseBody) -> Void) {
         let body=checkUserNameRepeat(username: username)
         AF.request(url, method: .post, parameters: body).responseString { response in
@@ -59,7 +59,7 @@ class JSONBRIDGE {
                closure (responseBody(result: 0, message: "网络出现问题", data: nil))
             }
             let responseJson=JSON(response.data ?? Data())
-            let result=responseBody(result: responseJson["result"].intValue, message: responseJson["message"].stringValue, data: responseJson["data"].string)
+            let result=responseBody(result: responseJson["result"].intValue, message: responseJson["message"].stringValue, data: responseJson["data"].array)
             closure(result)
         }
     }

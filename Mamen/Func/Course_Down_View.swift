@@ -6,19 +6,13 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 struct Course_Down_View: View {
     @State var showDetailView = false
     @State var showWebView = false
-    
-    var FileNames = ["Example-week7", "Example-week8", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
-    
-    var FileTypes = ["ZIP", "PDF", "PDF", "ZIP", "PDF", "ZIP", "PDF", "ZIP"]
-    
-    var FileTimes = ["Dec 18 8:23PM", "Dec 17 8:23PM", "Dec 16 8:23PM", "Dec 15 8:23PM", "Dec 14 8:23PM", "Dec 13 8:23PM", "Dec 12 8:23PM", "Dec 11 8:23PM"]
-    
-    var FileURLS = ["https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "Chttps://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip", "https://student.zy.cdut.edu.cn/sites/student.zy.cdut.edu.cn/files/attachments/examples-week7-lecture.zip"]
-    
+    @State private var filejson:responseBody=responseBody(result: 0, message: "", data: nil)
+   
     var TeacherImag: String
     var TeacherName: String
     var Course_name: String
@@ -45,24 +39,31 @@ struct Course_Down_View: View {
                         .padding(.leading, 25)
                         .padding(.top, 15)
                     Spacer()
+                }.task {
+                    r.GetCourseFiles { result in
+                        self.filejson=result
+                        print(result)
+                    }
                 }
                 
                 ScrollView(showsIndicators: false) {
                     VStack {
-                        ForEach(FileNames.indices, id: \.self) { index in
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(.white)
-                                    .onTapGesture {
-                                        self.showWebView.toggle()
-                                        TapticEngine.impact.feedback(.medium)
-                                    }
-                                    .sheet(isPresented: $showWebView) {
-                                        SafariView(url: URL(string: FileURLS[index])!)
-                                    }
-                                CourseFileView(image: FileTypes[index], name: FileNames[index], time: FileNames[index])
-                            }
-                        }
+                        let json=JSON(self.filejson.data ?? "")
+                        ForEach(0..<json.count, id: \.self) { index in
+                            if json[index,"course"].stringValue==Course_name{
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(.white)
+                                        .onTapGesture {
+                                            self.showWebView.toggle()
+                                            TapticEngine.impact.feedback(.medium)
+                                        }
+                                        .sheet(isPresented: $showWebView) {
+                                            SafariView(url: URL(string: json[index,"url"].stringValue)!)
+                                        }
+                                    CourseFileView(image: json[index,"type"].stringValue, name: json[index,"title"].stringValue, time: json[index,"date"].stringValue)
+                                }
+                            }}
                     }
                 }
             }
