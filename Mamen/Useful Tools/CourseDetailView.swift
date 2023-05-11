@@ -12,7 +12,8 @@ struct CourseDetailView: View {
     var course: Course_class
     @Environment(\.dismiss) var dismiss
     @State var showMap = false
-
+    @AppStorage("selectedCourse") var selectedCourse: [String] = []
+    @State private var isselect=false
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -116,14 +117,24 @@ struct CourseDetailView: View {
                         .frame(height: 30)
                     
                     Button {
-                        self.course.slected.toggle()
+                        
+                        self.isselect.toggle()
+                        switch self.isselect{
+                        case true:
+                            self.selectedCourse.append(course.name)
+                            debugPrint(self.selectedCourse)
+                        case false:
+                            self.selectedCourse=self.selectedCourse.filter({ name in
+                                name != course.name
+                            })
+                        }
                     } label: {
                         HStack{
                             RoundedRectangle(cornerRadius: 90, style: .continuous)
                                 .frame(width: 350, height: 50)
                                 .foregroundColor(Color("main-green"))
                                 .overlay {
-                                    Text(course.slected ? "Delete" : "Choose")
+                                    Text(self.isselect ? "Delete" : "Choose")
                                         .font(.custom("AirbnbCereal_W_Bd", size: 15))
                                         .foregroundColor(.white)
                                 }
@@ -135,7 +146,13 @@ struct CourseDetailView: View {
                     
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 80)
+                .padding(.top, 80).onAppear(){
+                    if selectedCourse.contains(course.name){
+                        self.isselect=true
+                    }else{
+                        self.isselect=false
+                    }
+                }
             }
         }
         .ignoresSafeArea()

@@ -12,7 +12,7 @@ struct signUp: View {
     @State private var username=""
     @State private var password=""
     @State private var isshow=false
-    @AppStorage("userkey") var userkey=""
+    
 
     var body: some View {
         NavigationView {
@@ -53,12 +53,17 @@ struct signUp: View {
                             TapticEngine.notification.feedback(.error)
                             self.isshow.toggle()
                         }
-                        if !self.Save(username: username, password: password) {
-                            self.isshow.toggle()
-                        } else {
-                            self.presentationMode.wrappedValue.dismiss()
-                            ProgressHUD.showSucceed("Register successfully")
+                        if self.Check(username: username, password: password) {
+                            r.UserResign(username: username, password: password, name: "User\(Int.random(in: 1000...99999))") { result in
+                                if result.result==0{
+                                    ProgressHUD.showError("Username Repeated")
+                                }else{
+                                    self.presentationMode.wrappedValue.dismiss()
+                                    ProgressHUD.showSucceed("Register successfully")
+                                }
+                            }
                         }
+                        
 
                     } label: {
                         RoundedRectangle(cornerRadius: 90, style: .continuous)
@@ -105,13 +110,7 @@ struct signUp: View {
         }
     }
 
-    private func Save(username: String, password: String)->Bool {
-        if self.Check(username: username, password: password) {
-            self.userkey=username + password
-            return true
-        }
-        return false
-    }
+    
 }
 
 struct S_input_ID: View {

@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 struct HomeView: View {
-
+    @State private var deadlinejson:responseBody=responseBody(result: 0, message: "", data: nil)
+    @State private var messagejson:responseBody=responseBody(result: 0, message: "", data: nil)
+    @State private var coursejson:responseBody=responseBody(result: 0, message: "", data: nil)
     var body: some View {
         ScrollView(showsIndicators: false) {
             // MARK: - Dadline view
@@ -24,10 +27,18 @@ struct HomeView: View {
                     Spacer()
                 }
                 .padding(.bottom, 1)
+                .task {
+                    r.GetDeadline { result in
+                        self.deadlinejson=result
+                    }
+                }
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        DeadLineView(name: "Human Interface", inf: "Individual design", time: "2022-5-08", DUO_day: "10  DAY", line: 100)
-                        DeadLineView(name: "Data Structure Algorithms", inf: "Coursework", time: "2022-5-13", DUO_day: "15  DAY", line: 150)
+                        let json=JSON(deadlinejson.data ?? "")
+                        ForEach(0 ..< json.count,id: \.self) { item in
+                            DeadLineView(name: json[item,"title"].stringValue, inf: json[item,"info"].stringValue, time: json[item,"deadline"].stringValue, DUO_day: json[item,"remaindays"].stringValue, line: CGFloat(json[item,"length"].intValue))
+                        }
+                       
                     }
                     .padding(.leading)
                     .frame(height: 120)
@@ -45,6 +56,10 @@ struct HomeView: View {
                         .foregroundColor(Color("main-green"))
                         .padding(.leading)
                     Spacer()
+                }.task {
+                    r.GetInformation() { result in
+                        self.messagejson=result
+                    }
                 }
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
@@ -54,9 +69,11 @@ struct HomeView: View {
                     .overlay {
                         VStack {
                             Group {
-                                MassageView(name: "Doctument", icon: "doc.text.fill", massage: "IPD have new doctument", time: "5 hours age")
-                                MassageView(name: "Daed Line", icon: "clock.fill", massage: "HCI have new daed line", time: "2 days age")
-                                MassageView(name: "Dead Line", icon: "clock.fill", massage: "C&C++ have new daed line", time: "2 days age")
+                                let json=JSON(messagejson.data ?? "")
+                                
+                                ForEach(0..<json.count,id:\.self) { item in
+                                    MassageView(name: json[item,"title"].stringValue, icon: json[item,"icon"].stringValue, massage: json[item,"info"].stringValue, time: json[item,"date"].stringValue)
+                                }
                             }
                             .padding(.top, 0.1)
                         }
@@ -73,9 +90,20 @@ struct HomeView: View {
                         .foregroundColor(Color("main-green"))
                         .padding(.leading)
                     Spacer()
+                }.task {
+                    r.GetAllTimeTables { result in
+                        self.coursejson=result
+                        print(result)
+                    }
                 }
-                DayView(name: "Data Base", place: "8203", begin: "8:00 AM", over: "9:45 AM", color: Color(hex: "FF927F"))
-                DayView(name: "Human Interface", place: "8606", begin: "2:30 PM", over: "3:00 PM", color: Color(hex: "CCC8EF"))
+                let json=JSON(coursejson.data ?? "")
+                ForEach(0 ..< json.count,id:\.self) { item in
+                    if json[item,"week"].stringValue==String(whatsdaytoday()-1){
+                        DayView(name: json[item,"title"].stringValue, place: json[item,"room"].stringValue, begin: json[item,"start"].stringValue, over: json[item,"end"].stringValue, color: Color(hex: json[item,"color"].stringValue))
+                    }
+                   
+                }
+                
             }
             .padding(.bottom)
 

@@ -11,7 +11,7 @@ struct login: View {
     
     @State private var username=""
     @State private var password=""
-    @AppStorage("userkey") var userkey=""
+    
     @State private var isshow=false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @AppStorage("islogined") var islogined=false
@@ -53,12 +53,15 @@ struct login: View {
                     //Login button adn Success Announce
                     Button {
                         let newuserkey=username + password
-                        if newuserkey.count > 0 && newuserkey == userkey {
-                            self.islogined.toggle()
-                            ProgressHUD.showSucceed("Success")
-                        } else {
-                            self.isshow.toggle()
+                        r.UserLogin(username: username, password: password) { result in
+                            if result.result==1{
+                                self.islogined.toggle()
+                                ProgressHUD.showSucceed("Success")
+                            }else{
+                                self.isshow.toggle()
+                            }
                         }
+                        
                     } label: {
                         RoundedRectangle(cornerRadius: 90, style: .continuous)
                             .frame(width: 320, height: 50, alignment: .center)

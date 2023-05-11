@@ -14,6 +14,9 @@
 		6267D185293DADD8005A3392 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267D184293DADD8005A3392 /* LoginPage.swift */; };
 		6267D187293DB18E005A3392 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267D186293DB18E005A3392 /* TapticEngine.swift */; };
 		6267D18B293DEE3A005A3392 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267D18A293DEE3A005A3392 /* ProgressHUD.swift */; };
+		62F90BA82A0C8D4700FBD36A /* jsonbridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F90BA72A0C8D4700FBD36A /* jsonbridge.swift */; };
+		62F90BAB2A0C8D7D00FBD36A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62F90BAA2A0C8D7D00FBD36A /* Alamofire */; };
+		62F90BAE2A0C8D9500FBD36A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 62F90BAD2A0C8D9500FBD36A /* SwiftyJSON */; };
 		FB0A2D7B29B37CBF00044814 /* TeachersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A2D7A29B37CBF00044814 /* TeachersView.swift */; };
 		FB0A2D7D29B3906100044814 /* Course_Down_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A2D7C29B3906100044814 /* Course_Down_View.swift */; };
 		FB0A2D8329B4038E00044814 /* ViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A2D8229B4038E00044814 /* ViewElements.swift */; };
@@ -128,6 +131,7 @@
 		6267D184293DADD8005A3392 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		6267D186293DB18E005A3392 /* TapticEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 		6267D18A293DEE3A005A3392 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		62F90BA72A0C8D4700FBD36A /* jsonbridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonbridge.swift; sourceTree = "<group>"; };
 		FB0A2D7A29B37CBF00044814 /* TeachersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersView.swift; sourceTree = "<group>"; };
 		FB0A2D7C29B3906100044814 /* Course_Down_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_Down_View.swift; sourceTree = "<group>"; };
 		FB0A2D8229B4038E00044814 /* ViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElements.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F90BAE2A0C8D9500FBD36A /* SwiftyJSON in Frameworks */,
+				62F90BAB2A0C8D7D00FBD36A /* Alamofire in Frameworks */,
 				FBF8980F29CD885600E72B13 /* ChatGPTSwift in Frameworks */,
 				FBF8981529CD8A2A00E72B13 /* OpenAIKit in Frameworks */,
 				FBF8981229CD89FF00E72B13 /* OpenAI in Frameworks */,
@@ -282,6 +288,7 @@
 				FB7419DB295022050093BE88 /* Course.swift */,
 				FB78E92C2957585300090D3E /* SettingView.swift */,
 				FBA4DFD729657E0800A9DB14 /* CalendarView.swift */,
+				62F90BA72A0C8D4700FBD36A /* jsonbridge.swift */,
 				6267D17A293DAD60005A3392 /* Assets.xcassets */,
 				6267D17C293DAD60005A3392 /* Preview Content */,
 			);
@@ -444,6 +451,8 @@
 				FBF8980E29CD885500E72B13 /* ChatGPTSwift */,
 				FBF8981129CD89FF00E72B13 /* OpenAI */,
 				FBF8981429CD8A2A00E72B13 /* OpenAIKit */,
+				62F90BAA2A0C8D7D00FBD36A /* Alamofire */,
+				62F90BAD2A0C8D9500FBD36A /* SwiftyJSON */,
 			);
 			productName = Mamen;
 			productReference = 6267D173293DAD5F005A3392 /* Mamen.app */;
@@ -562,6 +571,8 @@
 				FBF8980D29CD885500E72B13 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 				FBF8981029CD89FF00E72B13 /* XCRemoteSwiftPackageReference "openai" */,
 				FBF8981329CD8A2A00E72B13 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+				62F90BA92A0C8D7D00FBD36A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				62F90BAC2A0C8D9500FBD36A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 6267D174293DAD5F005A3392 /* Products */;
 			projectDirPath = "";
@@ -661,6 +672,7 @@
 				6267D179293DAD5F005A3392 /* ContentView.swift in Sources */,
 				FB78E92A2957195000090D3E /* HomeView.swift in Sources */,
 				FBB590C129C762AD00EFF3C2 /* GPT3ViewModel.swift in Sources */,
+				62F90BA82A0C8D4700FBD36A /* jsonbridge.swift in Sources */,
 				FB58332729B62B06005784A8 /* ActivityView.swift in Sources */,
 				FB78E91D29560A8300090D3E /* MapViewNoBack.swift in Sources */,
 				6267D185293DADD8005A3392 /* LoginPage.swift in Sources */,
@@ -859,7 +871,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen/Preview Content\"";
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mamen/Info.plist;
@@ -897,7 +909,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen/Preview Content\"";
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mamen/Info.plist;
@@ -934,7 +946,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen Watch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -963,7 +975,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen Watch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -991,7 +1003,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppTests";
@@ -1012,7 +1024,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppTests";
@@ -1032,7 +1044,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppUITests";
@@ -1052,7 +1064,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppUITests";
@@ -1073,7 +1085,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = small/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = small;
@@ -1101,7 +1113,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4PWUBYN7SD;
+				DEVELOPMENT_TEAM = 7KLCU4C8BW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = small/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = small;
@@ -1182,6 +1194,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		62F90BA92A0C8D7D00FBD36A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		62F90BAC2A0C8D9500FBD36A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		FBB590CF29C8078C00EFF3C2 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView";
@@ -1217,6 +1245,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		62F90BAA2A0C8D7D00FBD36A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62F90BA92A0C8D7D00FBD36A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		62F90BAD2A0C8D9500FBD36A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62F90BAC2A0C8D9500FBD36A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		FBB590D029C8078C00EFF3C2 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBB590CF29C8078C00EFF3C2 /* XCRemoteSwiftPackageReference "AxisTabView" */;

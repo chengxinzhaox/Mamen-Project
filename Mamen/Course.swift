@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
-
+import SwiftyJSON
 struct Course: View {
     
     
     @State var showDetailView = false
     @State var showWebView = false
-    @State var courseSlect = 1
-
+    @State var courseSlect = 0
+    @State private var coursejson:responseBody=responseBody(result: 0, message: "", data: nil)
+    @AppStorage("selectedCourse") var selectedCourse: [String] = []
     var body: some View {
         VStack {
             HStack {
@@ -25,54 +26,40 @@ struct Course: View {
             .padding(.horizontal)
             .padding(.bottom, 30)
             .padding(.top, 20)
+            .task {
+                r.GetAllCourses { result in
+                    self.coursejson=result
+                }
+            }
+            let json=JSON(self.coursejson.data ?? "")
             ZStack {
+                
                 HStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         ZStack {
                             
                             HStack {
-                                ZStack {
-                                    Course_card(image: "C-image", name: "C&C++", emoji: "🧑🏻‍💻")
-                                        .onTapGesture {
-                                            courseSlect = 1
-                                            TapticEngine.impact.feedback(.medium)
-                                        }
-                                        .animation(.easeOut, value: courseSlect)
-                                    if courseSlect == 1 {
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .frame(width: 80, height: 3)
-                                            .foregroundColor(Color("main-green"))
-                                            .offset(x:5, y: 63)
-                                    }
+                               
+
+                                ForEach(0 ..< json.count,id:\.self) { item in
+                                    if self.selectedCourse.contains(json[item,"title"].stringValue){
+                                        ZStack {
+                                            Course_card(image: json[item,"pic"].stringValue, name: json[item,"title"].stringValue, emoji: "🧑🏻‍💻")
+                                                .onTapGesture {
+                                                    courseSlect = item
+                                                    TapticEngine.impact.feedback(.medium)
+                                                }
+                                                .animation(.easeOut, value: courseSlect)
+                                            if courseSlect == item {
+                                                RoundedRectangle(cornerRadius: 20)
+                                                    .frame(width: 80, height: 3)
+                                                    .foregroundColor(Color("main-green"))
+                                                    .offset(x:5, y: 63)
+                                            }
+                                        }}
                                 }
-                                ZStack {
-                                    Course_card(image: "DB-image", name: "DB", emoji: "🧑🏻‍💻")
-                                        .onTapGesture {
-                                            courseSlect = 2
-                                            TapticEngine.impact.feedback(.medium)
-                                        }
-                                        .animation(.easeOut, value: courseSlect)
-                                    if courseSlect == 2 {
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .frame(width: 80, height: 3)
-                                            .foregroundColor(Color("main-green"))
-                                            .offset(x:5, y: 63)
-                                    }
-                                }
-                                ZStack {
-                                    Course_card(image: "IPD-image", name: "IPD", emoji: "🧑🏽‍🔧")
-                                        .onTapGesture {
-                                            courseSlect = 3
-                                            TapticEngine.impact.feedback(.medium)
-                                        }
-                                        .animation(.easeOut, value: courseSlect)
-                                    if courseSlect == 3 {
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .frame(width: 80, height: 3)
-                                            .foregroundColor(Color("main-green"))
-                                            .offset(x:5, y: 63)
-                                    }
-                                }
+                               
+                                
                             }
                         }
                     }
@@ -80,16 +67,8 @@ struct Course: View {
                 .padding(.bottom, 5)
             }
             .padding(.bottom, 10)
-           
-            if courseSlect == 1 {
-                Course_Down_View(TeacherImag: "leon", TeacherName: "Leno Liang", Course_name: "C&C++", Email: "maged@zy.edu.cn", WorkTime: "9:00AM - 7:00PM", OfficeLocation: "8 Building, CDUT", OfficeLocation_Map: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China")
-            }
-            if courseSlect == 2 {
-                Course_Down_View(TeacherImag: "maged", TeacherName: "Maged Refat", Course_name: "Database", Email: "maged@zy.edu.cn", WorkTime: "9:00AM - 7:00PM", OfficeLocation: "8 Building, CDUT", OfficeLocation_Map: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China")
-            }
-            if courseSlect == 3 {
-                Course_Down_View(TeacherImag: "maged", TeacherName: "Maged Refat", Course_name: "Database", Email: "maged@zy.edu.cn", WorkTime: "9:00AM - 7:00PM", OfficeLocation: "8 Building, CDUT", OfficeLocation_Map: "No.1, Erxianqiao East 3rd Road, Chenghua Chengdu Sichuan China")
-            }
+            Course_Down_View(TeacherImag: json[courseSlect,"name"].stringValue, TeacherName:json[courseSlect,"fullname"].stringValue, Course_name: json[courseSlect,"title"].stringValue, Email: json[courseSlect,"email"].stringValue, WorkTime: json[courseSlect,"worktime"].stringValue, OfficeLocation: json[courseSlect,"workroom"].stringValue, OfficeLocation_Map: json[courseSlect,"workroomdetail"].stringValue)
+            
         }
     }
 }

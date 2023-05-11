@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 struct Person: View {
     @State private var isshow = false
     @State private var showSettingView = false
     @AppStorage("islogined") var islogined = false
     @AppStorage("userkey") var userkey = ""
-    
     
     @State private var iscard = -80
     @AppStorage("money") var money = 0.0
@@ -145,9 +145,10 @@ struct Person_preview: PreviewProvider {
 }
 
 struct Score: View {
-    var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
-    
-    var courseScores = [72, 90, 75, 73, 82, 88, 83, 83]
+    @State private var markjson: responseBody = .init(result: 0, message: "", data: nil)
+//    var courseNames = ["C&C++ Development", "Human Interface", "Web Application Development ", "JAVA Development", "Data Base", "Swift Development", "CSS & HTML", "Generic English"]
+//
+//    var courseScores = [72, 90, 75, 73, 82, 88, 83, 83]
     
     func calculateGPA(score: Int) -> Double {
         switch score {
@@ -164,15 +165,33 @@ struct Score: View {
         }
     }
         
-    var averageScore: Double {
+    func averageScore() -> Double {
+        let json = JSON(markjson.data ?? Data())
+        var courseScores = json.map { _, mark in
+            mark["mark"].intValue
+        }
         let sum = courseScores.reduce(0, +)
         return Double(sum) / Double(courseScores.count)
     }
-        
-    var averageGPA: Double {
+
+    func averageGPA() -> Double {
+        let json = JSON(markjson.data ?? Data())
+        var courseScores = json.map { _, mark in
+            mark["mark"].intValue
+        }
         let gpaSum = courseScores.map { calculateGPA(score: $0) }.reduce(0, +)
         return gpaSum / Double(courseScores.count)
     }
+
+//    var averageScore: Double {
+//    let gpaSum = courseScores.map { calculateGPA(score: $0) }.reduce(0, +)
+//    return gpaSum / Double(courseScores.count)
+//    }
+//
+//    var averageGPA: Double {
+//        let gpaSum = courseScores.map { calculateGPA(score: $0) }.reduce(0, +)
+//        return gpaSum / Double(courseScores.count)
+//    }
     
     var body: some View {
         VStack {
@@ -189,7 +208,11 @@ struct Score: View {
                                 .foregroundColor(Color("main-green"))
                         }
                         .offset(x: -35, y: -59)
-                        
+                        .task {
+                            r.GetMarks { result in
+                                self.markjson=result
+                            }
+                        }
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
                             .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
                             .frame(width: 160, height: 160)
@@ -199,11 +222,11 @@ struct Score: View {
                                 .opacity(0.1)
                             
                             Circle()
-                                .trim(from: 0, to: CGFloat(averageGPA / 4.0))
+                                .trim(from: 0, to: CGFloat(averageGPA() / 4.0))
                                 .stroke(Color("main-green"), style: StrokeStyle(lineWidth: 10, lineCap: .round))
                                 .rotationEffect(.degrees(-90))
 
-                            Text("\(averageGPA, specifier: "%.1f")")
+                            Text("\(averageGPA(), specifier: "%.1f")")
                                 .foregroundColor(Color("main-green"))
                                 .font(.custom("AirbnbCereal_W_Bd", size: 19))
                         }
@@ -233,10 +256,10 @@ struct Score: View {
                                 .opacity(0.1)
                             
                             Circle()
-                                .trim(from: 0, to: CGFloat(averageScore / 100.0))
+                                .trim(from: 0, to: CGFloat(averageScore() / 100.0))
                                 .stroke(Color("main-green"), style: StrokeStyle(lineWidth: 10, lineCap: .round))
                                 .rotationEffect(.degrees(-90))
-                            Text("\(averageScore, specifier: "%.1f")")
+                            Text("\(averageScore(), specifier: "%.1f")")
                                 .foregroundColor(Color("main-green"))
                                 .font(.custom("AirbnbCereal_W_Bd", size: 19))
                         }
@@ -246,9 +269,9 @@ struct Score: View {
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 10)
-                
-                ForEach(courseNames.indices, id: \.self) { index in
-                    ScoreElement(scoreName: courseNames[index], scoreNumber: "\(courseScores[index])")
+                let json = JSON(markjson.data ?? Data())
+                ForEach(0..<json.count, id: \.self) { index in
+                    ScoreElement(scoreName: json[index,"title"].stringValue, scoreNumber: json[index,"mark"].stringValue)
                         .listRowSeparator(.hidden)
                 }
             }

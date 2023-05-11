@@ -30,7 +30,31 @@ struct SettingView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(height: 190)
-
+                        //新增
+                        .onTapGesture {
+                            
+//                            r.CheckUserNameRepeat(username: "face"){result in
+//                                debugPrint(result)
+//
+//                            }
+//                            r.UserResign(username: "lad", password: "sad", name: "原来是你") { result in
+//                                debugPrint(result)
+//                            }
+//                            r.UserLogin(username: "lad", password: "sa1d") { result in
+//                                debugPrint(result)
+//                            }
+//                            r.GetCourseFiles { result in
+//                                debugPrint(result)
+//                            }
+//                            r.GetAllCourses { result in
+//                                debugPrint(result)
+//                            }
+//                            r.GetAllTimeTables{result in
+//
+//                                debugPrint(result)
+//                            }
+                        }
+                        //新增
                     Spacer()
                         .frame(height: 40)
                 }

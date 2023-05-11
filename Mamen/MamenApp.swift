@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+let r=JSONBRIDGE()
 @main
 struct MamenApp: App {
     
