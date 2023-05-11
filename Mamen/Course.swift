@@ -30,6 +30,7 @@ struct Course: View {
             .task {
                 r.GetAllCourses { result in
                     self.coursejson=result
+                    
                 }
             }
             let json=JSON(self.coursejson.data ?? "")
@@ -38,10 +39,7 @@ struct Course: View {
                 HStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         ZStack {
-                            
                             HStack {
-                               
-
                                 ForEach(0 ..< json.count,id:\.self) { item in
                                     if self.selectedCourse.contains(json[item,"title"].stringValue){
                                         ZStack {
@@ -52,13 +50,20 @@ struct Course: View {
                                                     now=courseSlect
                                                 }
                                                 .animation(.easeOut, value: courseSlect)
-                                            if courseSlect == item {
+                                            if now == item {
                                                 RoundedRectangle(cornerRadius: 20)
                                                     .frame(width: 80, height: 3)
                                                     .foregroundColor(Color("main-green"))
                                                     .offset(x:5, y: 63)
                                             }
-                                        }}
+                                        }.onAppear(){
+                                            if now==0 {
+                                                let first=self.selectedCourse.firstIndex(of: json[item,"title"].stringValue)
+                                                now=first!
+                                            }
+                                        }
+                                        
+                                    }
                                 }
                                
                                 
