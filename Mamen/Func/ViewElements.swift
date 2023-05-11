@@ -108,20 +108,21 @@ struct Course_card: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(Color(hex: "e8e8e8"), lineWidth: 1)
-                .frame(width: 150, height: 110)
+                .frame(width: 150, height: 90)
+                .offset(y:30)
                 .foregroundColor(.white)
 
             VStack {
                 Image(image)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .offset(y: -19)
+                    
+                    .frame(width: 150, height: 100)
                 HStack {
                     Text(name)
                         .font(.custom("AirbnbCereal_W_Bd", size: 15))
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
-                        .offset(y: -13)
+                        .lineLimit(1)
                         .padding()
                     Spacer()
                 }
@@ -132,7 +133,6 @@ struct Course_card: View {
                 Text(emoji)
                     .padding()
                     .font(.largeTitle)
-                    .offset(y: -5)
                 Spacer()
             }
         }
