@@ -91,3 +91,4 @@ struct Course_Previews: PreviewProvider {
         Course()
     }
 }
+
