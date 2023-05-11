@@ -68,7 +68,8 @@ struct Course: View {
             }
             .padding(.bottom, 10)
             if selectedCourse.count > 0{
-                Course_Down_View(TeacherImag: json[courseSlect,"name"].stringValue, TeacherName:json[courseSlect,"fullname"].stringValue, Course_name: json[courseSlect,"title"].stringValue, Email: json[courseSlect,"email"].stringValue, WorkTime: json[courseSlect,"worktime"].stringValue, OfficeLocation: json[courseSlect,"workroom"].stringValue, OfficeLocation_Map: json[courseSlect,"workroomdetail"].stringValue)
+                let location=selectedCourse.firstIndex(of: json[courseSlect,"name"].stringValue) ?? 0
+                Course_Down_View(TeacherImag: json[location,"name"].stringValue, TeacherName:json[location,"fullname"].stringValue, Course_name: json[location,"title"].stringValue, Email: json[location,"email"].stringValue, WorkTime: json[location,"worktime"].stringValue, OfficeLocation: json[location,"workroom"].stringValue, OfficeLocation_Map: json[location,"workroomdetail"].stringValue)
             }
         }
     }
