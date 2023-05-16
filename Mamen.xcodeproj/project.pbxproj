@@ -70,6 +70,7 @@
 		FBB590D729C8574C00EFF3C2 /* Translator_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590D629C8574C00EFF3C2 /* Translator_View.swift */; };
 		FBB590D929C85D8D00EFF3C2 /* DalleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590D829C85D8C00EFF3C2 /* DalleViewModel.swift */; };
 		FBB590DB29C85E1300EFF3C2 /* DalleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB590DA29C85E1300EFF3C2 /* DalleView.swift */; };
+		FBC49A782A13BF4900FDAFE7 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC49A772A13BF4900FDAFE7 /* AboutUs.swift */; };
 		FBDA4FDB29B595DC0018071F /* Slected.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA4FDA29B595DC0018071F /* Slected.swift */; };
 		FBDFB5B829B18C4500C20197 /* CourseSlectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */; };
 		FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFB5BF29B19B4F00C20197 /* TestView.swift */; };
@@ -187,6 +188,7 @@
 		FBB590D629C8574C00EFF3C2 /* Translator_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator_View.swift; sourceTree = "<group>"; };
 		FBB590D829C85D8C00EFF3C2 /* DalleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DalleViewModel.swift; sourceTree = "<group>"; };
 		FBB590DA29C85E1300EFF3C2 /* DalleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DalleView.swift; sourceTree = "<group>"; };
+		FBC49A772A13BF4900FDAFE7 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		FBDA4FDA29B595DC0018071F /* Slected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slected.swift; sourceTree = "<group>"; };
 		FBDFB5B729B18C4500C20197 /* CourseSlectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSlectView.swift; sourceTree = "<group>"; };
 		FBDFB5BF29B19B4F00C20197 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				FB6399C429C3EF79003CC3F0 /* Calendar_class.swift */,
 				FB6399C629C40002003CC3F0 /* CalendarDetailView.swift */,
 				FB6399C829C40ED0003CC3F0 /* Empty.swift */,
+				FBC49A772A13BF4900FDAFE7 /* AboutUs.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				FBA4DFDC29657E8200A9DB14 /* CustomDatePicker.swift in Sources */,
 				FBDFB5C029B19B4F00C20197 /* TestView.swift in Sources */,
 				FBA4DFD829657E0800A9DB14 /* CalendarView.swift in Sources */,
+				FBC49A782A13BF4900FDAFE7 /* AboutUs.swift in Sources */,
 				FB6399C529C3EF79003CC3F0 /* Calendar_class.swift in Sources */,
 				FB784BFA29C5FF0000EF5EE0 /* NewCourseView.swift in Sources */,
 				FB58332929B62D8A005784A8 /* CourseDetailView.swift in Sources */,
@@ -871,7 +875,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen/Preview Content\"";
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mamen/Info.plist;
@@ -909,7 +913,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen/Preview Content\"";
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mamen/Info.plist;
@@ -946,7 +950,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen Watch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -975,7 +979,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mamen Watch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -1003,7 +1007,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppTests";
@@ -1024,7 +1028,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppTests";
@@ -1044,7 +1048,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppUITests";
@@ -1064,7 +1068,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "chesrer.com.Mamen-Watch-Watch-AppUITests";
@@ -1085,7 +1089,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = small/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = small;
@@ -1113,7 +1117,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KLCU4C8BW;
+				DEVELOPMENT_TEAM = 4PWUBYN7SD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = small/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = small;

@@ -30,31 +30,8 @@ struct SettingView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(height: 190)
-                        //新增
                         .onTapGesture {
-                            
-//                            r.CheckUserNameRepeat(username: "face"){result in
-//                                debugPrint(result)
-//
-//                            }
-//                            r.UserResign(username: "lad", password: "sad", name: "原来是你") { result in
-//                                debugPrint(result)
-//                            }
-//                            r.UserLogin(username: "lad", password: "sa1d") { result in
-//                                debugPrint(result)
-//                            }
-//                            r.GetCourseFiles { result in
-//                                debugPrint(result)
-//                            }
-//                            r.GetAllCourses { result in
-//                                debugPrint(result)
-//                            }
-//                            r.GetAllTimeTables{result in
-//
-//                                debugPrint(result)
-//                            }
                         }
-                        //新增
                     Spacer()
                         .frame(height: 40)
                 }
@@ -69,8 +46,8 @@ struct SettingView: View {
                 Divider_Person()
 
                 NavigationLink(destination:
-                    LibaryView()
-                        .navigationTitle("Perosnal Information")
+                    AboutUs()
+                        .navigationTitle("About")
                 ) {
                     SettingElementView(icon: "About", name: "About Us", color: Color(hex: "FFA61E"))
                 }
@@ -98,7 +75,7 @@ struct SettingView: View {
                     .padding(.bottom, -4.0)
                     HStack {
                         Spacer()
-                        Text("Manen v1.6")
+                        Text("Manen v2.0")
                             .font(.custom("AirbnbCereal_W_Md", size: 12))
                             .foregroundColor(Color.gray)
                             .fontWeight(.semibold)

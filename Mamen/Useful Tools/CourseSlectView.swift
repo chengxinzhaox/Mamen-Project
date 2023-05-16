@@ -73,16 +73,6 @@ struct CourseSlectView: View {
                         .foregroundColor(.gray)
                 }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "plus")
-                        .font(.system(size: 13))
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                }
-            }
         }
     }
 }

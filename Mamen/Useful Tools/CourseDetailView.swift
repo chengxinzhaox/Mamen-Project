@@ -133,12 +133,14 @@ struct CourseDetailView: View {
                             RoundedRectangle(cornerRadius: 90, style: .continuous)
                                 .frame(width: 350, height: 50)
                                 .foregroundColor(Color("main-green"))
+                                
                                 .overlay {
                                     Text(self.isselect ? "Delete" : "Choose")
                                         .font(.custom("AirbnbCereal_W_Bd", size: 15))
                                         .foregroundColor(.white)
                                 }
                         }
+                        .padding(.bottom, 40)
                     }
 
                     

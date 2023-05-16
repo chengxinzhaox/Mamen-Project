@@ -127,7 +127,7 @@ struct HomeView: View {
                         ToolsView(name: "Select", icon: "Course 1")
                     }
 
-                    NavigationLink(destination: DalleView()) {
+                    NavigationLink(destination: Slected()) {
                         ToolsView(name: "My Courses", icon: "Pay")
                     }
                 }
